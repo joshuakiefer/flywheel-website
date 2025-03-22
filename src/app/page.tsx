@@ -36,7 +36,7 @@ const features = [
 
 const metrics = [
   { id: 1, stat: '10+', emphasis: 'Years Experience', rest: 'serving digital agencies' },
-  { id: 2, stat: '45+', emphasis: 'Active Clients', rest: 'in the $1M-$5M range' },
+  { id: 2, stat: '45+', emphasis: 'Active Clients', rest: 'in the $1M-$15M range' },
   { id: 3, stat: '5.0', emphasis: 'Google Rating', rest: 'based on reviews' },
 ]
 
@@ -69,7 +69,7 @@ const industryIcons = [
 
 export default function Home() {
   return (
-    <div className="relative isolate">
+    <div className="relative isolate pt-16 sm:pt-20">
       {/* Hero background effects */}
       <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00A651] to-[#1A2B49] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" 
@@ -80,7 +80,7 @@ export default function Home() {
       </div>
 
       {/* Hero section */}
-      <div className="relative pt-24 sm:pt-32 pb-24 sm:pb-32 overflow-hidden">
+      <div className="relative pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
         {/* Enhanced background effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#00A65115,_transparent_40%)] animate-pulse-slower" />
@@ -88,19 +88,19 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,_transparent,_#00A65105,_transparent)]" />
           
           {/* Floating shapes */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-brand-secondary/5 to-transparent rounded-full blur-2xl animate-float-delayed" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-full blur-3xl animate-float hidden sm:block" />
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-brand-secondary/5 to-transparent rounded-full blur-2xl animate-float-delayed hidden sm:block" />
         </div>
 
         <div className="container-custom relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Left Column */}
-            <div>
+            <div className="text-center lg:text-left">
               <AnimateInView>
                 <div className="relative">
-                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-full blur-3xl animate-pulse-slow" />
+                  <div className="absolute -top-10 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-40 h-40 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-full blur-3xl animate-pulse-slow" />
                   
-                  <h1 className="relative text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl animate-fade-up">
+                  <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 animate-fade-up">
                     <span className="block">Turn Your Agency's</span>
                     <span className="block mt-2 relative">
                       <span className="relative z-10 bg-gradient-to-r from-brand-primary to-brand-primary bg-clip-text text-transparent animate-slide-right">
@@ -112,16 +112,16 @@ export default function Home() {
                     </span>
                   </h1>
                   
-                  <p className="mt-8 text-xl leading-8 text-gray-600 relative z-10 max-w-2xl animate-fade-up [animation-delay:200ms]">
-                    We partner with select agencies scaling from $1M to $5M, transforming financial complexity into a strategic advantage for sustainable growth.
+                  <p className="mt-6 sm:mt-8 text-lg sm:text-xl leading-8 text-gray-600 relative z-10 max-w-2xl mx-auto lg:mx-0 animate-fade-up [animation-delay:200ms]">
+                    We partner with select agencies scaling from $1M to $15M, transforming financial complexity into a strategic advantage for sustainable growth.
                   </p>
                   
-                  <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 relative z-10 animate-fade-up [animation-delay:400ms]">
+                  <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 relative z-10 animate-fade-up [animation-delay:400ms]">
                     <a
                       href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-x-2 rounded-lg bg-brand-primary px-6 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-brand-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-all duration-300 hover:scale-105"
+                      className="w-full sm:w-auto group inline-flex items-center justify-center gap-x-2 rounded-lg bg-brand-primary px-6 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-brand-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-all duration-300 hover:scale-105"
                     >
                       Schedule Your Discovery Call
                       <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -132,16 +132,16 @@ export default function Home() {
             </div>
 
             {/* Right Column */}
-            <div>
+            <div className="mt-8 lg:mt-0">
               <AnimateInView delay={0.2}>
                 <div className="relative lg:pl-12">
                   <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-gray-900/5 overflow-hidden hover:shadow-lg transition-all duration-300">
-                    <div className="p-8 bg-gradient-to-br from-brand-primary/5 to-transparent">
+                    <div className="p-6 sm:p-8 bg-gradient-to-br from-brand-primary/5 to-transparent">
                       <h3 className="text-xl font-semibold text-gray-900">Our Services</h3>
                       <p className="mt-2 text-base text-gray-600">Comprehensive financial solutions for growing agencies</p>
                     </div>
                     <div className="divide-y divide-gray-100">
-                      <div className="p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
+                      <div className="p-4 sm:p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
                         <div className="flex-shrink-0">
                           <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
                             <BuildingOfficeIcon className="w-5 h-5 text-brand-primary" />
@@ -152,7 +152,7 @@ export default function Home() {
                           <p className="mt-1 text-sm text-gray-600">Bookkeeping • AP • Invoicing • Payroll</p>
                         </div>
                       </div>
-                      <div className="p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
+                      <div className="p-4 sm:p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
                         <div className="flex-shrink-0">
                           <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
                             <ChartBarIcon className="w-5 h-5 text-brand-primary" />
@@ -163,7 +163,7 @@ export default function Home() {
                           <p className="mt-1 text-sm text-gray-600">Fractional CFO • Controller • Cash Flow Planning</p>
                         </div>
                       </div>
-                      <div className="p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
+                      <div className="p-4 sm:p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
                         <div className="flex-shrink-0">
                           <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
                             <CurrencyDollarIcon className="w-5 h-5 text-brand-primary" />
@@ -184,29 +184,29 @@ export default function Home() {
       </div>
 
       {/* Feature section */}
-      <div className="mt-16">
+      <div className="mt-8 sm:mt-16">
         <div className="container-custom">
           <AnimateInView>
-            <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comprehensive Financial Services</h2>
-              <p className="mt-4 text-lg leading-8 text-gray-600">
+            <div className="mx-auto max-w-2xl text-center px-4 sm:px-0">
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comprehensive Financial Services</h2>
+              <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
                 Your one-stop solution for agency finance and accounting. Choose full-service partnership or individual services that match your needs.
               </p>
             </div>
           </AnimateInView>
 
           <AnimateInView delay={0.2}>
-            <div className="mx-auto mt-12 max-w-7xl">
-              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-12">
+            <div className="mx-auto mt-8 sm:mt-12 max-w-7xl">
+              <dl className="grid max-w-xl grid-cols-1 gap-x-6 gap-y-6 sm:gap-x-8 sm:gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-12">
                 {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-16">
+                  <div key={feature.name} className="relative pl-14 sm:pl-16 bg-white/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/80 transition-colors duration-200">
                     <dt className="text-base font-semibold leading-7 text-gray-900">
-                      <div className="absolute left-0 top-0 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-primary">
-                        <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <div className="absolute left-3 sm:left-4 top-4 sm:top-6 flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-lg bg-brand-primary">
+                        <feature.icon className="h-5 sm:h-6 w-5 sm:w-6 text-white" aria-hidden="true" />
                       </div>
                       {feature.name}
                     </dt>
-                    <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                    <dd className="mt-2 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">{feature.description}</dd>
                   </div>
                 ))}
               </dl>
@@ -216,11 +216,11 @@ export default function Home() {
       </div>
 
       {/* Flywheel section */}
-      <div className="py-24 sm:py-32">
+      <div className="py-16 sm:py-24 lg:py-32">
         <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Flywheel Effect</h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600">
+          <div className="mx-auto max-w-2xl text-center px-4 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Flywheel Effect</h2>
+            <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
               When your financial operations work in harmony, each element builds upon the last—creating unstoppable momentum for your agency.
             </p>
           </div>
@@ -229,15 +229,17 @@ export default function Home() {
       </div>
 
       {/* Reviews section */}
-      <div className="py-24 sm:py-32 bg-gray-50">
+      <div className="py-16 sm:py-24 lg:py-32 bg-gray-50">
         <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What Our Clients Say</h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600">
+          <div className="mx-auto max-w-2xl text-center px-4 sm:px-0">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What Our Clients Say</h2>
+            <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
               Hear from agency owners who have transformed their financial operations.
             </p>
           </div>
-          <ReviewCarousel />
+          <div className="mt-8 sm:mt-12">
+            <ReviewCarousel />
+          </div>
         </div>
       </div>
 

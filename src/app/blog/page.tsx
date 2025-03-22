@@ -9,7 +9,7 @@ import { CalendarIcon, ClockIcon, ArrowRightIcon } from '@heroicons/react/24/out
 const featuredPosts = [
   {
     id: 1,
-    title: 'The Agency Growth Blueprint: Scaling from $1M to $5M',
+    title: 'The Agency Growth Blueprint: Scaling from $1M to $15M',
     description: 'Learn the key financial strategies and metrics that successful agencies use to scale their operations effectively.',
     image: '/blog/agency-growth.jpg',
     category: 'Growth Strategy',

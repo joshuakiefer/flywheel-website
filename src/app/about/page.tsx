@@ -9,7 +9,7 @@ import { CheckCircleIcon } from '@heroicons/react/24/outline'
 const values = [
   {
     name: 'Growth Partnership',
-    description: 'We help agencies like yours grow from $1M to $5M with clear financial strategies that make sense for your business.',
+    description: 'We help agencies like yours grow from $1M to $15M with clear financial strategies that make sense for your business.',
   },
   {
     name: 'Personal Support',
@@ -96,7 +96,7 @@ export default function AboutPage() {
                     Our approach combines deep agency experience with practical financial strategies that work in the real world. No complex jargon, just clear guidance that helps you grow.
                   </p>
                   <p>
-                    Whether you're looking to scale from $1M to $5M or just want better financial clarity, we're here to help you succeed on your terms.
+                    Whether you're looking to scale from $1M to $15M or just want better financial clarity, we're here to help you succeed on your terms.
                   </p>
                 </div>
 
