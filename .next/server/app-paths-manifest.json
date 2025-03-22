@@ -1,4 +1,14 @@
 {
-  "/not-found": "app/not-found.js",
-  "/page": "app/page.js"
+  "/_not-found": "app/_not-found.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/success-stories/page": "app/success-stories/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/services/page": "app/services/page.js",
+  "/about/page": "app/about/page.js",
+  "/resources/page": "app/resources/page.js",
+  "/resources/profitability-calculator/page": "app/resources/profitability-calculator/page.js",
+  "/resources/pricing-calculator/page": "app/resources/pricing-calculator/page.js"
 }
