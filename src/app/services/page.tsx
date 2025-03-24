@@ -161,12 +161,23 @@ export default function ServicesPage() {
 
         {/* CTA Section */}
         <div className="mt-32 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-            Ready to Transform Your Agency\'s Finances?
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Book a discovery call to discuss how we can help you achieve your financial goals.
-          </p>
+          <div className="relative">
+            <div className="absolute inset-0">
+              <div className="h-1/3 bg-gradient-to-b from-emerald-50/50" />
+            </div>
+            <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl lg:max-w-none">
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    Ready to Transform Your Agency's Finances?
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-600">
+                    Book a discovery call to discuss how we can help you achieve your financial goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="mt-8">
             <a
               href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"

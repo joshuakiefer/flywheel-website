@@ -34,7 +34,7 @@ export default function Navigation() {
             <Link href="/" className="flex items-center space-x-3">
               <div className="relative h-10 w-10">
                 <Image
-                  src="/IconOnly_NoBuffer.png"
+                  src="/Main logo.png"
                   alt="Flywheel Logo"
                   fill
                   className="object-contain"

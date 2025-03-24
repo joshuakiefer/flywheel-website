@@ -48,15 +48,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             >
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-3" onClick={onClose}>
-                  <div className="relative h-10 w-10">
+                  <div className="relative h-8 w-8">
                     <Image
-                      src="/IconOnly_NoBuffer.png"
+                      src="/Main logo.png"
                       alt="Flywheel Logo"
                       fill
                       className="object-contain"
+                      priority
                     />
                   </div>
-                  <span className="text-xl font-bold text-gray-900">Flywheel</span>
+                  <span className="text-lg font-bold text-gray-900">Flywheel</span>
                 </Link>
                 <button
                   type="button"
