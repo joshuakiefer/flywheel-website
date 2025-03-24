@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: 'Flywheel Bookkeeping - Financial Strategy for Modern Agencies',
   description: 'Specialized bookkeeping, CFO, and tax services for agencies scaling from $1M to $15M. Transform your agency\'s financial management with expert guidance.',
   keywords: 'agency bookkeeping, CFO services, tax planning, financial strategy, agency growth',
+  metadataBase: new URL('https://flywheelbookkeeping.com'),
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },

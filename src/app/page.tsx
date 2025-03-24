@@ -9,6 +9,7 @@ import CTASection from '@/components/CTASection'
 import AnimateInView from '@/components/AnimateInView'
 import FlywheelAnimation from '@/components/FlywheelAnimation'
 import ReviewCarousel from '@/components/ReviewCarousel'
+import SectionHeader from '@/components/SectionHeader'
 import { ChartBarIcon, ArrowTrendingUpIcon, ClockIcon, CurrencyDollarIcon, BuildingOfficeIcon, RocketLaunchIcon, LightBulbIcon, SparklesIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const features = [
@@ -186,20 +187,23 @@ export default function Home() {
       {/* Feature section */}
       <div className="mt-8 sm:mt-16">
         <div className="container-custom">
-          <AnimateInView>
-            <div className="mx-auto max-w-2xl text-center px-4 sm:px-0">
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Comprehensive Financial Services</h2>
-              <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-                Your one-stop solution for agency finance and accounting. Choose full-service partnership or individual services that match your needs.
-              </p>
-            </div>
-          </AnimateInView>
+          <SectionHeader
+            label="Our Services"
+            title="Comprehensive Financial Services"
+            description="Your one-stop solution for agency finance and accounting. Choose full-service partnership or individual services that match your needs."
+          />
 
           <AnimateInView delay={0.2}>
-            <div className="mx-auto mt-8 sm:mt-12 max-w-7xl">
+            <div className="mx-auto mt-8 sm:mt-12 max-w-7xl relative">
+              {/* Decorative background */}
+              <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#00A65108,_transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4905,_transparent_60%)]" />
+              </div>
+
               <dl className="grid max-w-xl grid-cols-1 gap-x-6 gap-y-6 sm:gap-x-8 sm:gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-12">
                 {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-14 sm:pl-16 bg-white/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/80 transition-colors duration-200">
+                  <div key={feature.name} className="relative pl-14 sm:pl-16 bg-white/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
                     <dt className="text-base font-semibold leading-7 text-gray-900">
                       <div className="absolute left-3 sm:left-4 top-4 sm:top-6 flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-lg bg-brand-primary">
                         <feature.icon className="h-5 sm:h-6 w-5 sm:w-6 text-white" aria-hidden="true" />
@@ -218,25 +222,29 @@ export default function Home() {
       {/* Flywheel section */}
       <div className="py-16 sm:py-24 lg:py-32">
         <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center px-4 sm:px-0">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">The Flywheel Effect</h2>
-            <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-              When your financial operations work in harmony, each element builds upon the last—creating unstoppable momentum for your agency.
-            </p>
-          </div>
+          <SectionHeader
+            label="How It Works"
+            title="The Flywheel Effect"
+            description="When your financial operations work in harmony, each element builds upon the last—creating unstoppable momentum for your agency."
+          />
           <FlywheelAnimation />
         </div>
       </div>
 
       {/* Reviews section */}
-      <div className="py-16 sm:py-24 lg:py-32 bg-gray-50">
+      <div className="py-16 sm:py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-brand-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl transform translate-x-1/3 translate-y-1/3" />
+        </div>
+
         <div className="container-custom">
-          <div className="mx-auto max-w-2xl text-center px-4 sm:px-0">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">What Our Clients Say</h2>
-            <p className="mt-4 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-              Hear from agency owners who have transformed their financial operations.
-            </p>
-          </div>
+          <SectionHeader
+            label="Client Stories"
+            title="What Our Clients Say"
+            description="Hear from agency owners who have transformed their financial operations."
+          />
           <div className="mt-8 sm:mt-12">
             <ReviewCarousel />
           </div>

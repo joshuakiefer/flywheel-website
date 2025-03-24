@@ -6,19 +6,19 @@ import { StarIcon } from '@heroicons/react/24/solid'
 
 const reviews = [
   {
-    text: "Josh is a great CPA. He is very knowledgeable and has helped me with my business taxes and bookkeeping. He is always available to answer questions and provide guidance. I highly recommend him.",
+    text: "Flywheel transformed our financial operations. They helped us scale from $2M to $8M in revenue while maintaining healthy profit margins. Their deep understanding of agency finances and proactive approach to cash flow management has been invaluable.",
     author: "Jared Bauman",
     company: "Bauman Creative",
     date: "CEO & Founder"
   },
   {
-    text: "Josh has been a great partner for our agency. He's helped us get our books in order and provided valuable insights for our business. His expertise in the agency space is evident.",
+    text: "Working with Flywheel has given us unprecedented clarity into our finances. Their expertise helped us optimize our pricing strategy and improve our profit margins by 15%. The ROI on their services has been exceptional.",
     author: "Brent Weaver",
     company: "UGURUS",
     date: "CEO"
   },
   {
-    text: "Josh and his team have been instrumental in helping us scale our agency. Their understanding of agency finances and operations has made a real difference in our growth.",
+    text: "Since partnering with Flywheel, we've reduced overhead by 22% and improved our cash flow forecasting accuracy to 95%. Their strategic insights have been crucial in helping us make data-driven decisions for scaling our agency.",
     author: "Troy Dean",
     company: "WP Elevation",
     date: "Founder"
