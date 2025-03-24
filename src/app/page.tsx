@@ -11,6 +11,7 @@ import FlywheelAnimation from '@/components/FlywheelAnimation'
 import ReviewCarousel from '@/components/ReviewCarousel'
 import SectionHeader from '@/components/SectionHeader'
 import { ChartBarIcon, ArrowTrendingUpIcon, ClockIcon, CurrencyDollarIcon, BuildingOfficeIcon, RocketLaunchIcon, LightBulbIcon, SparklesIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
 
 const features = [
   {
@@ -70,209 +71,493 @@ const industryIcons = [
 
 export default function Home() {
   return (
-    <div className="relative isolate pt-16 sm:pt-20">
-      {/* Hero background effects */}
-      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-        <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#00A651] to-[#1A2B49] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" 
-          style={{
-            clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
-
-      {/* Hero section */}
-      <div className="relative pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
-        {/* Enhanced background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#00A65115,_transparent_40%)] animate-pulse-slower" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4910,_transparent_50%)] animate-pulse-slow" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,_transparent,_#00A65105,_transparent)]" />
-          
-          {/* Floating shapes */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-brand-primary/5 to-transparent rounded-full blur-3xl animate-float hidden sm:block" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-br from-brand-secondary/5 to-transparent rounded-full blur-2xl animate-float-delayed hidden sm:block" />
+    <main className="relative">
+      {/* Hero Section */}
+      <div className="relative min-h-[90vh] flex items-center">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-emerald-50/40 to-white">
+          <div className="absolute inset-0">
+            <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-emerald-100/30 rounded-full blur-3xl animate-pulse-slow" />
+            <div className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-blue-100/20 rounded-full blur-3xl animate-pulse" />
+          </div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A10,_transparent_50%)]" />
         </div>
 
-        <div className="container-custom relative">
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-            {/* Left Column */}
-            <div className="text-center lg:text-left">
-              <AnimateInView>
-                <div className="relative">
-                  <div className="absolute -top-10 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 w-40 h-40 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5 rounded-full blur-3xl animate-pulse-slow" />
-                  
-                  <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 animate-fade-up">
-                    <span className="block">Turn Your Agency's</span>
-                    <span className="block mt-2 relative">
-                      <span className="relative z-10 bg-gradient-to-r from-brand-primary to-brand-primary bg-clip-text text-transparent animate-slide-right">
-                        Finances Into Fuel
-                      </span>
-                      <svg className="absolute -bottom-2 left-0 w-full h-2 text-brand-primary/20" viewBox="0 0 300 12" fill="currentColor">
-                        <path d="M1 5.5C1 5.5 77 -2.5 150.5 5.5C224 13.5 299 5.5 299 5.5" stroke="currentColor" strokeWidth="4" fill="none" strokeDasharray="1000" className="animate-draw"/>
-                      </svg>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid lg:grid-cols-2 gap-x-16 gap-y-8 items-center">
+            {/* Left Column - Main Content */}
+            <div className="max-w-2xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6"
+              >
+                <span className="inline-flex text-emerald-600 text-lg font-semibold">
+                  For Agencies Scaling $1M to $15M
+                </span>
+
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+                  Financial{' '}
+                  <span className="text-emerald-600">Clarity</span>
+                  <br />
+                  Fuels Agency{' '}
+                  <span className="relative inline-block">
+                    <span className="relative z-10 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+                      Growth
                     </span>
-                  </h1>
-                  
-                  <p className="mt-6 sm:mt-8 text-lg sm:text-xl leading-8 text-gray-600 relative z-10 max-w-2xl mx-auto lg:mx-0 animate-fade-up [animation-delay:200ms]">
-                    We partner with select agencies scaling from $1M to $15M, transforming financial complexity into a strategic advantage for sustainable growth.
-                  </p>
-                  
-                  <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 relative z-10 animate-fade-up [animation-delay:400ms]">
-                    <a
-                      href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full sm:w-auto group inline-flex items-center justify-center gap-x-2 rounded-lg bg-brand-primary px-6 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-brand-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-all duration-300 hover:scale-105"
-                    >
-                      Schedule Your Discovery Call
-                      <ArrowRightIcon className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-emerald-600/30 rounded-full" />
+                  </span>
+                </h1>
+
+                <p className="text-xl text-gray-600 max-w-xl">
+                  Transform your agency's financial complexity into a strategic advantage with expert bookkeeping, CFO services, and tax planning.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <a
+                    href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105 hover:shadow-emerald-600/20"
+                  >
+                    Book Discovery Call
+                    <ArrowRightIcon className="ml-2.5 h-5 w-5" />
+                  </a>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center justify-center rounded-full px-8 py-4 text-lg font-semibold text-emerald-600 ring-2 ring-emerald-600/10 hover:bg-emerald-50 transition-all duration-200"
+                  >
+                    View Services
+                  </Link>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="flex items-center gap-x-6 pt-8 text-sm text-gray-600">
+                  <div className="flex items-center gap-x-2">
+                    <svg className="h-5 w-5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                    </svg>
+                    <span>Trusted by 50+ Agencies</span>
                   </div>
                 </div>
-              </AnimateInView>
+              </motion.div>
             </div>
 
-            {/* Right Column */}
-            <div className="mt-8 lg:mt-0">
-              <AnimateInView delay={0.2}>
-                <div className="relative lg:pl-12">
-                  <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-sm ring-1 ring-gray-900/5 overflow-hidden hover:shadow-lg transition-all duration-300">
-                    <div className="p-6 sm:p-8 bg-gradient-to-br from-brand-primary/5 to-transparent">
-                      <h3 className="text-xl font-semibold text-gray-900">Our Services</h3>
-                      <p className="mt-2 text-base text-gray-600">Comprehensive financial solutions for growing agencies</p>
+            {/* Right Column - Stats Grid */}
+            <div className="relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="grid grid-cols-2 gap-6"
+              >
+                {[
+                  { stat: '50+', label: 'Active Agencies', sublabel: 'Growing $1M-$15M' },
+                  { stat: '$150M+', label: 'Revenue Managed', sublabel: 'Annually' },
+                  { stat: '45+', label: 'Years Experience', sublabel: 'Combined Agency Finance' },
+                  { stat: '98%', label: 'Client Retention', sublabel: 'Long-term Partners' },
+                ].map((item, index) => (
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 + (index * 0.1) }}
+                    className="relative group"
+                  >
+                    <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-emerald-600/5 transform transition-transform group-hover:scale-105" />
+                    <div className="relative p-8 text-center">
+                      <p className="text-4xl font-bold text-emerald-600">{item.stat}</p>
+                      <p className="mt-2 font-medium text-gray-900">{item.label}</p>
+                      <p className="text-sm text-gray-500">{item.sublabel}</p>
                     </div>
-                    <div className="divide-y divide-gray-100">
-                      <div className="p-4 sm:p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
-                        <div className="flex-shrink-0">
-                          <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
-                            <BuildingOfficeIcon className="w-5 h-5 text-brand-primary" />
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="text-base font-medium text-gray-900">Core Operations</h4>
-                          <p className="mt-1 text-sm text-gray-600">Bookkeeping • AP • Invoicing • Payroll</p>
-                        </div>
-                      </div>
-                      <div className="p-4 sm:p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
-                        <div className="flex-shrink-0">
-                          <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
-                            <ChartBarIcon className="w-5 h-5 text-brand-primary" />
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="text-base font-medium text-gray-900">Strategic Leadership</h4>
-                          <p className="mt-1 text-sm text-gray-600">Fractional CFO • Controller • Cash Flow Planning</p>
-                        </div>
-                      </div>
-                      <div className="p-4 sm:p-6 flex items-start gap-4 hover:bg-white/50 transition-colors duration-200">
-                        <div className="flex-shrink-0">
-                          <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
-                            <CurrencyDollarIcon className="w-5 h-5 text-brand-primary" />
-                          </div>
-                        </div>
-                        <div>
-                          <h4 className="text-base font-medium text-gray-900">Tax & Compliance</h4>
-                          <p className="mt-1 text-sm text-gray-600">Planning • Preparation • Optimization</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </AnimateInView>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Feature section */}
-      <div className="mt-8 sm:mt-16">
-        <div className="container-custom">
-          <SectionHeader
-            label="Our Services"
-            title="Comprehensive Financial Services"
-            description="Your one-stop solution for agency finance and accounting. Choose full-service partnership or individual services that match your needs."
-          />
+      {/* Services Section */}
+      <div className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#06966A05,_transparent_50%)]" />
+        </div>
+        
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+                Comprehensive Financial Services
+              </span>
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                Everything Your Agency Needs to{' '}
+                <span className="text-emerald-600">Scale</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                From day-to-day operations to strategic planning, we provide the financial expertise agencies need to grow from $1M to $15M+
+              </p>
+            </motion.div>
+          </div>
 
-          <AnimateInView delay={0.2}>
-            <div className="mx-auto mt-8 sm:mt-12 max-w-7xl relative">
-              {/* Decorative background */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#00A65108,_transparent_50%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4905,_transparent_60%)]" />
-              </div>
-
-              <dl className="grid max-w-xl grid-cols-1 gap-x-6 gap-y-6 sm:gap-x-8 sm:gap-y-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-12">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-14 sm:pl-16 bg-white/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/80 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg">
-                    <dt className="text-base font-semibold leading-7 text-gray-900">
-                      <div className="absolute left-3 sm:left-4 top-4 sm:top-6 flex h-10 sm:h-12 w-10 sm:w-12 items-center justify-center rounded-lg bg-brand-primary">
-                        <feature.icon className="h-5 sm:h-6 w-5 sm:w-6 text-white" aria-hidden="true" />
-                      </div>
-                      {feature.name}
-                    </dt>
-                    <dd className="mt-2 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">{feature.description}</dd>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Core Operations',
+                description: 'Expert handling of your day-to-day financial operations, from bookkeeping to payroll.',
+                features: ['Monthly Bookkeeping', 'AP & AR Management', 'Payroll Services', 'Financial Reporting'],
+                icon: BuildingOfficeIcon,
+                color: 'emerald',
+              },
+              {
+                title: 'Strategic Leadership',
+                description: 'High-level financial guidance and strategy to fuel your agency\'s growth.',
+                features: ['Fractional CFO', 'Cash Flow Planning', 'Growth Strategy', 'KPI Tracking'],
+                icon: ChartBarIcon,
+                color: 'blue',
+              },
+              {
+                title: 'Tax & Compliance',
+                description: 'Proactive tax planning and compliance to optimize your agency\'s tax position.',
+                features: ['Tax Planning', 'Tax Preparation', 'Entity Structure', 'Compliance'],
+                icon: ArrowTrendingUpIcon,
+                color: 'purple',
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative group"
+              >
+                <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-gray-900/5 transform transition-transform group-hover:scale-[1.025]" />
+                <div className="relative p-8">
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-${service.color}-600/10`}>
+                    <service.icon className={`h-6 w-6 text-${service.color}-600`} aria-hidden="true" />
                   </div>
-                ))}
-              </dl>
-            </div>
-          </AnimateInView>
+                  <h3 className="mt-6 text-xl font-semibold text-gray-900">{service.title}</h3>
+                  <p className="mt-2 text-gray-600">{service.description}</p>
+                  
+                  <ul className="mt-6 space-y-3">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center text-gray-600">
+                        <svg className="h-5 w-5 text-emerald-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-600/10 px-8 py-4 text-lg font-semibold text-emerald-600 hover:bg-emerald-600/20 transition-all duration-200"
+            >
+              View All Services
+              <svg
+                className="ml-2 h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Flywheel section */}
-      <div className="py-16 sm:py-24 lg:py-32">
-        <div className="container-custom">
-          <SectionHeader
-            label="How It Works"
-            title="The Flywheel Effect"
-            description="When your financial operations work in harmony, each element builds upon the last—creating unstoppable momentum for your agency."
-          />
-          <FlywheelAnimation />
+      {/* Industry Focus */}
+      <div className="relative py-32 overflow-hidden bg-gray-900">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A20,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4920,_transparent_60%)]" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <span className="inline-flex text-emerald-400 text-lg font-semibold">
+                Built for Digital Agencies
+              </span>
+              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                Specialized Financial Expertise for{' '}
+                <span className="text-emerald-400">Modern Agencies</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We understand the unique financial challenges of digital agencies. Our solutions are tailored to help you scale efficiently and profitably.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: 'Digital Marketing',
+                description: 'Optimize cash flow and profitability with retainer and project-based revenue streams.',
+                features: ['Revenue Recognition', 'Project Costing', 'Margin Analysis'],
+                icon: RocketLaunchIcon,
+                color: 'from-purple-500/10 to-purple-500/5',
+              },
+              {
+                name: 'Creative Studios',
+                description: 'Track project profitability and manage resource allocation effectively.',
+                features: ['Resource Tracking', 'Project Budgeting', 'Time Analysis'],
+                icon: SparklesIcon,
+                color: 'from-amber-500/10 to-amber-500/5',
+              },
+              {
+                name: 'Tech Companies',
+                description: 'Scale your SaaS and development services with strategic financial planning.',
+                features: ['MRR Tracking', 'Dev Cost Analysis', 'Growth Metrics'],
+                icon: LightBulbIcon,
+                color: 'from-blue-500/10 to-blue-500/5',
+              },
+              {
+                name: 'Design Agencies',
+                description: 'Balance creative excellence with financial performance and growth.',
+                features: ['Project ROI', 'Resource Planning', 'Cost Control'],
+                icon: BuildingOfficeIcon,
+                color: 'from-rose-500/10 to-rose-500/5',
+              },
+            ].map((industry, index) => (
+              <motion.div
+                key={industry.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + (index * 0.1) }}
+                className="relative group"
+              >
+                <div className="absolute inset-0 bg-white/5 backdrop-blur-sm rounded-3xl transform transition-transform group-hover:scale-[1.025]" />
+                <div className="relative p-8">
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${industry.color}`}>
+                    <industry.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-6 text-xl font-semibold text-white">{industry.name}</h3>
+                  <p className="mt-2 text-gray-300">{industry.description}</p>
+                  
+                  <ul className="mt-6 space-y-3">
+                    {industry.features.map((feature) => (
+                      <li key={feature} className="flex items-center text-gray-300">
+                        <svg className="h-5 w-5 text-emerald-400 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link
+              href="/success-stories"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-400/10 px-8 py-4 text-lg font-semibold text-emerald-400 hover:bg-emerald-400/20 transition-all duration-200"
+            >
+              View Success Stories
+              <svg
+                className="ml-2 h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Reviews section */}
-      <div className="py-16 sm:py-24 lg:py-32 bg-gray-50 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-0 w-72 h-72 bg-brand-primary/5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-3xl transform translate-x-1/3 translate-y-1/3" />
+      {/* Reviews Section */}
+      <div className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#06966A05,_transparent_50%)]" />
         </div>
+        
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+                Client Success Stories
+              </span>
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                Trusted by Leading{' '}
+                <span className="text-emerald-600">Digital Agencies</span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                See how we\'ve helped agencies like yours transform their financial operations and accelerate growth.
+              </p>
+            </motion.div>
+          </div>
 
-        <div className="container-custom">
-          <SectionHeader
-            label="Client Stories"
-            title="What Our Clients Say"
-            description="Hear from agency owners who have transformed their financial operations."
-          />
-          <div className="mt-8 sm:mt-12">
+          <div className="mt-12">
             <ReviewCarousel />
           </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                stat: '50+',
+                label: 'Active Agencies',
+                description: 'Trust us with their finances',
+              },
+              {
+                stat: '98%',
+                label: 'Client Retention',
+                description: 'Long-term partnerships',
+              },
+              {
+                stat: '5.0',
+                label: 'Average Rating',
+                description: 'Based on client reviews',
+              },
+              {
+                stat: '10+',
+                label: 'Years Experience',
+                description: 'In agency finance',
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative group"
+              >
+                <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-emerald-600/5 transform transition-transform group-hover:scale-[1.025]" />
+                <div className="relative p-8 text-center">
+                  <p className="text-4xl font-bold text-emerald-600">{item.stat}</p>
+                  <p className="mt-2 font-medium text-gray-900">{item.label}</p>
+                  <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Updated background animation */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#00A65110,_transparent_50%)] animate-pulse-slower" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4908,_transparent_60%)] animate-pulse-slow" />
-        <div className="absolute w-[200%] aspect-square -top-1/2 -left-1/2 bg-[conic-gradient(from_0deg_at_50%_50%,#00A65102_0deg,#1A2B4902_120deg,#00000000_240deg)] animate-slow-spin" />
-      </div>
+      {/* CTA Section */}
+      <div className="relative py-32 overflow-hidden bg-emerald-600">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A40,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4940,_transparent_60%)]" />
+        </div>
 
-      {/* Bottom gradient */}
-      <div
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#00A651] to-[#1A2B49] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center space-y-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <span className="inline-flex text-emerald-200 text-lg font-semibold">
+                  Ready to Scale Your Agency?
+                </span>
+                <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                  Transform Your Agency\'s{' '}
+                  <span className="relative">
+                    <span className="relative inline-block">
+                      <span className="relative z-10">
+                        Financial Future
+                      </span>
+                      <div className="absolute -bottom-2 left-0 right-0 h-1 bg-emerald-400/30 rounded-full" />
+                    </span>
+                  </span>
+                </h2>
+                <p className="text-xl leading-8 text-emerald-100 max-w-2xl mx-auto">
+                  Join the growing number of agencies that trust us with their financial success. Book a discovery call to learn how we can help your agency thrive.
+                </p>
+              </motion.div>
 
-      <CTASection />
-    </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              >
+                <a
+                  href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-emerald-600 shadow-sm hover:bg-emerald-50 transition-all duration-200 hover:scale-105"
+                >
+                  Book Discovery Call
+                  <svg
+                    className="ml-2.5 h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                  </svg>
+                </a>
+                <Link
+                  href="/services"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-4 text-lg font-semibold text-white ring-2 ring-white/20 hover:bg-white/10 transition-all duration-200"
+                >
+                  View Services
+                </Link>
+              </motion.div>
+
+              {/* Trust Badges */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="pt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
+              >
+                <div className="flex items-center gap-x-2 text-emerald-100">
+                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                  </svg>
+                  <span>98% Client Retention</span>
+                </div>
+                <div className="flex items-center gap-x-2 text-emerald-100">
+                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.464 3.314a.75.75 0 00-1.077-.798L5.26 4.966l3.977-1.514a.75.75 0 10-.474-1.424L3.214 4.416a.75.75 0 00-.445.832l1.458 6.5A.75.75 0 004.978 12h4.271a.75.75 0 000-1.5H5.421l-1.041-4.432 5.677-2.166a.75.75 0 00.407-.888z" />
+                  </svg>
+                  <span>Free Discovery Call</span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   )
 } 

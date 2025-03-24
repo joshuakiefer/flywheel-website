@@ -10,7 +10,6 @@ const stages = [
     subtitle: 'Foundation for Growth',
     description: 'Accurate financials unlock insights',
     icon: ChartBarIcon,
-    position: 'top-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
     delay: 0,
     color: 'bg-emerald-50 text-emerald-600'
   },
@@ -19,7 +18,6 @@ const stages = [
     subtitle: 'Data-Driven Decisions',
     description: 'Turn data into growth strategy',
     icon: ArrowPathIcon,
-    position: 'bottom-1/4 right-0 translate-x-1/2',
     delay: 0.2,
     color: 'bg-blue-50 text-blue-600'
   },
@@ -28,7 +26,6 @@ const stages = [
     subtitle: 'Accelerate Success',
     description: 'Reinvest for exponential returns',
     icon: CurrencyDollarIcon,
-    position: 'bottom-1/4 left-0 -translate-x-1/2',
     delay: 0.4,
     color: 'bg-purple-50 text-purple-600'
   }
@@ -36,95 +33,65 @@ const stages = [
 
 export default function FlywheelAnimation() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto py-12">
-      <div className="relative h-[500px] flex items-center justify-center">
-        {/* Background elements */}
-        <div className="absolute w-[450px] h-[450px] rounded-full border-2 border-gray-100" />
-        <div className="absolute w-[400px] h-[400px] rounded-full border border-gray-100" />
-        
-        {/* Rotating elements */}
-        <motion.div 
-          className="absolute w-[425px] h-[425px] rounded-full border border-brand-primary/20"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        />
-
-        {/* Animated paths */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 500 500">
-          <motion.path
-            d="M250,125 A125,125 0 1,1 250,375 A125,125 0 1,1 250,125"
-            fill="none"
-            stroke="url(#gradient)"
-            strokeOpacity="0.3"
-            strokeWidth="2"
-            strokeDasharray="4,8"
-            animate={{ strokeDashoffset: [0, -48] }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          />
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#10B981" />
-              <stop offset="50%" stopColor="#3B82F6" />
-              <stop offset="100%" stopColor="#8B5CF6" />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        {/* Stages */}
-        <div className="absolute inset-0">
-          {stages.map((stage) => (
-            <motion.div
-              key={stage.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: stage.delay, duration: 0.5 }}
-              className={`absolute ${stage.position} bg-white p-6 w-72 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className={`w-12 h-12 rounded-xl ${stage.color} flex items-center justify-center`}>
-                    <stage.icon className="w-6 h-6" />
-                  </div>
+    <div className="relative w-full max-w-5xl mx-auto py-8 sm:py-12">
+      {/* Stages Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 relative">
+        {stages.map((stage, index) => (
+          <motion.div
+            key={stage.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: stage.delay }}
+            className="relative"
+          >
+            <div className="bg-white rounded-xl p-6 shadow-sm ring-1 ring-gray-900/5 hover:shadow-md transition-all duration-300 h-full">
+              <div className="flex flex-col gap-4">
+                <div className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl ${stage.color.split(' ')[0]}`}>
+                  <stage.icon className={`h-6 w-6 ${stage.color.split(' ')[1]}`} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{stage.title}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{stage.subtitle}</p>
-                  <p className={`text-sm mt-2 font-medium ${stage.color.split(' ')[1]}`}>
-                    {stage.description}
-                  </p>
+                  <h3 className="text-xl font-semibold text-gray-900">{stage.title}</h3>
+                  <p className="mt-2 text-base font-medium text-gray-600">{stage.subtitle}</p>
+                  <p className="mt-2 text-base text-gray-500">{stage.description}</p>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Center content */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="relative z-10 text-center bg-gradient-to-br from-brand-primary/5 to-brand-primary/10 rounded-full p-10 shadow-lg backdrop-blur-sm"
-        >
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-            The Flywheel Effect
-          </h3>
-          <p className="text-sm text-gray-600 mt-2 max-w-[180px] font-medium">
-            Each stage powers the next, creating unstoppable momentum
-          </p>
-        </motion.div>
+            </div>
+            
+            {/* Connection arrow for desktop */}
+            {index < stages.length - 1 && (
+              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                <motion.svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                >
+                  <path
+                    d="M4 12h16m0 0l-6-6m6 6l-6 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-gray-400"
+                  />
+                </motion.svg>
+              </div>
+            )}
+          </motion.div>
+        ))}
       </div>
 
-      <motion.div 
+      {/* Description */}
+      <motion.p 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
-        className="text-center max-w-xl mx-auto mt-8"
+        className="mt-12 text-center text-lg text-gray-600 max-w-3xl mx-auto"
       >
-        <p className="text-base text-gray-600">
-          Our integrated approach creates a powerful growth engine: clean books provide strategic insights, 
-          driving better decisions that compound your success over time.
-        </p>
-      </motion.div>
+        Our integrated approach creates a powerful growth engine: clean books provide strategic insights, driving better decisions that compound your success over time.
+      </motion.p>
     </div>
   )
 } 

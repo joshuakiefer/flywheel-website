@@ -2,141 +2,278 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { CheckIcon, ArrowRightIcon, ArrowPathIcon } from '@heroicons/react/24/outline'
-import AnimateInView from '@/components/AnimateInView'
-import PricingSection from '@/components/PricingSection'
+import { CheckIcon } from '@heroicons/react/24/outline'
+
+const tiers = [
+  {
+    name: 'Core Operations',
+    id: 'core',
+    priceMonthly: 'From $1,000',
+    description: 'Perfect for agencies looking to establish a strong financial foundation.',
+    features: [
+      'Monthly Bookkeeping',
+      'Financial Statement Preparation',
+      'AP & AR Management',
+      'Payroll Services',
+      'Monthly Financial Review',
+      'Basic KPI Tracking',
+      'Software Setup & Support',
+      'Year-Round Support',
+    ],
+    cta: 'Get Started',
+    mostPopular: false,
+  },
+  {
+    name: 'Controller',
+    id: 'controller',
+    priceMonthly: 'From $3,000',
+    description: 'Ideal for agencies seeking deeper financial insights and guidance.',
+    features: [
+      'Everything in Core Operations',
+      'Advanced Financial Planning',
+      'Cash Flow Management',
+      'Budget Development',
+      'Advanced KPI Dashboard',
+      'Monthly Strategy Sessions',
+      'Team Training & Support',
+      'Priority Support',
+    ],
+    cta: 'Scale Your Agency',
+    mostPopular: true,
+  },
+  {
+    name: 'Fractional CFO',
+    id: 'cfo',
+    priceMonthly: 'From $5,500',
+    description: 'Strategic financial leadership for scaling agencies.',
+    features: [
+      'Everything in Controller',
+      'Strategic Financial Leadership',
+      'Growth & Profitability Planning',
+      'M&A Advisory',
+      'Board Meeting Support',
+      'Weekly Strategy Calls',
+      'Executive Team Support',
+      'VIP Support',
+    ],
+    cta: 'Transform Your Agency',
+    mostPopular: false,
+  },
+]
 
 export default function PricingPage() {
   return (
-    <main className="flex-auto">
-      {/* Hero section */}
-      <div className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Partner with Us to Scale Your Agency
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              We help agencies between $1M-$10M in revenue build financial momentum. Choose the partnership level that best fits your growth stage.
-            </p>
-          </div>
+    <main className="relative">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-emerald-50/40 to-white">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-emerald-100/30 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-blue-100/20 rounded-full blur-3xl animate-pulse" />
         </div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A10,_transparent_50%)]" />
       </div>
 
-      {/* Value props section */}
-      <div className="py-8">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl">
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
-                    <ArrowPathIcon className="w-5 h-5 text-brand-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">The Flywheel Effect</h3>
-                  <p className="mt-2 text-gray-600">
-                    Our integrated approach creates compound growth: clean books provide strategic insights, 
-                    driving better decisions that accelerate your success over time.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-lg bg-brand-primary/10 flex items-center justify-center">
-                    <CheckIcon className="w-5 h-5 text-brand-primary" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Dedicated Support</h3>
-                  <p className="mt-2 text-gray-600">
-                    All packages include monthly review meetings, direct access to your financial team, 
-                    and our commitment to your agency's growth.
-                  </p>
-                </div>
-              </div>
-            </div>
+      <div className="relative pt-32 pb-24 lg:pt-40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="mx-auto max-w-3xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-4"
+            >
+              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+                Transparent Pricing
+              </span>
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                Choose the Right Plan for Your{' '}
+                <span className="text-emerald-600">Agency's Growth</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Flexible plans designed to support your agency at every stage. All plans include our core financial expertise and dedicated support.
+              </p>
+            </motion.div>
           </div>
-        </div>
-      </div>
 
-      {/* Pricing section */}
-      <div className="py-8">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-              Transparent Pricing
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Select the level of financial expertise your agency needs, with the flexibility to scale as you grow.
-            </p>
-          </div>
-          <PricingSection />
-        </div>
-      </div>
-
-      {/* FAQ section */}
-      <div className="py-16 sm:py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-              Common Questions
-            </h2>
-            <dl className="mt-8 space-y-8">
-              <div>
-                <dt className="text-lg font-semibold text-gray-900">
-                  How do you determine which package is right for my agency?
-                </dt>
-                <dd className="mt-3 text-gray-600">
-                  During our discovery call, we'll discuss your agency's current stage, goals, and financial needs. 
-                  We'll recommend the best package based on your revenue, complexity, and growth objectives.
-                </dd>
-              </div>
-              <div>
-                <dt className="text-lg font-semibold text-gray-900">
-                  Can I upgrade my package as my agency grows?
-                </dt>
-                <dd className="mt-3 text-gray-600">
-                  Absolutely! Our packages are designed to scale with you. As your needs evolve, 
-                  we can adjust your services to match your growth.
-                </dd>
-              </div>
-              <div>
-                <dt className="text-lg font-semibold text-gray-900">
-                  What's included in the monthly review meetings?
-                </dt>
-                <dd className="mt-3 text-gray-600">
-                  We review your financial performance, discuss growth opportunities, and address any questions. 
-                  These meetings ensure you're making data-driven decisions for your agency.
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA section */}
-      <div className="py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-              Ready to Build Financial Momentum?
-            </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Schedule a discovery call to explore how we can help accelerate your agency's growth.
-            </p>
-            <div className="mt-8">
-              <a
-                href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary group"
+          {/* Pricing Section */}
+          <div className="mt-24 space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+            {tiers.map((tier, index) => (
+              <motion.div
+                key={tier.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative flex flex-col rounded-3xl bg-white shadow-xl shadow-gray-900/5"
               >
-                Schedule Discovery Call
-                <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
+                <div className="relative p-8 lg:p-12">
+                  {tier.mostPopular && (
+                    <div className="absolute -top-4 right-8 inline-flex items-center rounded-full bg-emerald-600 px-4 py-1 text-sm font-medium text-white">
+                      Most Popular
+                    </div>
+                  )}
+
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900">{tier.name}</h3>
+                    <p className="mt-4 flex items-baseline">
+                      <span className="text-4xl font-bold tracking-tight text-emerald-600">
+                        {tier.priceMonthly}
+                      </span>
+                      <span className="ml-1 text-sm text-gray-500">/month</span>
+                    </p>
+                    <p className="mt-6 text-base text-gray-600">{tier.description}</p>
+
+                    <ul className="mt-8 space-y-4">
+                      {tier.features.map((feature) => (
+                        <li key={feature} className="flex items-center">
+                          <div className="flex-shrink-0">
+                            <CheckIcon className="h-6 w-6 text-emerald-500" aria-hidden="true" />
+                          </div>
+                          <span className="ml-3 text-base text-gray-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <a
+                    href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-8 block w-full rounded-full px-6 py-4 text-center text-base font-semibold transition-all duration-200 hover:scale-105 ${
+                      tier.mostPopular
+                        ? 'bg-emerald-600 text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500'
+                        : 'bg-emerald-600/10 text-emerald-600 hover:bg-emerald-600/20'
+                    }`}
+                  >
+                    {tier.cta}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Tax Services Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-24 mx-auto max-w-3xl rounded-3xl bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 lg:p-12 text-white"
+          >
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold">Tax Services</h2>
+              <p className="text-xl text-emerald-100">
+                Comprehensive tax planning and preparation services tailored to your agency's needs
+              </p>
+              <div className="mt-6 inline-flex text-3xl font-bold">
+                Custom Pricing
+              </div>
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Services Include:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <span>Tax Planning & Strategy</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <span>Tax Return Preparation</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <span>Entity Structure Optimization</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Additional Benefits:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <span>Year-Round Tax Support</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <span>Multi-State Tax Compliance</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <span>IRS Representation</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-8">
+                <a
+                  href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-semibold text-emerald-600 shadow-xl shadow-emerald-900/10 hover:bg-emerald-50 transition-all duration-200 hover:scale-105"
+                >
+                  Discuss Tax Services
+                  <svg
+                    className="ml-2.5 h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
+          </motion.div>
+
+          {/* FAQ Section */}
+          <div className="mx-auto max-w-3xl mt-32">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center space-y-4"
+            >
+              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+                Common Questions
+              </span>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-gray-600">
+                Have more questions? Book a discovery call to discuss your specific needs.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-12 space-y-8"
+            >
+              {[
+                {
+                  question: 'What\'s included in the monthly fee?',
+                  answer: 'Our monthly fee includes all core services listed in each plan, plus unlimited email support and regular check-ins. There are no hidden fees or surprise charges.',
+                },
+                {
+                  question: 'Can I upgrade or downgrade my plan?',
+                  answer: 'Yes, you can adjust your plan as your needs change. We\'ll work with you to ensure a smooth transition and that you have the right level of support.',
+                },
+                {
+                  question: 'Do you offer custom solutions?',
+                  answer: 'Absolutely! Our Enterprise plan is fully customizable to meet your specific needs. We\'ll work together to create a package that aligns with your goals.',
+                },
+                {
+                  question: 'What software do you use?',
+                  answer: 'We work with leading financial software including QuickBooks, Xero, and other industry-standard tools. We\'ll help you choose the best stack for your needs.',
+                },
+              ].map((faq, index) => (
+                <div key={index} className="space-y-2">
+                  <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                  <p className="text-base text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

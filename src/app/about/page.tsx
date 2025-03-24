@@ -39,10 +39,10 @@ const expertise = [
 ]
 
 const achievements = [
-  { metric: '10+', label: 'Years Supporting Agencies' },
-  { metric: '100+', label: 'Happy Agency Clients' },
-  { metric: '$500M+', label: 'Client Revenue Guided' },
-  { metric: '96%', label: 'Client Satisfaction' },
+  { metric: '50+', label: 'Active Agencies', sublabel: 'Growing $1M-$15M' },
+  { metric: '$150M+', label: 'Revenue Managed', sublabel: 'Annually' },
+  { metric: '45+', label: 'Years Experience', sublabel: 'Combined Agency Finance' },
+  { metric: '98%', label: 'Client Retention', sublabel: 'Long-term Partners' },
 ]
 
 export default function AboutPage() {

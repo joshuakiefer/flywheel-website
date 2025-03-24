@@ -2,8 +2,7 @@
 
 import React from 'react'
 import AnimateInView from '@/components/AnimateInView'
-import { ChartBarIcon, CurrencyDollarIcon, DocumentTextIcon, PresentationChartLineIcon, ArrowPathIcon, ClipboardDocumentCheckIcon, CalculatorIcon, BuildingOfficeIcon, ChartPieIcon, BanknotesIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import { DocumentTextIcon, ChartBarIcon, CurrencyDollarIcon, ArrowPathIcon, ClipboardDocumentCheckIcon, CalculatorIcon, BanknotesIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const services = [
   {
@@ -37,32 +36,32 @@ const services = [
   },
   {
     id: 'cfo',
-    name: 'CFO Services',
-    description: 'Your personal financial strategist, helping transform your agency from good to exceptional with data-backed guidance.',
+    name: 'Strategic Financial Leadership',
+    description: 'Transform your financial data into strategic insights that drive growth and profitability.',
     icon: ChartBarIcon,
     features: [
       {
-        name: 'Growth Strategy',
-        description: 'Turn your growth goals into reality with clear financial roadmaps and milestone tracking.',
-        icon: ChartPieIcon,
-      },
-      {
-        name: 'Profit Maximization',
-        description: 'Uncover hidden opportunities and optimize every aspect of your agency\'s finances.',
-        icon: PresentationChartLineIcon,
-      },
-      {
-        name: 'Decision Support',
-        description: 'Get confident answers to your biggest questions about hiring, scaling, and investing.',
+        name: 'Growth Strategy Development',
+        description: 'Create and execute financial strategies that support your agency\'s growth goals.',
         icon: ChartBarIcon,
       },
       {
-        name: 'Custom Insights',
-        description: 'Beautiful, actionable dashboards that tell the story behind your numbers.',
-        icon: BuildingOfficeIcon,
+        name: 'Profitability Analysis',
+        description: 'Identify opportunities to improve margins and optimize your agency\'s financial performance.',
+        icon: CalculatorIcon,
+      },
+      {
+        name: 'Cash Flow Optimization',
+        description: 'Ensure healthy cash flow with proactive planning and management strategies.',
+        icon: BanknotesIcon,
+      },
+      {
+        name: 'Strategic Decision Support',
+        description: 'Get expert guidance for key business decisions, backed by data and industry expertise.',
+        icon: ClipboardDocumentCheckIcon,
       },
     ],
-    cta: 'Transform Your Agency',
+    cta: 'Scale Your Agency',
   },
   {
     id: 'tax',
@@ -78,17 +77,17 @@ const services = [
       {
         name: 'Structure Optimization',
         description: 'Ensure your business structure supports both tax efficiency and scaling plans.',
-        icon: BuildingOfficeIcon,
+        icon: ClipboardDocumentCheckIcon,
       },
       {
-        name: 'Peace of Mind Compliance',
+        name: 'Compliance Management',
         description: 'Stay ahead of deadlines and requirements with our proactive approach.',
         icon: ClipboardDocumentCheckIcon,
       },
       {
-        name: 'Maximum Savings',
+        name: 'Tax Savings Opportunities',
         description: 'We find every legitimate opportunity to reduce your tax burden and reinvest in growth.',
-        icon: CurrencyDollarIcon,
+        icon: BanknotesIcon,
       },
     ],
     cta: 'Save on Taxes',
@@ -97,121 +96,90 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-28 pb-24 bg-white">
-      <div className="container-custom">
-        <AnimateInView>
-          <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+    <main className="relative">
+      {/* Hero Section */}
+      <div className="relative py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Services That Power Your Growth
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
               Everything you need to transform your agency\'s finances from a source of stress into a powerful growth engine.
             </p>
           </div>
-        </AnimateInView>
+        </div>
+      </div>
 
-        <div className="mt-24 space-y-24">
-          {services.map((service, serviceIdx) => (
-            <div
-              key={service.id}
-              id={service.id}
-              className="scroll-mt-28"
-            >
-              <AnimateInView delay={serviceIdx * 0.1}>
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
-                  <div>
-                    <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-brand-primary bg-opacity-10">
-                      <service.icon className="h-8 w-8 text-brand-primary" aria-hidden="true" />
+      {/* Services Grid */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 sm:pb-32">
+        <div className="space-y-24">
+          {services.map((service, index) => (
+            <AnimateInView key={service.id} delay={index * 0.1}>
+              <div className="relative">
+                <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+                  <div className="space-y-6">
+                    <div className="flex items-center gap-x-3">
+                      <service.icon className="h-12 w-12 text-emerald-600" />
+                      <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                        {service.name}
+                      </h2>
                     </div>
-                    <h2 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                      {service.name}
-                    </h2>
-                    <p className="mt-4 text-lg text-gray-600">
-                      {service.description}
-                    </p>
-                    <div className="mt-8">
-                      <Link
-                        href="/contact"
-                        className="btn-primary inline-flex items-center gap-x-2"
+                    <p className="text-lg text-gray-600">{service.description}</p>
+                    <div>
+                      <a
+                        href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105 hover:shadow-emerald-600/20"
                       >
                         {service.cta}
-                        <span aria-hidden="true">→</span>
-                      </Link>
+                        <ArrowRightIcon className="ml-2.5 h-5 w-5" />
+                      </a>
                     </div>
                   </div>
-                  <div className="bg-gray-50 rounded-2xl p-8">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-8">
-                      What\'s Included
-                    </h3>
-                    <div className="grid gap-8 sm:grid-cols-2">
-                      {service.features.map((feature) => (
-                        <div key={feature.name} className="relative">
-                          <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-                            <feature.icon className="h-5 w-5 flex-none text-brand-primary" aria-hidden="true" />
-                            {feature.name}
-                          </dt>
-                          <dd className="mt-2 text-base text-gray-600">{feature.description}</dd>
+
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    {service.features.map((feature) => (
+                      <div
+                        key={feature.name}
+                        className="relative group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 hover:bg-gradient-to-br hover:from-emerald-50 hover:to-emerald-100/50 transition-all duration-200"
+                      >
+                        <div className="flex items-center gap-x-3">
+                          <feature.icon className="h-6 w-6 text-emerald-600" />
+                          <h3 className="font-semibold text-gray-900">{feature.name}</h3>
                         </div>
-                      ))}
-                    </div>
+                        <p className="mt-3 text-gray-600">{feature.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </AnimateInView>
-            </div>
+              </div>
+            </AnimateInView>
           ))}
         </div>
 
-        {/* FAQ Section */}
-        <div className="mx-auto max-w-4xl mt-32">
-          <AnimateInView>
-            <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Questions You Might Have
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                We believe in complete transparency. Here are answers to common questions about working together.
-              </p>
-            </div>
-          </AnimateInView>
-
-          <AnimateInView delay={0.2}>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
-              <div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  How quickly can you get started?
-                </dt>
-                <dd className="mt-2 text-base text-gray-600">
-                  We move at your pace. Most clients are up and running within a week of our first chat. Our streamlined onboarding gets you results fast while ensuring a smooth transition.
-                </dd>
-              </div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  What makes you different from other firms?
-                </dt>
-                <dd className="mt-2 text-base text-gray-600">
-                  We exclusively serve agencies like yours. This focus means we understand your unique challenges and opportunities. Plus, you get direct access to senior team members who\'ve helped dozens of agencies scale.
-                </dd>
-              </div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  How do you price your services?
-                </dt>
-                <dd className="mt-2 text-base text-gray-600">
-                  We believe in transparent, value-based pricing that grows with you. We\'ll create a custom package based on your needs and goals, with clear deliverables and no surprises.
-                </dd>
-              </div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-gray-900/5">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  What support can I expect?
-                </dt>
-                <dd className="mt-2 text-base text-gray-600">
-                  You get direct access to your dedicated team through phone, email, and chat. We\'re here when you need us, with regular check-ins and quarterly strategy sessions to keep you on track.
-                </dd>
-              </div>
-            </dl>
-          </AnimateInView>
+        {/* CTA Section */}
+        <div className="mt-32 text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+            Ready to Transform Your Agency\'s Finances?
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            Book a discovery call to discuss how we can help you achieve your financial goals.
+          </p>
+          <div className="mt-8">
+            <a
+              href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105 hover:shadow-emerald-600/20"
+            >
+              Book Discovery Call
+              <ArrowRightIcon className="ml-2.5 h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   )
 } 

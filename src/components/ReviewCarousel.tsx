@@ -6,22 +6,22 @@ import { StarIcon } from '@heroicons/react/24/solid'
 
 const reviews = [
   {
-    text: "Flywheel transformed our financial operations. They helped us scale from $2M to $8M in revenue while maintaining healthy profit margins. Their deep understanding of agency finances and proactive approach to cash flow management has been invaluable.",
-    author: "Jared Bauman",
-    company: "Bauman Creative",
-    date: "CEO & Founder"
+    text: "Flywheel Bookkeeping has helped us stay organized and on top of our finances. They're responsive and proactive.",
+    author: "Jon Winters",
+    company: "Verified Client",
+    date: "a month ago"
   },
   {
-    text: "Working with Flywheel has given us unprecedented clarity into our finances. Their expertise helped us optimize our pricing strategy and improve our profit margins by 15%. The ROI on their services has been exceptional.",
-    author: "Brent Weaver",
-    company: "UGURUS",
-    date: "CEO"
+    text: "Flexible and willing to accommodate customized needs. Strong knowledge of Quickbooks and Excel which is very helpful.",
+    author: "June Keating",
+    company: "Verified Client",
+    date: "a month ago"
   },
   {
-    text: "Since partnering with Flywheel, we've reduced overhead by 22% and improved our cash flow forecasting accuracy to 95%. Their strategic insights have been crucial in helping us make data-driven decisions for scaling our agency.",
-    author: "Troy Dean",
-    company: "WP Elevation",
-    date: "Founder"
+    text: "Flywheel is a great accounting partner. Through the highs and lows of running a creative business, I've found their consistency and approach are something I can reliably count on.",
+    author: "Earl G",
+    company: "Verified Client",
+    date: "2 days ago"
   },
 ]
 

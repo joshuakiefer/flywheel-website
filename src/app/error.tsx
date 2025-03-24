@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import Link from 'next/link'
 
 export default function Error({
   error,
@@ -16,30 +15,14 @@ export default function Error({
   }, [error])
 
   return (
-    <div className="min-h-screen bg-white px-6 py-24 sm:py-32 lg:px-8">
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="text-base font-semibold text-brand-primary">There was a problem</p>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-          Something went wrong
-        </h1>
-        <p className="mt-6 text-base leading-7 text-gray-600">
-          We apologize for the inconvenience. Our team has been notified and is working to fix the issue.
-        </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <button
-            onClick={reset}
-            className="btn-primary"
-          >
-            Try again
-          </button>
-          <Link
-            href="/"
-            className="text-sm font-semibold text-gray-900"
-          >
-            Go back home <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <h2 className="text-2xl font-semibold mb-4">Something went wrong!</h2>
+      <button
+        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+        onClick={() => reset()}
+      >
+        Try again
+      </button>
     </div>
   )
 } 

@@ -1,71 +1,59 @@
 'use client'
 
-import Link from 'next/link'
 import { motion } from 'framer-motion'
-import AnimateInView from './AnimateInView'
 
 export default function CTASection() {
   return (
-    <section className="relative isolate overflow-hidden bg-brand-primary py-24 sm:py-32">
-      {/* Background pattern */}
-      <div className="absolute inset-0 -z-10 opacity-10">
-        <svg
-          className="absolute left-[calc(50%-18rem)] top-10 h-[64rem] max-w-none stroke-white/20 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="pattern-1"
-              width={200}
-              height={200}
-              x="50%"
-              y="50%"
-              patternUnits="userSpaceOnUse"
-              patternTransform="translate(0 0)"
-            >
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y="50%" className="overflow-visible fill-brand-primary/20">
-            <path
-              d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect width="100%" height="100%" strokeWidth={0} fill="url(#pattern-1)" />
-        </svg>
+    <section className="relative isolate">
+      {/* Background */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-emerald-700" />
+        <div className="absolute inset-y-0 right-1/2 -left-72 -z-10 mr-16 w-[200%] origin-top-right skew-x-[-30deg] bg-white/10 ring-1 ring-white/10 sm:-left-100 lg:-left-100" />
+        <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-right skew-x-[-30deg] bg-white/10 ring-1 ring-white/10 sm:-left-100 lg:-left-100" />
       </div>
 
-      <div className="container-custom relative">
-        <AnimateInView>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Ready to Scale Your Agency?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-100">
-              Get the financial clarity and strategic guidance you need to take your agency to the next level.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+      <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:max-w-none">
+          <div className="text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Ready to Transform Your Agency's Finances?
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300"
+            >
+              Book a discovery call to explore how we can help your agency achieve its financial goals.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="mt-10 flex items-center justify-center gap-x-6"
+            >
+              <a
+                href="/schedule"
+                className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-emerald-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
               >
-                <Link
-                  href="/contact"
-                  className="rounded-md bg-white px-8 py-4 text-base font-semibold text-brand-primary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
-                  Schedule Your Free Consultation
-                </Link>
-              </motion.div>
-              <Link
+                Schedule Your Discovery Call
+              </a>
+              <a
                 href="/services"
-                className="text-base font-semibold leading-6 text-white"
+                className="text-base font-semibold leading-6 text-white hover:text-gray-100 transition-colors"
               >
                 Learn More <span aria-hidden="true">→</span>
-              </Link>
-            </div>
+              </a>
+            </motion.div>
           </div>
-        </AnimateInView>
+        </div>
       </div>
     </section>
   )

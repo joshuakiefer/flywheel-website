@@ -18,10 +18,15 @@
   }
 
   :root {
-    --brand-primary: #00A651;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    
+    /* Updated brand colors to emerald */
+    --brand-primary: #059669;
+    --brand-primary-dark: #047857;
+    --brand-primary-light: #d1fae5;
     --brand-secondary: #1A2B49;
-    --brand-primary-light: #e6f7ef;
-    --brand-secondary-light: #e8eaf0;
   }
 
   /* Improved focus styles */
@@ -37,11 +42,11 @@
   }
 
   .btn-primary {
-    @apply rounded-md bg-brand-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-brand-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-all duration-200;
+    @apply rounded-full bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-all duration-200;
+    @apply rounded-full bg-white px-6 py-3 text-base font-semibold text-emerald-600 ring-1 ring-emerald-600/20 hover:bg-emerald-50 transition-all duration-200;
   }
 
   /* Card styles */
@@ -62,7 +67,8 @@
   }
 
   .animate-float-delayed {
-    animation: float 6s ease-in-out 2s infinite;
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
   }
 
   .animate-fade-up {
@@ -94,7 +100,7 @@
   }
 
   .animate-slow-spin {
-    animation: slow-spin 60s linear infinite;
+    animation: spin 20s linear infinite;
   }
 
   .animate-draw {
@@ -103,11 +109,14 @@
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+  0% {
+    transform: translateY(0px);
   }
   50% {
     transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
@@ -182,7 +191,7 @@
   }
 }
 
-@keyframes slow-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
