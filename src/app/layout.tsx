@@ -7,7 +7,7 @@ import Navigation from '@/components/Navigation'
 const inter = Inter({ subsets: ['latin'] })
 const montserrat = Montserrat({ subsets: ['latin'] })
 
-export const viewport: Viewport = {
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -15,8 +15,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Flywheel Bookkeeping - Financial Strategy for Modern Agencies',
-  description: 'Specialized bookkeeping, CFO, and tax services for agencies scaling from $1M to $15M. Transform your agency\'s financial management with expert guidance.',
+  title: 'Flywheel Bookkeeping - Financial Strategy for Growing Businesses',
+  description: 'Specialized bookkeeping, CFO, and tax services for businesses scaling from $1M to $20M. Transform your business\'s financial management with expert guidance.',
   keywords: 'agency bookkeeping, CFO services, tax planning, financial strategy, agency growth',
   metadataBase: new URL('https://flywheelbookkeeping.com'),
   icons: {

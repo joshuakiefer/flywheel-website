@@ -9,11 +9,11 @@ import { CheckCircleIcon } from '@heroicons/react/24/outline'
 const values = [
   {
     name: 'Growth Partnership',
-    description: 'We help agencies like yours grow from $1M to $15M with clear financial strategies that make sense for your business.',
+    description: 'We help businesses like yours grow from $1M to $20M with clear financial strategies that make sense for your industry.',
   },
   {
     name: 'Personal Support',
-    description: 'You\'ll work directly with our experienced team who understand the unique challenges of running a creative agency.',
+    description: 'You\'ll work directly with our experienced team who understand the unique challenges of scaling a business.',
   },
   {
     name: 'Clear Insights',
@@ -39,9 +39,9 @@ const expertise = [
 ]
 
 const achievements = [
-  { metric: '50+', label: 'Active Agencies', sublabel: 'Growing $1M-$15M' },
+  { metric: '50+', label: 'Active Clients', sublabel: 'Growing $1M-$20M' },
   { metric: '$150M+', label: 'Revenue Managed', sublabel: 'Annually' },
-  { metric: '45+', label: 'Years Experience', sublabel: 'Combined Agency Finance' },
+  { metric: '45+', label: 'Years Experience', sublabel: 'Combined Finance' },
   { metric: '98%', label: 'Client Retention', sublabel: 'Long-term Partners' },
 ]
 
@@ -53,11 +53,14 @@ export default function AboutPage() {
         <div className="container-custom py-16 sm:py-24">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 lg:text-6xl">
-                Your Partner in Agency Growth
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center">
+                Your Partner in
+                Business Growth
               </h1>
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-                We help creative agencies like yours build strong financial foundations for sustainable growth.
+              <p className="mt-6 text-lg sm:text-xl text-gray-600 text-center max-w-3xl mx-auto">
+                We help growing businesses build strong financial foundations for
+                sustainable growth. Our expertise spans across industries, providing the financial clarity
+                needed to scale from $1M to $20M and beyond.
               </p>
             </div>
           </AnimateInView>
@@ -69,7 +72,7 @@ export default function AboutPage() {
                 <figure className="border-l-4 border-brand-primary pl-4 sm:pl-8">
                   <blockquote className="text-lg sm:text-xl font-semibold leading-8 tracking-tight text-gray-900">
                     <p>
-                      "I started this firm because I saw how many talented agencies were held back by financial complexity. Our mission is simple: to help you build a strong financial foundation so you can focus on what you do best – creating amazing work for your clients."
+                      "I started this firm because I saw how many talented businesses were held back by financial complexity. Our mission is simple: to help you build a strong financial foundation so you can focus on what you do best – growing your business."
                     </p>
                   </blockquote>
                   <figcaption className="mt-6 sm:mt-8 flex items-center gap-x-4 sm:gap-x-6">
@@ -86,17 +89,17 @@ export default function AboutPage() {
 
               <div className="lg:col-span-7">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">
-                  Built for Creative Agencies
+                  Built for Growing Businesses
                 </h2>
                 <div className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
                   <p className="mb-4">
-                    We've worked with hundreds of creative agencies, and we've seen firsthand how the right financial support can transform a good agency into a great one.
+                    We've worked with hundreds of growing businesses, and we've seen firsthand how the right financial support can transform a good company into a great one.
                   </p>
                   <p className="mb-4">
-                    Our approach combines deep agency experience with practical financial strategies that work in the real world. No complex jargon, just clear guidance that helps you grow.
+                    Our approach combines deep industry experience with practical financial strategies that work in the real world. No complex jargon, just clear guidance that helps you grow.
                   </p>
                   <p>
-                    Whether you're looking to scale from $1M to $15M or just want better financial clarity, we're here to help you succeed on your terms.
+                    Whether you're looking to scale from $1M to $20M or just want better financial clarity, we're here to help you succeed on your terms.
                   </p>
                 </div>
 
@@ -135,7 +138,7 @@ export default function AboutPage() {
               <div className="mx-auto max-w-2xl sm:text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">Strategic Methodology</h2>
                 <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-                  A sophisticated framework engineered specifically for agencies navigating critical growth phases.
+                  A sophisticated framework engineered specifically for businesses navigating critical growth phases.
                 </p>
               </div>
               <dl className="mx-auto mt-12 sm:mt-16 grid max-w-2xl grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
@@ -159,7 +162,7 @@ export default function AboutPage() {
                   Ready to Architect Your Growth?
                 </h2>
                 <p className="mx-auto mt-4 sm:mt-6 max-w-xl text-center text-base sm:text-lg leading-7 sm:leading-8 text-gray-300">
-                  Schedule a strategic analysis to evaluate your agency's growth potential.
+                  Schedule a strategic analysis to evaluate your business's growth potential.
                 </p>
                 <div className="mt-8 sm:mt-10 flex justify-center">
                   <Link

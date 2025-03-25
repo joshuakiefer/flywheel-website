@@ -7,53 +7,53 @@ import { ArrowRightIcon, ChartBarIcon, ArrowTrendingUpIcon, CurrencyDollarIcon }
 
 const successStories = [
   {
-    title: "Scaling Operations with Financial Clarity",
-    client: "Digital Marketing Agency",
+    title: "Streamlining Operations for Rapid Growth",
+    client: "Manufacturing Company",
     results: [
-      "Grew from $2M to $8M in revenue",
-      "Improved profit margins by 15%",
-      "Streamlined financial operations"
+      "Scaled from $3M to $12M in revenue",
+      "Reduced operational costs by 22%",
+      "Implemented automated financial reporting"
     ],
-    quote: "Flywheel has transformed how we handle our finances. Their deep understanding of agency operations has helped us optimize our cash flow and grow sustainably.",
-    author: "Sarah Johnson",
-    role: "CEO, Digital Spark Agency",
+    quote: "Flywheel's expertise helped us navigate our rapid growth phase while maintaining strong financial controls. Their strategic guidance has been instrumental in our expansion.",
+    author: "David Martinez",
+    role: "CEO, PrecisionTech Manufacturing",
     metrics: {
       growth: "300%",
-      timeframe: "24 months",
+      timeframe: "36 months",
       focus: "Revenue Growth"
     }
   },
   {
-    title: "Optimizing Profitability Through Strategic Planning",
-    client: "Creative Design Studio",
+    title: "Maximizing Profitability in E-commerce",
+    client: "Online Retail Business",
     results: [
-      "Increased project profitability by 25%",
-      "Reduced overhead costs by 20%",
-      "Implemented effective resource planning"
+      "Increased profit margins by 18%",
+      "Optimized inventory management",
+      "Improved cash flow forecasting"
     ],
-    quote: "Working with Flywheel gave us unprecedented clarity into our finances. Their expertise helped us optimize our pricing strategy and significantly improve our margins.",
-    author: "Michael Chen",
-    role: "Founder, Design Collective",
+    quote: "Working with Flywheel transformed our financial operations. Their insights helped us optimize our inventory management and significantly improve our bottom line.",
+    author: "Emily Zhang",
+    role: "Founder, StyleHub E-commerce",
     metrics: {
-      growth: "25%",
-      timeframe: "12 months",
-      focus: "Profit Margins"
+      growth: "85%",
+      timeframe: "18 months",
+      focus: "Profit Growth"
     }
   },
   {
-    title: "Building a Foundation for Sustainable Growth",
-    client: "Web Development Agency",
+    title: "Scaling Professional Services",
+    client: "IT Consulting Firm",
     results: [
-      "Scaled to $5M in annual revenue",
-      "Established efficient financial systems",
-      "Improved cash flow management"
+      "Grew to $8M in annual revenue",
+      "Enhanced project profitability by 25%",
+      "Streamlined billing processes"
     ],
-    quote: "Flywheel helped us build the financial foundation we needed to scale. Their strategic guidance has been invaluable in our growth journey.",
-    author: "Alex Rivera",
-    role: "Managing Partner, WebTech Solutions",
+    quote: "Flywheel helped us build scalable financial systems that support our growth. Their strategic approach to financial management has been key to our success.",
+    author: "James Wilson",
+    role: "Managing Partner, TechPro Solutions",
     metrics: {
-      growth: "150%",
-      timeframe: "18 months",
+      growth: "160%",
+      timeframe: "24 months",
       focus: "Revenue Growth"
     }
   }
@@ -63,14 +63,14 @@ export default function SuccessStories() {
   return (
     <main className="relative">
       {/* Hero Section */}
-      <div className="relative py-24 sm:py-32">
+      <div className="relative pt-24 sm:pt-28 lg:pt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Success Stories
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              See how we've helped agencies like yours achieve their financial goals and scale with confidence.
+              See how we've helped businesses like yours achieve their financial goals and scale with confidence.
             </p>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function SuccessStories() {
             Ready to Write Your Success Story?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Join the growing number of agencies achieving their financial goals with Flywheel.
+            Join the growing number of businesses achieving their financial goals with Flywheel.
           </p>
           <div className="mt-8">
             <a

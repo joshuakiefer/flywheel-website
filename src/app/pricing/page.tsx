@@ -9,7 +9,7 @@ const tiers = [
     name: 'Core Operations',
     id: 'core',
     priceMonthly: 'From $1,000',
-    description: 'Perfect for agencies looking to establish a strong financial foundation.',
+    description: 'Perfect for businesses looking to establish a strong financial foundation.',
     features: [
       'Monthly Bookkeeping',
       'Financial Statement Preparation',
@@ -27,7 +27,7 @@ const tiers = [
     name: 'Controller',
     id: 'controller',
     priceMonthly: 'From $3,000',
-    description: 'Ideal for agencies seeking deeper financial insights and guidance.',
+    description: 'Ideal for businesses seeking deeper financial insights and guidance.',
     features: [
       'Everything in Core Operations',
       'Advanced Financial Planning',
@@ -38,14 +38,14 @@ const tiers = [
       'Team Training & Support',
       'Priority Support',
     ],
-    cta: 'Scale Your Agency',
+    cta: 'Scale Your Business',
     mostPopular: true,
   },
   {
     name: 'Fractional CFO',
     id: 'cfo',
     priceMonthly: 'From $5,500',
-    description: 'Strategic financial leadership for scaling agencies.',
+    description: 'Strategic financial leadership for scaling businesses.',
     features: [
       'Everything in Controller',
       'Strategic Financial Leadership',
@@ -56,7 +56,7 @@ const tiers = [
       'Executive Team Support',
       'VIP Support',
     ],
-    cta: 'Transform Your Agency',
+    cta: 'Transform Your Business',
     mostPopular: false,
   },
 ]
@@ -83,16 +83,19 @@ export default function PricingPage() {
               transition={{ duration: 0.6 }}
               className="space-y-4"
             >
-              <span className="inline-flex text-emerald-600 text-lg font-semibold">
-                Transparent Pricing
-              </span>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Choose the Right Plan for Your{' '}
-                <span className="text-emerald-600">Agency's Growth</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Flexible plans designed to support your agency at every stage. All plans include our core financial expertise and dedicated support.
-              </p>
+              <div className="text-center">
+                <h2 className="text-base font-semibold leading-7 text-emerald-600">
+                  Transparent Pricing
+                </h2>
+                <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                  Choose the Right Plan for Your
+                  <span className="text-emerald-600"> Business's Growth</span>
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
+                  Flexible plans designed to support your business at every stage. All
+                  plans include our core financial expertise and dedicated support.
+                </p>
+              </div>
             </motion.div>
           </div>
 
@@ -162,7 +165,7 @@ export default function PricingPage() {
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold">Tax Services</h2>
               <p className="text-xl text-emerald-100">
-                Comprehensive tax planning and preparation services tailored to your agency's needs
+                Comprehensive tax planning and preparation services tailored to your business needs
               </p>
               <div className="mt-6 inline-flex text-3xl font-bold">
                 Custom Pricing
@@ -261,11 +264,11 @@ export default function PricingPage() {
                 },
                 {
                   question: 'Do you offer custom solutions?',
-                  answer: 'Absolutely! Our Enterprise plan is fully customizable to meet your specific needs. We\'ll work together to create a package that aligns with your goals.',
+                  answer: 'Absolutely! We can customize any of our plans to meet your specific business needs. We\'ll work together to create a package that aligns with your goals.',
                 },
                 {
                   question: 'What software do you use?',
-                  answer: 'We work with leading financial software including QuickBooks, Xero, and other industry-standard tools. We\'ll help you choose the best stack for your needs.',
+                  answer: 'We work with leading financial software including QuickBooks, Xero, and other industry-standard tools. We\'ll help you choose the best stack for your business needs.',
                 },
               ].map((faq, index) => (
                 <div key={index} className="space-y-2">
