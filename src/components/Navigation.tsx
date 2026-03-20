@@ -25,18 +25,25 @@ export default function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-lg' : 'bg-white'
+          isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-white'
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
+          <div className="flex h-16 sm:h-20 items-center justify-between">
+            {/* Logo - icon only on small mobile, icon+text on larger mobile, full with tagline on desktop */}
             <Link href="/" className="flex items-center">
-              <FlywheelLogo height={40} showTagline={true} />
+              {/* Mobile: no tagline */}
+              <div className="block lg:hidden">
+                <FlywheelLogo height={32} showTagline={false} />
+              </div>
+              {/* Desktop: with tagline */}
+              <div className="hidden lg:block">
+                <FlywheelLogo height={38} showTagline={true} />
+              </div>
             </Link>
 
             {/* Navigation Links */}
-            <div className="hidden md:flex md:items-center md:space-x-8">
+            <div className="hidden md:flex md:items-center md:space-x-6 lg:space-x-8">
               {[
                 { name: 'Home', href: '/' },
                 { name: 'Services', href: '/services' },
@@ -47,7 +54,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-base font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 relative group"
+                  className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 relative group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full" />
@@ -56,11 +63,11 @@ export default function Navigation() {
             </div>
 
             {/* Right Section */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-4 sm:space-x-6">
               {/* Contact Link */}
               <Link
                 href="/contact"
-                className="hidden md:inline-flex text-base font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200"
+                className="hidden md:inline-flex text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200"
               >
                 Contact
               </Link>
@@ -70,7 +77,7 @@ export default function Navigation() {
                 href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
+                className="hidden md:inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
               >
                 Book Discovery Call
                 <svg
@@ -91,7 +98,7 @@ export default function Navigation() {
               {/* Mobile Menu Button */}
               <button
                 type="button"
-                className="md:hidden rounded-full p-2.5 text-gray-700 hover:bg-gray-100"
+                className="md:hidden rounded-full p-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setIsMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open menu</span>
@@ -121,4 +128,4 @@ export default function Navigation() {
       />
     </>
   )
-} 
+}

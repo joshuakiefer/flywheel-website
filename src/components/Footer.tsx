@@ -59,7 +59,7 @@ export default function Footer() {
               <FlywheelLogo height={36} showTagline={true} />
             </Link>
             <p className="text-sm leading-6 text-gray-600">
-              Empowering agencies with financial clarity and strategic guidance to scale with confidence.
+              Empowering growing businesses with financial clarity and strategic guidance to scale with confidence.
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (

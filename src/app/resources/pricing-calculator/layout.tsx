@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Agency Pricing Calculator | Flywheel Bookkeeping',
+  title: 'Agency Pricing Calculator | Flywheel',
   description: 'Calculate optimal rates for your agency with our interactive calculator. Get recommendations for hourly rates, retainers, and project minimums.',
 }
 
