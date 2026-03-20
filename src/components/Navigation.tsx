@@ -29,7 +29,7 @@ export default function Navigation() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 sm:h-24 items-center justify-between">
+          <div className="flex h-20 sm:h-28 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               {/* Mobile: no tagline */}
@@ -38,7 +38,7 @@ export default function Navigation() {
               </div>
               {/* Desktop: with tagline */}
               <div className="hidden lg:block">
-                <FlywheelLogo height={56} showTagline={true} />
+                <FlywheelLogo height={72} showTagline={true} />
               </div>
             </Link>
 
