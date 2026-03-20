@@ -32,14 +32,8 @@ export default function Navigation() {
           <div className="flex h-16 lg:h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
-              {/* Mobile: icon + wordmark only */}
-              <div className="lg:hidden">
-                <FlywheelLogo height={32} showTagline={false} />
-              </div>
-              {/* Desktop: full logo with tagline */}
-              <div className="hidden lg:block">
-                <FlywheelLogo height={40} showTagline={true} />
-              </div>
+              <FlywheelLogo height={36} showTagline={true} className="lg:hidden" />
+              <FlywheelLogo height={40} showTagline={true} className="hidden lg:block" />
             </Link>
 
             {/* Navigation Links */}
