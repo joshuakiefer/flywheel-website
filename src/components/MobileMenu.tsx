@@ -98,8 +98,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   className="mt-8 space-y-4"
                 >
                   <div className="rounded-2xl bg-emerald-50 p-4">
-                    <h3 className="text-sm font-medium text-emerald-900">Ready to Transform Your Agency's Finances?</h3>
-                    <p className="mt-1 text-sm text-emerald-700">Book a discovery call to learn how we can help your agency thrive.</p>
+                    <h3 className="text-sm font-medium text-emerald-900">Ready to Transform Your Business&apos;s Finances?</h3>
+                    <p className="mt-1 text-sm text-emerald-700">Book a discovery call to learn how we can help your business thrive.</p>
                   </div>
                   
                   <a

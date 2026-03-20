@@ -26,7 +26,7 @@ function FlywheelIcon({ size = 40 }: { size?: number }) {
 
 export default function FlywheelLogo({ height = 40, showTagline = true, className = '' }: FlywheelLogoProps) {
   return (
-    <div className={`flex items-center gap-2.5 ${className}`}>
+    <div className={`flex items-center ${className}`} style={{ gap: `${height * 0.2}px` }}>
       <FlywheelIcon size={height} />
       <div className="flex flex-col justify-center">
         <span
@@ -41,11 +41,12 @@ export default function FlywheelLogo({ height = 40, showTagline = true, classNam
         </span>
         {showTagline && (
           <span
-            className="uppercase leading-none mt-0.5"
+            className="uppercase leading-none"
             style={{
               fontSize: `${height * 0.18}px`,
               color: '#6B6B68',
               letterSpacing: '0.15em',
+              marginTop: `${height * 0.06}px`,
             }}
           >
             outsourced accounting for growing businesses

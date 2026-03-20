@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog - Agency Financial Insights | Flywheel Bookkeeping',
+  title: 'Blog - Agency Financial Insights | Flywheel',
   description: 'Expert insights on agency finance, growth strategies, and financial management for creative and digital agencies.',
 }
 

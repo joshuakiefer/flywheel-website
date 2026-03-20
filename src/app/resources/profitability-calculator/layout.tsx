@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Agency Profitability Calculator | Flywheel Bookkeeping',
+  title: 'Agency Profitability Calculator | Flywheel',
   description: 'Calculate your agency\'s true profitability with our interactive calculator. Get insights on gross profit, operating profit, and net profit margins.',
 }
 
