@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import FlywheelLogo from './FlywheelLogo'
 import { motion } from 'framer-motion'
 import MobileMenu from './MobileMenu'
 
@@ -31,17 +31,8 @@ export default function Navigation() {
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative h-10 w-10">
-                <Image
-                  src="/Main logo.png"
-                  alt="Flywheel Logo"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Flywheel</span>
+            <Link href="/" className="flex items-center">
+              <FlywheelLogo height={40} showTagline={true} />
             </Link>
 
             {/* Navigation Links */}
