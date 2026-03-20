@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Link href="/">
-              <FlywheelLogo height={36} showTagline={true} />
+              <FlywheelLogo height={48} showTagline={true} />
             </Link>
             <p className="text-sm leading-6 text-gray-600">
               Empowering growing businesses with financial clarity and strategic guidance to scale with confidence.

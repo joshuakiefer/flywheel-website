@@ -48,7 +48,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             >
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center" onClick={onClose}>
-                  <FlywheelLogo height={32} showTagline={false} />
+                  <FlywheelLogo height={40} showTagline={false} />
                 </Link>
                 <button
                   type="button"
