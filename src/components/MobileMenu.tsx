@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import FlywheelLogo from './FlywheelLogo'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Dialog } from '@headlessui/react'
 
@@ -47,17 +47,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               <div className="flex items-center justify-between">
-                <Link href="/" className="flex items-center space-x-3" onClick={onClose}>
-                  <div className="relative h-8 w-8">
-                    <Image
-                      src="/Main logo.png"
-                      alt="Flywheel Logo"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
-                  <span className="text-lg font-bold text-gray-900">Flywheel</span>
+                <Link href="/" className="flex items-center" onClick={onClose}>
+                  <FlywheelLogo height={32} showTagline={false} />
                 </Link>
                 <button
                   type="button"

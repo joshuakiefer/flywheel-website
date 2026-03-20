@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import FlywheelLogo from './FlywheelLogo'
 
 const navigation = {
   main: [
@@ -54,8 +55,8 @@ export default function Footer() {
       <div className="container-custom py-12 md:py-16">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <Link href="/" className="text-2xl font-bold text-brand-primary">
-              Flywheel
+            <Link href="/">
+              <FlywheelLogo height={36} showTagline={true} />
             </Link>
             <p className="text-sm leading-6 text-gray-600">
               Empowering agencies with financial clarity and strategic guidance to scale with confidence.
@@ -99,7 +100,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} Flywheel Bookkeeping. All rights reserved.</p>
+          <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} Flywheel. All rights reserved.</p>
         </div>
       </div>
     </footer>
