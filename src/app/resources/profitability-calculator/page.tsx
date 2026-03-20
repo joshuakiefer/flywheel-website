@@ -82,10 +82,10 @@ export default function ProfitabilityCalculatorPage() {
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Agency Profitability Calculator
+                Business Profitability Calculator
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Calculate your agency's true profitability and identify opportunities for improvement.
+                Calculate your business's true profitability and identify opportunities for improvement.
               </p>
             </div>
           </AnimateInView>
@@ -264,13 +264,13 @@ export default function ProfitabilityCalculatorPage() {
                               ? 'Your net profit margin is below industry average. Consider reviewing your pricing strategy and operational costs.'
                               : results.netProfitMargin < 20
                               ? 'Your profitability is solid, but there might be room for improvement in operational efficiency.'
-                              : 'Excellent profitability! Your agency is performing above industry averages.'}
+                              : 'Excellent profitability! Your business is performing above industry averages.'}
                           </p>
                         </div>
                       </>
                     ) : (
                       <p className="text-gray-600">
-                        Enter your numbers and click calculate to see your agency's profitability metrics.
+                        Enter your numbers and click calculate to see your business's profitability metrics.
                       </p>
                     )}
                   </div>

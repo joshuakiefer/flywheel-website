@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Resources - Agency Financial Tools & Guides | Flywheel',
-  description: 'Free resources, tools, and guides to help your agency optimize its financial operations and accelerate growth.',
+  title: 'Resources - Business Financial Tools & Guides | Flywheel',
+  description: 'Free resources, tools, and guides to help your business optimize its financial operations and accelerate growth.',
 }
 
 export default function ResourcesLayout({
@@ -11,4 +11,4 @@ export default function ResourcesLayout({
   children: React.ReactNode
 }) {
   return children
-} 
+}

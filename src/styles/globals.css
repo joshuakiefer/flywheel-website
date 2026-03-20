@@ -213,12 +213,11 @@ html {
 
 /* Better tap targets on mobile */
 @media (max-width: 640px) {
-  button, 
+  button,
   [role="button"],
   [type="button"],
   [type="submit"],
-  [type="reset"],
-  a[href] {
+  [type="reset"] {
     min-height: 44px;
     min-width: 44px;
     padding: 0.5rem 1rem;

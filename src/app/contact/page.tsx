@@ -9,22 +9,24 @@ export default function ContactPage() {
   const contactMethods = [
     {
       name: 'Book a Chat',
-      description: 'Schedule a friendly conversation about your agency\'s goals and how we can help you reach them.',
-      href: '#',
+      description: 'Schedule a friendly conversation about your business\'s goals and how we can help you reach them.',
+      href: 'https://www.calendar.com/joshkiefercpa/meeting-flywheel/',
       icon: PhoneIcon,
+      external: true,
     },
     {
       name: 'Send a Message',
       description: 'Drop us a line anytime. We\'ll get back to you within one business day.',
-      href: '#',
+      href: 'mailto:josh@scalablebookkeeping.co',
       icon: EnvelopeIcon,
+      external: false,
     },
   ]
 
   const faqs = [
     {
       question: 'What happens in our first conversation?',
-      answer: 'We\'ll have a friendly chat about your agency, your goals, and your current challenges. No pressure, just an open discussion to see if we\'re a good fit for each other.',
+      answer: 'We\'ll have a friendly chat about your business, your goals, and your current challenges. No pressure, just an open discussion to see if we\'re a good fit for each other.',
     },
     {
       question: 'How do we get started working together?',
@@ -36,7 +38,7 @@ export default function ContactPage() {
     },
     {
       question: 'How are you different from other firms?',
-      answer: 'We focus exclusively on helping creative agencies grow. This means we understand your unique challenges and can offer practical solutions that actually work for your business.',
+      answer: 'We focus exclusively on helping growing businesses scale. This means we understand your unique challenges and can offer practical solutions that actually work for your business.',
     },
   ]
 
@@ -48,16 +50,22 @@ export default function ContactPage() {
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
               {/* ... existing SVG background ... */}
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Let's Talk About Your Agency</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Let's Talk About Your Business</h2>
             <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-              Whether you have questions about our services or just want to explore how we could help your agency grow, we're here to chat.
+              Whether you have questions about our services or just want to explore how we could help your business grow, we're here to chat.
             </p>
             <dl className="mt-8 sm:mt-10 space-y-4 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">
               {contactMethods.map((method) => (
                 <div key={method.name} className="relative pl-9">
                   <dt className="inline font-semibold text-gray-900">
                     <method.icon className="absolute left-1 top-1 h-5 w-5 text-brand-primary" aria-hidden="true" />
-                    {method.name}
+                    <a
+                      href={method.href}
+                      {...(method.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className="hover:text-brand-primary transition-colors"
+                    >
+                      {method.name}
+                    </a>
                   </dt>
                   <dd className="inline ml-2">{method.description}</dd>
                 </div>
@@ -101,7 +109,7 @@ export default function ContactPage() {
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="agency" className="block text-sm font-semibold leading-6 text-gray-900">
-                  Agency Name
+                  Business Name
                 </label>
                 <div className="mt-2">
                   <input
@@ -109,7 +117,7 @@ export default function ContactPage() {
                     name="agency"
                     id="agency"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
-                    placeholder="Tell us about your agency"
+                    placeholder="Tell us about your business"
                   />
                 </div>
               </div>

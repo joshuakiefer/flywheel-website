@@ -93,7 +93,7 @@ export default function CareersPage() {
                 Join Our Team
               </h1>
               <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
-                Help us transform financial management for creative agencies. We're looking for talented individuals who are passionate about making a difference.
+                Help us transform financial management for growing businesses. We're looking for talented individuals who are passionate about making a difference.
               </p>
             </div>
           </AnimateInView>
@@ -107,7 +107,7 @@ export default function CareersPage() {
                     Why Work With Us?
                   </h2>
                   <p className="mt-4 text-base sm:text-lg text-gray-600">
-                    Join a team that's passionate about helping agencies grow while growing your own career.
+                    Join a team that's passionate about helping businesses grow while growing your own career.
                   </p>
                   <ul role="list" className="mt-8 grid grid-cols-1 gap-4">
                     {benefits.map((benefit) => (

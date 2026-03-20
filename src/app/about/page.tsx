@@ -141,7 +141,7 @@ export default function AboutPage() {
                   A sophisticated framework engineered specifically for businesses navigating critical growth phases.
                 </p>
               </div>
-              <dl className="mx-auto mt-12 sm:mt-16 grid max-w-2xl grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+              <dl className="mx-auto mt-12 sm:mt-16 grid max-w-2xl grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {values.map((value) => (
                   <div key={value.name} className="flex flex-col bg-white px-4 sm:px-6 py-6 sm:py-8 rounded-2xl shadow-sm ring-1 ring-gray-900/5">
                     <dt className="text-base sm:text-lg font-semibold leading-7 text-brand-primary">{value.name}</dt>

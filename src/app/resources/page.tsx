@@ -3,53 +3,22 @@
 import React from 'react'
 import AnimateInView from '@/components/AnimateInView'
 import Link from 'next/link'
-import { DocumentArrowDownIcon, CalculatorIcon, ChartBarIcon, DocumentTextIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { CalculatorIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 
 const tools = [
   {
-    name: 'Agency Profitability Calculator',
-    description: 'Calculate your agency\'s true profitability and identify areas for improvement.',
+    name: 'Profitability Calculator',
+    description: 'Calculate your business\'s true profitability and identify areas for improvement.',
     icon: CalculatorIcon,
     href: '/resources/profitability-calculator',
     category: 'Interactive Tool',
   },
   {
-    name: 'Service Rate Calculator',
-    description: 'Determine optimal billing rates based on your costs and profit targets.',
+    name: 'Pricing Calculator',
+    description: 'Determine optimal pricing based on your costs and profit targets.',
     icon: CalculatorIcon,
-    href: '/resources/rate-calculator',
+    href: '/resources/pricing-calculator',
     category: 'Interactive Tool',
-  },
-  {
-    name: 'Growth Readiness Assessment',
-    description: 'Evaluate if your agency is financially ready to scale to the next level.',
-    icon: ChartBarIcon,
-    href: '/resources/growth-assessment',
-    category: 'Assessment',
-  },
-]
-
-const guides = [
-  {
-    name: 'Agency Financial Metrics Guide',
-    description: 'A comprehensive guide to the key financial metrics every agency should track.',
-    icon: DocumentTextIcon,
-    downloadUrl: '/resources/downloads/agency-metrics-guide.pdf',
-    category: 'Guide',
-  },
-  {
-    name: 'Tax Planning Checklist',
-    description: 'Essential tax planning strategies and deadlines for agency owners.',
-    icon: DocumentTextIcon,
-    downloadUrl: '/resources/downloads/tax-planning-checklist.pdf',
-    category: 'Checklist',
-  },
-  {
-    name: 'Financial Systems Setup Guide',
-    description: 'Step-by-step guide to setting up efficient financial systems for your agency.',
-    icon: DocumentTextIcon,
-    downloadUrl: '/resources/downloads/financial-systems-guide.pdf',
-    category: 'Guide',
   },
 ]
 
@@ -61,10 +30,10 @@ export default function ResourcesPage() {
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Agency Growth Resources
+                Business Growth Resources
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Free tools, calculators, and guides to help optimize your agency's financial operations.
+                Free tools and calculators to help optimize your business's financial operations.
               </p>
             </div>
           </AnimateInView>
@@ -76,11 +45,11 @@ export default function ResourcesPage() {
                 Interactive Tools
               </h2>
               <p className="mt-2 text-lg text-gray-600">
-                Calculate, analyze, and optimize your agency's financial performance.
+                Calculate, analyze, and optimize your business's financial performance.
               </p>
             </AnimateInView>
 
-            <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-8 sm:grid-cols-2">
               {tools.map((tool) => (
                 <AnimateInView key={tool.name} delay={0.1}>
                   <Link
@@ -97,39 +66,6 @@ export default function ResourcesPage() {
                       <ArrowRightIcon className="h-4 w-4 text-brand-primary" />
                     </div>
                   </Link>
-                </AnimateInView>
-              ))}
-            </div>
-          </div>
-
-          {/* Downloadable Resources */}
-          <div className="mx-auto mt-24 max-w-7xl">
-            <AnimateInView>
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-                Free Guides & Templates
-              </h2>
-              <p className="mt-2 text-lg text-gray-600">
-                Download practical resources to improve your agency's financial management.
-              </p>
-            </AnimateInView>
-
-            <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {guides.map((guide) => (
-                <AnimateInView key={guide.name} delay={0.1}>
-                  <div className="relative flex flex-col rounded-2xl border border-gray-200 p-8">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-primary/10">
-                      <guide.icon className="h-6 w-6 text-brand-primary" />
-                    </div>
-                    <h3 className="mt-4 text-lg font-semibold text-gray-900">{guide.name}</h3>
-                    <p className="mt-2 flex-1 text-base text-gray-600">{guide.description}</p>
-                    <Link
-                      href={guide.downloadUrl}
-                      className="mt-6 inline-flex items-center gap-x-2 text-sm font-medium text-brand-primary hover:text-brand-primary-dark"
-                    >
-                      <DocumentArrowDownIcon className="h-5 w-5" />
-                      Download PDF
-                    </Link>
-                  </div>
                 </AnimateInView>
               ))}
             </div>
@@ -187,4 +123,4 @@ export default function ResourcesPage() {
       </div>
     </div>
   )
-} 
+}

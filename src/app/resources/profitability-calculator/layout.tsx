@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Agency Profitability Calculator | Flywheel',
-  description: 'Calculate your agency\'s true profitability with our interactive calculator. Get insights on gross profit, operating profit, and net profit margins.',
+  title: 'Business Profitability Calculator | Flywheel',
+  description: 'Calculate your business\'s true profitability with our interactive calculator. Get insights on gross profit, operating profit, and net profit margins.',
 }
 
 export default function ProfitabilityCalculatorLayout({
@@ -11,4 +11,4 @@ export default function ProfitabilityCalculatorLayout({
   children: React.ReactNode
 }) {
   return children
-} 
+}

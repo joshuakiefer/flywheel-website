@@ -8,7 +8,7 @@ const services = [
   {
     id: 'bookkeeping',
     name: 'Bookkeeping Services',
-    description: 'Get crystal-clear financial clarity with books you can trust. We handle the details so you can focus on growing your agency.',
+    description: 'Get crystal-clear financial clarity with books you can trust. We handle the details so you can focus on growing your business.',
     icon: DocumentTextIcon,
     features: [
       {
@@ -17,18 +17,18 @@ const services = [
         icon: ClipboardDocumentCheckIcon,
       },
       {
-        name: 'Agency-Specific Revenue Tracking',
-        description: 'Smart tracking of retainers, projects, and recurring revenue that matches how agencies really work.',
+        name: 'Business-Specific Revenue Tracking',
+        description: 'Smart tracking of retainers, projects, and recurring revenue that matches how your business really works.',
         icon: CalculatorIcon,
       },
       {
         name: 'Proactive Cash Management',
-        description: 'Stay ahead of cash flow needs with forecasting and optimization designed for agency growth.',
+        description: 'Stay ahead of cash flow needs with forecasting and optimization designed for business growth.',
         icon: BanknotesIcon,
       },
       {
         name: 'Seamless Tech Integration',
-        description: 'Your favorite tools working together perfectly - QuickBooks, Xero, and agency management platforms.',
+        description: 'Your favorite tools working together perfectly - QuickBooks, Xero, and business management platforms.',
         icon: ArrowPathIcon,
       },
     ],
@@ -42,12 +42,12 @@ const services = [
     features: [
       {
         name: 'Growth Strategy Development',
-        description: 'Create and execute financial strategies that support your agency\'s growth goals.',
+        description: 'Create and execute financial strategies that support your business\'s growth goals.',
         icon: ChartBarIcon,
       },
       {
         name: 'Profitability Analysis',
-        description: 'Identify opportunities to improve margins and optimize your agency\'s financial performance.',
+        description: 'Identify opportunities to improve margins and optimize your business\'s financial performance.',
         icon: CalculatorIcon,
       },
       {
@@ -61,12 +61,12 @@ const services = [
         icon: ClipboardDocumentCheckIcon,
       },
     ],
-    cta: 'Scale Your Agency',
+    cta: 'Scale Your Business',
   },
   {
     id: 'tax',
     name: 'Tax Services',
-    description: 'Stop overpaying taxes. Our agency-focused strategies help you keep more of what you\'ve earned.',
+    description: 'Stop overpaying taxes. Our business-focused strategies help you keep more of what you\'ve earned.',
     icon: CurrencyDollarIcon,
     features: [
       {
@@ -105,7 +105,7 @@ export default function ServicesPage() {
               Services That Power Your Growth
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
-              Everything you need to transform your agency\'s finances from a source of stress into a powerful growth engine.
+              Everything you need to transform your business's finances from a source of stress into a powerful growth engine.
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
         <div className="space-y-24">
           {services.map((service, index) => (
             <AnimateInView key={service.id} delay={index * 0.1}>
-              <div className="relative">
+              <div id={service.id} className="relative scroll-mt-24">
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
                   <div className="space-y-6">
                     <div className="flex items-center gap-x-3">
@@ -169,7 +169,7 @@ export default function ServicesPage() {
               <div className="mx-auto max-w-2xl lg:max-w-none">
                 <div className="text-center">
                   <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Ready to Transform Your Agency's Finances?
+                    Ready to Transform Your Business's Finances?
                   </h2>
                   <p className="mt-4 text-lg text-gray-600">
                     Book a discovery call to discuss how we can help you achieve your financial goals.

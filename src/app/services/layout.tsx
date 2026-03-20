@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Services - Flywheel',
-  description: 'Comprehensive financial services for growing agencies including bookkeeping, CFO services, and tax planning.',
+  description: 'Comprehensive financial services for growing businesses including bookkeeping, CFO services, and tax planning.',
 }
 
 export default function ServicesLayout({
@@ -11,4 +11,4 @@ export default function ServicesLayout({
   children: React.ReactNode
 }) {
   return children
-} 
+}

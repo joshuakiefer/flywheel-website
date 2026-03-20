@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog - Agency Financial Insights | Flywheel',
-  description: 'Expert insights on agency finance, growth strategies, and financial management for creative and digital agencies.',
+  title: 'Blog - Financial Insights | Flywheel',
+  description: 'Expert insights on business finance, growth strategies, and financial management for growing businesses.',
 }
 
 export default function BlogLayout({
@@ -11,4 +11,4 @@ export default function BlogLayout({
   children: React.ReactNode
 }) {
   return children
-} 
+}

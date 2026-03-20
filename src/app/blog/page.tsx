@@ -2,43 +2,38 @@
 
 import React from 'react'
 import AnimateInView from '@/components/AnimateInView'
-import Link from 'next/link'
-import Image from 'next/image'
-import { CalendarIcon, ClockIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
+import { CalendarIcon, ClockIcon } from '@heroicons/react/24/outline'
 
 const featuredPosts = [
   {
     id: 1,
-    title: 'The Agency Growth Blueprint: Scaling from $1M to $15M',
-    description: 'Learn the key financial strategies and metrics that successful agencies use to scale their operations effectively.',
-    image: '/blog/agency-growth.jpg',
+    title: 'The Business Growth Blueprint: Scaling from $1M to $20M',
+    description: 'Learn the key financial strategies and metrics that successful businesses use to scale their operations effectively.',
     category: 'Growth Strategy',
     author: 'Joshua Kiefer, CPA',
     date: 'Mar 15, 2024',
     readTime: '8 min read',
-    slug: 'agency-growth-blueprint',
+    gradient: 'from-emerald-500 to-emerald-700',
   },
   {
     id: 2,
-    title: 'Maximizing Agency Profitability: A Complete Guide',
-    description: 'Discover proven methods to optimize your agency\'s pricing, resource allocation, and financial operations.',
-    image: '/blog/agency-profitability.jpg',
+    title: 'Maximizing Business Profitability: A Complete Guide',
+    description: 'Discover proven methods to optimize your business\'s pricing, resource allocation, and financial operations.',
     category: 'Financial Strategy',
     author: 'Joshua Kiefer, CPA',
     date: 'Mar 10, 2024',
     readTime: '10 min read',
-    slug: 'maximizing-agency-profitability',
+    gradient: 'from-blue-500 to-blue-700',
   },
   {
     id: 3,
-    title: 'Tax Strategies for Digital Agencies in 2024',
-    description: 'Stay ahead of the curve with these tax planning strategies specifically designed for creative and digital agencies.',
-    image: '/blog/tax-strategies.jpg',
+    title: 'Tax Strategies for Growing Businesses in 2024',
+    description: 'Stay ahead of the curve with these tax planning strategies specifically designed for growing businesses.',
     category: 'Tax Planning',
     author: 'Joshua Kiefer, CPA',
     date: 'Mar 5, 2024',
     readTime: '7 min read',
-    slug: 'tax-strategies-2024',
+    gradient: 'from-purple-500 to-purple-700',
   },
 ]
 
@@ -47,7 +42,7 @@ const categories = [
   { name: 'Financial Strategy', count: 15 },
   { name: 'Tax Planning', count: 8 },
   { name: 'Cash Flow', count: 10 },
-  { name: 'Agency Operations', count: 7 },
+  { name: 'Business Operations', count: 7 },
   { name: 'Industry Insights', count: 9 },
 ]
 
@@ -59,11 +54,14 @@ export default function BlogPage() {
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Agency Financial Insights
+                Financial Insights
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Expert guidance and actionable strategies to help your agency thrive financially.
+                Expert guidance and actionable strategies to help your business thrive financially.
               </p>
+              <div className="mt-4 inline-flex items-center rounded-full bg-amber-50 px-4 py-2 text-sm font-medium text-amber-700 ring-1 ring-amber-600/20">
+                Coming Soon — Stay tuned for new articles
+              </div>
             </div>
           </AnimateInView>
 
@@ -72,13 +70,8 @@ export default function BlogPage() {
             {featuredPosts.map((post) => (
               <AnimateInView key={post.id} delay={post.id * 0.1}>
                 <article className="relative isolate flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200">
-                  <div className="aspect-[16/9] relative">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className={`aspect-[16/9] relative bg-gradient-to-br ${post.gradient} flex items-center justify-center`}>
+                    <span className="text-white/80 text-sm font-medium">Coming Soon</span>
                   </div>
                   <div className="flex-1 p-6">
                     <div className="flex items-center gap-x-4 text-xs">
@@ -96,30 +89,24 @@ export default function BlogPage() {
                         {post.category}
                       </span>
                     </div>
-                    <Link href={`/blog/${post.slug}`} className="group">
-                      <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-brand-primary">
+                    <div>
+                      <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900">
                         {post.title}
                       </h3>
                       <p className="mt-3 text-sm leading-6 text-gray-600">
                         {post.description}
                       </p>
-                    </Link>
+                    </div>
                     <div className="mt-4 flex items-center gap-x-2">
                       <span className="text-sm font-medium text-gray-900">{post.author}</span>
                     </div>
                   </div>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="absolute inset-0 aria-hidden pointer-events-none"
-                  >
-                    <span className="sr-only">Read more about {post.title}</span>
-                  </Link>
                 </article>
               </AnimateInView>
             ))}
           </div>
 
-          {/* Categories and Recent Posts */}
+          {/* Categories and Newsletter */}
           <div className="mx-auto mt-24 grid max-w-7xl gap-8 lg:grid-cols-4">
             {/* Categories */}
             <div className="lg:col-span-1">
@@ -127,15 +114,12 @@ export default function BlogPage() {
               <ul role="list" className="mt-4 space-y-3">
                 {categories.map((category) => (
                   <li key={category.name}>
-                    <Link
-                      href={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="group flex items-center justify-between"
-                    >
-                      <span className="text-sm text-gray-600 group-hover:text-brand-primary">
+                    <span className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">
                         {category.name}
                       </span>
                       <span className="text-sm text-gray-500">({category.count})</span>
-                    </Link>
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -148,7 +132,7 @@ export default function BlogPage() {
                   Get Financial Insights Delivered
                 </h2>
                 <p className="mt-2 text-sm text-gray-600">
-                  Join agency owners who receive our weekly insights on financial growth and management.
+                  Join business owners who receive our weekly insights on financial growth and management.
                 </p>
                 <form className="mt-6">
                   <div className="flex gap-x-4">
@@ -179,4 +163,4 @@ export default function BlogPage() {
       </div>
     </div>
   )
-} 
+}

@@ -17,7 +17,7 @@ export const viewport = {
 export const metadata: Metadata = {
   title: 'Flywheel - Financial Strategy for Growing Businesses',
   description: 'Specialized bookkeeping, CFO, and tax services for businesses scaling from $1M to $20M. Transform your business\'s financial management with expert guidance.',
-  keywords: 'agency bookkeeping, CFO services, tax planning, financial strategy, agency growth',
+  keywords: 'business bookkeeping, CFO services, tax planning, financial strategy, business growth',
   metadataBase: new URL('https://flywheelbookkeeping.com'),
   icons: {
     icon: [
@@ -26,16 +26,16 @@ export const metadata: Metadata = {
     ]
   },
   openGraph: {
-    title: 'Flywheel - Financial Strategy for Modern Agencies',
-    description: 'Transform your agency\'s financial management with expert guidance. Specialized services for agencies scaling from $1M to $15M.',
+    title: 'Flywheel - Financial Strategy for Growing Businesses',
+    description: 'Transform your business\'s financial management with expert guidance. Specialized services for businesses scaling from $1M to $20M.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Flywheel',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Flywheel - Financial Strategy for Modern Agencies',
-    description: 'Transform your agency\'s financial management with expert guidance. Specialized services for agencies scaling from $1M to $15M.',
+    title: 'Flywheel - Financial Strategy for Growing Businesses',
+    description: 'Transform your business\'s financial management with expert guidance. Specialized services for businesses scaling from $1M to $20M.',
   },
   robots: {
     index: true,

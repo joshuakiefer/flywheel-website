@@ -8,7 +8,7 @@ import { CheckIcon } from '@heroicons/react/24/outline'
 const services = [
   {
     name: 'Core Financial Operations',
-    description: 'Essential financial services to keep your agency running smoothly',
+    description: 'Essential financial services to keep your business running smoothly',
     features: [
       'Full-service bookkeeping and accounting',
       'Accounts payable management',
@@ -34,7 +34,7 @@ const services = [
     name: 'Tax & Compliance',
     description: 'Comprehensive tax planning and preparation services',
     features: [
-      'Agency-focused tax planning',
+      'Business-focused tax planning',
       'Annual tax preparation',
       'Quarterly tax management',
       'Entity structure optimization',
@@ -87,7 +87,7 @@ export default function ServicesSection() {
             
             <div className="mt-16 text-center">
               <p className="text-base text-gray-600">
-                Not sure what you need? Schedule a discovery call to discuss your agency's unique requirements.
+                Not sure what you need? Schedule a discovery call to discuss your business's unique requirements.
               </p>
               <div className="mt-6">
                 <a

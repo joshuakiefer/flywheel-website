@@ -21,7 +21,7 @@ export default function CTASection() {
               viewport={{ once: true }}
               className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
             >
-              Ready to Transform Your Agency's Finances?
+              Ready to Transform Your Business's Finances?
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function CTASection() {
               transition={{ delay: 0.1 }}
               className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300"
             >
-              Book a discovery call to explore how we can help your agency achieve its financial goals.
+              Book a discovery call to explore how we can help your business achieve its financial goals.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,9 @@ export default function CTASection() {
               className="mt-10 flex items-center justify-center gap-x-6"
             >
               <a
-                href="/schedule"
+                href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-emerald-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
               >
                 Schedule Your Discovery Call

@@ -47,15 +47,15 @@ const industries = [
 ]
 
 const metrics = [
-  { id: 1, stat: '10+', emphasis: 'Years Experience', rest: 'serving digital agencies' },
-  { id: 2, stat: '45+', emphasis: 'Active Clients', rest: 'in the $1M-$15M range' },
+  { id: 1, stat: '10+', emphasis: 'Years Experience', rest: 'serving growing businesses' },
+  { id: 2, stat: '45+', emphasis: 'Active Clients', rest: 'in the $1M-$20M range' },
   { id: 3, stat: '5.0', emphasis: 'Google Rating', rest: 'based on reviews' },
 ]
 
 const industryIcons = [
   {
     name: 'Digital Marketing',
-    description: 'Specializing in agency cash flow',
+    description: 'Specializing in business cash flow',
     icon: RocketLaunchIcon,
     color: 'from-purple-500/10 to-purple-500/5',
   },
@@ -72,7 +72,7 @@ const industryIcons = [
     color: 'from-blue-500/10 to-blue-500/5',
   },
   {
-    name: 'Design Agencies',
+    name: 'Design Studios',
     description: 'Project-based forecasting',
     icon: BuildingOfficeIcon,
     color: 'from-rose-500/10 to-rose-500/5',
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
           <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative min-h-[70vh] flex items-center">
-              <div className="relative w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-32 pb-4 sm:pb-8 lg:pb-12">
+              <div className="relative w-full mx-auto max-w-7xl pt-24 sm:pt-28 lg:pt-32 pb-4 sm:pb-8 lg:pb-12">
                 <div className="grid lg:grid-cols-2 gap-x-16 gap-y-6 items-center">
                   {/* Left Column - Main Content */}
                   <div className="w-full max-w-2xl mx-auto lg:mx-0">
@@ -251,8 +251,8 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-gray-900/5 transform transition-transform group-hover:scale-[1.025]" />
                 <div className="relative p-8">
-                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-${service.color}-600/10`}>
-                    <service.icon className={`h-6 w-6 text-${service.color}-600`} aria-hidden="true" />
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${({emerald: 'bg-emerald-600/10', blue: 'bg-blue-600/10', purple: 'bg-purple-600/10'} as Record<string, string>)[service.color]}`}>
+                    <service.icon className={`h-6 w-6 ${({emerald: 'text-emerald-600', blue: 'text-blue-600', purple: 'text-purple-600'} as Record<string, string>)[service.color]}`} aria-hidden="true" />
                   </div>
                   <h3 className="mt-6 text-xl font-semibold text-gray-900">{service.title}</h3>
                   <p className="mt-2 text-gray-600">{service.description}</p>

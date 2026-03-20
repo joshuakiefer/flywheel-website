@@ -78,10 +78,10 @@ export default function PricingCalculatorPage() {
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Agency Pricing Calculator
+                Business Pricing Calculator
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Calculate optimal rates for your agency based on your revenue goals and team capacity.
+                Calculate optimal rates for your business based on your revenue goals and team capacity.
               </p>
             </div>
           </AnimateInView>
@@ -265,7 +265,7 @@ export default function PricingCalculatorPage() {
                       </>
                     ) : (
                       <p className="text-gray-600">
-                        Enter your goals and click calculate to see recommended rates for your agency.
+                        Enter your goals and click calculate to see recommended rates for your business.
                       </p>
                     )}
                   </div>
