@@ -29,11 +29,14 @@ export default function Navigation() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 lg:h-24 items-center justify-between">
+          <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0">
-              <FlywheelLogo height={48} showTagline={true} className="lg:hidden" />
-              <FlywheelLogo height={56} showTagline={true} className="hidden lg:block" />
+            <Link href="/" className="flex items-center shrink-0 gap-2.5">
+              <FlywheelLogo height={38} iconOnly />
+              <div className="flex flex-col justify-center min-w-0">
+                <span className="text-xl sm:text-[22px] font-medium text-gray-900 leading-none" style={{ letterSpacing: '-0.02em' }}>flywheel</span>
+                <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.1em] sm:tracking-[0.12em] text-gray-500 leading-none mt-1">Outsourced Accounting for Growing Businesses</span>
+              </div>
             </Link>
 
             {/* Navigation Links */}
