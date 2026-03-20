@@ -85,7 +85,7 @@ export default function CareersPage() {
 
   return (
     <div className="bg-white">
-      <div className="relative isolate pt-20 sm:pt-28">
+      <div className="relative isolate pt-20 sm:pt-28 lg:pt-40">
         <div className="container-custom py-16 sm:py-24">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">

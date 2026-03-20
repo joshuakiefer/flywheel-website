@@ -63,7 +63,7 @@ export default function SuccessStories() {
   return (
     <main className="relative">
       {/* Hero Section */}
-      <div className="relative pt-24 sm:pt-28 lg:pt-32">
+      <div className="relative pt-24 sm:pt-28 lg:pt-44">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

@@ -77,7 +77,7 @@ export default function ProfitabilityCalculatorPage() {
 
   return (
     <div className="bg-white">
-      <div className="relative isolate pt-28">
+      <div className="relative isolate pt-28 lg:pt-40">
         <div className="container-custom py-24 sm:py-32">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">

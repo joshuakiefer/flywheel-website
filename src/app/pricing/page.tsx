@@ -73,7 +73,7 @@ export default function PricingPage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A10,_transparent_50%)]" />
       </div>
 
-      <div className="relative pt-32 pb-24 lg:pt-40">
+      <div className="relative pt-32 pb-24 lg:pt-48">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">

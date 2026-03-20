@@ -98,7 +98,7 @@ export default function ServicesPage() {
   return (
     <main className="relative">
       {/* Hero Section */}
-      <div className="relative py-24 sm:py-32">
+      <div className="relative pt-32 sm:pt-40 lg:pt-44 pb-24 sm:pb-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

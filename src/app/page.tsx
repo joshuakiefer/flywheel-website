@@ -85,7 +85,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative isolate">
         {/* Hero section */}
-        <div className="relative pt-12 sm:pt-16 lg:pt-20">
+        <div className="relative pt-16 sm:pt-20 lg:pt-8">
           {/* Video Background */}
           <div className="fixed top-0 left-0 w-full h-full -z-10">
             <video
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
           <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative min-h-[70vh] flex items-center">
-              <div className="relative w-full mx-auto max-w-7xl pt-24 sm:pt-28 lg:pt-32 pb-4 sm:pb-8 lg:pb-12">
+              <div className="relative w-full mx-auto max-w-7xl pt-24 sm:pt-28 lg:pt-40 pb-4 sm:pb-8 lg:pb-12">
                 <div className="grid lg:grid-cols-2 gap-x-16 gap-y-6 items-center">
                   {/* Left Column - Main Content */}
                   <div className="w-full max-w-2xl mx-auto lg:mx-0">
