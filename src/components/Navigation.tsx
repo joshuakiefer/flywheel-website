@@ -29,16 +29,16 @@ export default function Navigation() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 sm:h-20 items-center justify-between">
-            {/* Logo - icon only on small mobile, icon+text on larger mobile, full with tagline on desktop */}
+          <div className="flex h-20 sm:h-24 items-center justify-between">
+            {/* Logo */}
             <Link href="/" className="flex items-center">
               {/* Mobile: no tagline */}
               <div className="block lg:hidden">
-                <FlywheelLogo height={32} showTagline={false} />
+                <FlywheelLogo height={44} showTagline={false} />
               </div>
               {/* Desktop: with tagline */}
               <div className="hidden lg:block">
-                <FlywheelLogo height={38} showTagline={true} />
+                <FlywheelLogo height={56} showTagline={true} />
               </div>
             </Link>
 
@@ -54,7 +54,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 relative group"
+                  className="text-base font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 relative group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full" />
@@ -67,7 +67,7 @@ export default function Navigation() {
               {/* Contact Link */}
               <Link
                 href="/contact"
-                className="hidden md:inline-flex text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200"
+                className="hidden md:inline-flex text-base font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200"
               >
                 Contact
               </Link>
@@ -77,7 +77,7 @@ export default function Navigation() {
                 href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
+                className="hidden md:inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
               >
                 Book Discovery Call
                 <svg
