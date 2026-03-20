@@ -29,11 +29,11 @@ export default function Navigation() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 lg:h-20 items-center justify-between">
+          <div className="flex h-20 lg:h-24 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
-              <FlywheelLogo height={36} showTagline={true} className="lg:hidden" />
-              <FlywheelLogo height={40} showTagline={true} className="hidden lg:block" />
+              <FlywheelLogo height={48} showTagline={true} className="lg:hidden" />
+              <FlywheelLogo height={56} showTagline={true} className="hidden lg:block" />
             </Link>
 
             {/* Navigation Links */}
