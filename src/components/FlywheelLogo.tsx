@@ -7,13 +7,12 @@ interface FlywheelLogoProps {
 }
 
 export default function FlywheelLogo({ height = 40, showTagline = true, className = '' }: FlywheelLogoProps) {
-  // The icon is roughly square; the full logo aspect ratio depends on tagline
   const iconSize = height
   const fontSize = height * 0.6
   const taglineSize = height * 0.22
 
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex items-center gap-3 ${className}`}>
       {/* Flywheel icon */}
       <svg
         width={iconSize}
@@ -23,20 +22,24 @@ export default function FlywheelLogo({ height = 40, showTagline = true, classNam
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0"
       >
-        {/* Outer circle with small gap at bottom-left */}
-        <path
-          d="M 30 88 A 44 44 0 1 1 28 86"
+        {/* Outer circle ring with gap at bottom-left */}
+        <circle
+          cx="50"
+          cy="50"
+          r="40"
           stroke="#1a7a5a"
-          strokeWidth="9"
-          strokeLinecap="round"
+          strokeWidth="8"
           fill="none"
+          strokeDasharray="226 25"
+          strokeDashoffset="-10"
+          strokeLinecap="round"
         />
         {/* Inner filled dot */}
-        <circle cx="50" cy="50" r="11" fill="#1a7a5a" />
+        <circle cx="50" cy="50" r="12" fill="#1a7a5a" />
       </svg>
 
       {/* Text */}
-      <div className="flex flex-col justify-center" style={{ gap: showTagline ? '1px' : 0 }}>
+      <div className="flex flex-col justify-center" style={{ gap: showTagline ? '2px' : 0 }}>
         <span
           className="font-bold text-gray-900 leading-none"
           style={{ fontSize: `${fontSize}px`, letterSpacing: '-0.01em' }}
@@ -45,8 +48,8 @@ export default function FlywheelLogo({ height = 40, showTagline = true, classNam
         </span>
         {showTagline && (
           <span
-            className="text-gray-400 uppercase leading-none tracking-widest"
-            style={{ fontSize: `${taglineSize}px`, letterSpacing: '0.12em' }}
+            className="text-gray-400 uppercase leading-none"
+            style={{ fontSize: `${taglineSize}px`, letterSpacing: '0.15em' }}
           >
             outsourced accounting for growing businesses
           </span>
