@@ -29,14 +29,21 @@ export default function Navigation() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-16 lg:h-20 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
-              <FlywheelLogo height={36} showTagline={false} />
+              {/* Mobile: icon + wordmark only */}
+              <div className="lg:hidden">
+                <FlywheelLogo height={32} showTagline={false} />
+              </div>
+              {/* Desktop: full logo with tagline */}
+              <div className="hidden lg:block">
+                <FlywheelLogo height={40} showTagline={true} />
+              </div>
             </Link>
 
             {/* Navigation Links */}
-            <div className="hidden lg:flex lg:items-center lg:gap-x-8">
+            <div className="hidden lg:flex lg:items-center lg:gap-x-6">
               {[
                 { name: 'Home', href: '/' },
                 { name: 'Services', href: '/services' },
