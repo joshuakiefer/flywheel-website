@@ -7,54 +7,33 @@ interface FlywheelLogoProps {
 }
 
 export default function FlywheelLogo({ height = 40, showTagline = true, className = '' }: FlywheelLogoProps) {
-  const iconSize = height
-  const fontSize = height * 0.6
-  const taglineSize = height * 0.22
+  const viewBoxWidth = showTagline ? 520 : 280
+  const viewBoxHeight = 100
+  const aspectRatio = viewBoxWidth / viewBoxHeight
+  const width = height * aspectRatio
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox={`0 0 ${viewBoxWidth} ${viewBoxHeight}`}
+      width={width}
+      height={height}
+      className={className}
+    >
       {/* Flywheel icon */}
-      <svg
-        width={iconSize}
-        height={iconSize}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="shrink-0"
-      >
-        {/* Outer circle ring with gap at bottom-left */}
-        <circle
-          cx="50"
-          cy="50"
-          r="40"
-          stroke="#1a7a5a"
-          strokeWidth="8"
-          fill="none"
-          strokeDasharray="226 25"
-          strokeDashoffset="-10"
-          strokeLinecap="round"
-        />
-        {/* Inner filled dot */}
-        <circle cx="50" cy="50" r="12" fill="#1a7a5a" />
-      </svg>
+      <circle cx="42" cy="46" r="22" fill="none" stroke="#1D6B52" strokeWidth="3" />
+      <circle cx="42" cy="46" r="8" fill="#1D6B52" />
+      <path d="M42 24 Q57 28 62 38" fill="none" stroke="#1D6B52" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M64 46 Q60 61 50 68" fill="none" stroke="#1D6B52" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M42 68 Q27 64 20 54" fill="none" stroke="#1D6B52" strokeWidth="2.5" strokeLinecap="round" />
 
-      {/* Text */}
-      <div className="flex flex-col justify-center" style={{ gap: showTagline ? '2px' : 0 }}>
-        <span
-          className="font-bold text-gray-900 leading-none"
-          style={{ fontSize: `${fontSize}px`, letterSpacing: '-0.01em' }}
-        >
-          flywheel
-        </span>
-        {showTagline && (
-          <span
-            className="text-gray-400 uppercase leading-none"
-            style={{ fontSize: `${taglineSize}px`, letterSpacing: '0.15em' }}
-          >
-            outsourced accounting for growing businesses
-          </span>
-        )}
-      </div>
-    </div>
+      {/* Wordmark */}
+      <text x="78" y="55" fontFamily="'Helvetica Neue','Arial',sans-serif" fontSize="36" fontWeight="500" fill="#1C1C1A" letterSpacing="-0.5">flywheel</text>
+
+      {/* Tagline */}
+      {showTagline && (
+        <text x="80" y="78" fontFamily="'Helvetica Neue','Arial',sans-serif" fontSize="10.5" fontWeight="400" fill="#6B6B68" letterSpacing="2.2">OUTSOURCED ACCOUNTING FOR GROWING BUSINESSES</text>
+      )}
+    </svg>
   )
 }
