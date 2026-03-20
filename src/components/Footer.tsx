@@ -27,48 +27,69 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="relative z-10 bg-gray-900">
       <div className="container-custom py-12 md:py-16">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-            <Link href="/">
-              <FlywheelLogo height={48} showTagline={true} />
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link href="/" className="inline-block">
+              <FlywheelLogo height={32} showTagline={false} variant="light" />
             </Link>
-            <p className="text-sm leading-6 text-gray-600">
+            <p className="mt-4 text-sm leading-6 text-gray-400 max-w-xs">
               Empowering growing businesses with financial clarity and strategic guidance to scale with confidence.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Services</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.services.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-sm font-semibold text-white">Services</h3>
+            <ul role="list" className="mt-4 space-y-3">
+              {navigation.services.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-sm font-semibold text-white">Company</h3>
+            <ul role="list" className="mt-4 space-y-3">
+              {navigation.company.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div>
+            <h3 className="text-sm font-semibold text-white">Get Started</h3>
+            <p className="mt-4 text-sm text-gray-400">
+              Book a free discovery call to discuss your business goals.
+            </p>
+            <a
+              href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors"
+            >
+              Book a Call
+              <svg className="ml-1.5 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              </svg>
+            </a>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500">&copy; {new Date().getFullYear()} Flywheel. All rights reserved.</p>
+
+        <div className="mt-12 border-t border-gray-800 pt-8">
+          <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Flywheel Bookkeeping. All rights reserved.</p>
         </div>
       </div>
     </footer>

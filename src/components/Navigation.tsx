@@ -29,32 +29,26 @@ export default function Navigation() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 sm:h-28 items-center justify-between">
+          <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              {/* Mobile: no tagline */}
-              <div className="block lg:hidden">
-                <FlywheelLogo height={44} showTagline={false} />
-              </div>
-              {/* Desktop: with tagline */}
-              <div className="hidden lg:block">
-                <FlywheelLogo height={72} showTagline={true} />
-              </div>
+            <Link href="/" className="flex items-center shrink-0">
+              <FlywheelLogo height={36} showTagline={false} />
             </Link>
 
             {/* Navigation Links */}
-            <div className="hidden md:flex md:items-center md:space-x-6 lg:space-x-8">
+            <div className="hidden lg:flex lg:items-center lg:gap-x-8">
               {[
                 { name: 'Home', href: '/' },
                 { name: 'Services', href: '/services' },
                 { name: 'Pricing', href: '/pricing' },
                 { name: 'Success Stories', href: '/success-stories' },
                 { name: 'About', href: '/about' },
+                { name: 'Contact', href: '/contact' },
               ].map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-base font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 relative group"
+                  className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 whitespace-nowrap relative group"
                 >
                   {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full" />
@@ -63,25 +57,17 @@ export default function Navigation() {
             </div>
 
             {/* Right Section */}
-            <div className="flex items-center space-x-4 sm:space-x-6">
-              {/* Contact Link */}
-              <Link
-                href="/contact"
-                className="hidden md:inline-flex text-base font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200"
-              >
-                Contact
-              </Link>
-
+            <div className="flex items-center gap-x-4">
               {/* CTA Button */}
               <a
                 href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-2.5 text-base font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
+                className="hidden lg:inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 whitespace-nowrap"
               >
-                Book Discovery Call
+                Book a Call
                 <svg
-                  className="ml-2 h-4 w-4"
+                  className="ml-1.5 h-3.5 w-3.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -98,7 +84,7 @@ export default function Navigation() {
               {/* Mobile Menu Button */}
               <button
                 type="button"
-                className="md:hidden rounded-full p-2 text-gray-700 hover:bg-gray-100"
+                className="lg:hidden rounded-full p-2 text-gray-700 hover:bg-gray-100"
                 onClick={() => setIsMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open menu</span>
