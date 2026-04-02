@@ -37,7 +37,7 @@ const integrationCategories = [
   {
     name: 'CRM & Sales',
     tools: ['HubSpot', 'Salesforce', 'Pipedrive'],
-    description: 'Pipeline data meets financial forecasting. Know what&apos;s closing and how it impacts cash flow before it hits the books.',
+    description: 'Pipeline data meets financial forecasting. Know what\'s closing and how it impacts cash flow before it hits the books.',
     color: 'sky',
   },
 ]
@@ -66,7 +66,7 @@ const processSteps = [
   {
     step: '05',
     title: 'Ongoing Management',
-    description: 'We don&apos;t just build and leave. Your Flywheel team manages the books, monitors the dashboards, and flags issues proactively. The system gets smarter over time.',
+    description: 'We don\'t just build and leave. Your Flywheel team manages the books, monitors the dashboards, and flags issues proactively. The system gets smarter over time.',
   },
 ]
 
@@ -74,7 +74,7 @@ const useCases = [
   {
     title: 'Professional Services Firm',
     size: '30 employees, $4M revenue',
-    problem: 'Couldn&apos;t tell which clients were profitable. Time tracking lived in Harvest, projects in Monday.com, billing in QBO. It took 3 weeks after month-end to understand margins.',
+    problem: 'Couldn\'t tell which clients were profitable. Time tracking lived in Harvest, projects in Monday.com, billing in QBO. It took 3 weeks after month-end to understand margins.',
     solution: 'Integrated Harvest + Monday.com + QBO into a unified dashboard. Now the founder sees real-time project profitability and knows within 48 hours when a project is trending over budget.',
     outcomes: ['Real-time project margins', '3 weeks → 2 days for financial clarity', 'Identified 3 unprofitable client relationships'],
   },

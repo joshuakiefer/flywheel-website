@@ -50,7 +50,7 @@ const industries = [
 const metrics = [
   { id: 1, stat: '10+', emphasis: 'Years Experience', rest: 'serving growing businesses' },
   { id: 2, stat: '45+', emphasis: 'Active Clients', rest: 'in the $1M-$20M range' },
-  { id: 3, stat: '5.0', emphasis: 'Google Rating', rest: 'based on reviews' },
+  { id: 3, stat: '4.9', emphasis: 'Star Rating', rest: 'on Google Reviews' },
 ]
 
 const industryIcons = [
@@ -451,9 +451,9 @@ export default function Home() {
                 description: 'Long-term partnerships',
               },
               {
-                stat: '5.0',
-                label: 'Average Rating',
-                description: 'Based on client reviews',
+                stat: '4.9',
+                label: 'Star Rating',
+                description: 'On Google Reviews',
               },
               {
                 stat: '10+',

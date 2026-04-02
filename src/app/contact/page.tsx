@@ -108,14 +108,14 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="agency" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="business" className="block text-sm font-semibold leading-6 text-gray-900">
                   Business Name
                 </label>
                 <div className="mt-2">
                   <input
                     type="text"
-                    name="agency"
-                    id="agency"
+                    name="business"
+                    id="business"
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                     placeholder="Tell us about your business"
                   />

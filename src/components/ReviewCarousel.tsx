@@ -42,7 +42,7 @@ export default function ReviewCarousel() {
         <div className="p-6 sm:p-8">
           {/* Rating */}
           <div className="flex items-center gap-1 mb-6">
-            <span className="text-lg sm:text-xl font-semibold">5.0</span>
+            <span className="text-lg sm:text-xl font-semibold">4.9</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <StarIcon key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
