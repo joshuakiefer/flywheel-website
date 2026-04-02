@@ -16,6 +16,7 @@ const navigation = {
     { name: 'Bookkeeping', href: '/services#bookkeeping' },
     { name: 'CFO Services', href: '/services#cfo' },
     { name: 'Tax Services', href: '/services#tax' },
+    { name: 'Connected Finance', href: '/connected-finance' },
   ],
   company: [
     { name: 'About Us', href: '/about' },

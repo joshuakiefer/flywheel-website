@@ -15,6 +15,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Connected Finance', href: '/connected-finance' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Success Stories', href: '/success-stories' },
     { name: 'About', href: '/about' },

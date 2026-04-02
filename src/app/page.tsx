@@ -6,6 +6,7 @@ import Image from 'next/image'
 import ServicesSection from '@/components/ServicesSection'
 import PricingSection from '@/components/PricingSection'
 import CTASection from '@/components/CTASection'
+import ConnectedFinanceSection from '@/components/ConnectedFinanceSection'
 import AnimateInView from '@/components/AnimateInView'
 import FlywheelAnimation from '@/components/FlywheelAnimation'
 import ReviewCarousel from '@/components/ReviewCarousel'
@@ -291,6 +292,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Connected Finance Section */}
+      <ConnectedFinanceSection />
 
       {/* Industry Focus */}
       <div className="relative py-32 overflow-hidden bg-gray-900">
