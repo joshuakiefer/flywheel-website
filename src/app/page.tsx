@@ -104,84 +104,57 @@ export default function Home() {
           <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative min-h-[70vh] flex items-center">
               <div className="relative w-full mx-auto max-w-7xl pt-24 sm:pt-28 lg:pt-40 pb-4 sm:pb-8 lg:pb-12">
-                <div className="grid lg:grid-cols-2 gap-x-16 gap-y-6 items-center">
-                  {/* Left Column - Main Content */}
-                  <div className="w-full max-w-2xl mx-auto lg:mx-0">
-                    <div className="space-y-4">
-                      <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-600 text-base sm:text-lg font-semibold ring-1 ring-emerald-100/50">
-                        For Businesses Scaling $1M to $20M
+                <div className="max-w-3xl">
+                  <div className="space-y-4">
+                    <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-600 text-base sm:text-lg font-semibold ring-1 ring-emerald-100/50">
+                      For Businesses Scaling $1M to $20M
+                    </span>
+
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+                      Financial{' '}
+                      <span className="relative">
+                        <span className="relative z-10 text-emerald-600">Clarity</span>
                       </span>
-
-                      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                        Financial{' '}
-                        <span className="relative">
-                          <span className="relative z-10 text-emerald-600">Clarity</span>
+                      {' '}
+                      <br className="hidden sm:block" />
+                      Fuels Business{' '}
+                      <span className="relative inline-block">
+                        <span className="relative z-10 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+                          Growth
                         </span>
-                        {' '}
-                        <br className="hidden sm:block" />
-                        Fuels Business{' '}
-                        <span className="relative inline-block">
-                          <span className="relative z-10 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-                            Growth
-                          </span>
-                        </span>
-                      </h1>
+                      </span>
+                    </h1>
 
-                      <p className="text-lg sm:text-xl text-gray-600 max-w-xl">
-                        Transform your business's financial complexity into a strategic advantage with expert bookkeeping, CFO services, and tax planning.
-                      </p>
+                    <p className="text-lg sm:text-xl text-gray-600 max-w-xl">
+                      Transform your business&apos;s financial complexity into a strategic advantage with expert bookkeeping, CFO services, and tax planning.
+                    </p>
 
-                      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
-                        <a
-                          href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
-                        >
-                          Book Discovery Call
-                          <ArrowRightIcon className="ml-2.5 h-5 w-5" />
-                        </a>
-                        <Link
-                          href="/services"
-                          className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-emerald-600 ring-2 ring-emerald-600/10 hover:bg-emerald-50 transition-all duration-200"
-                        >
-                          View Services
-                        </Link>
-                      </div>
-
-                      {/* Trust Indicators */}
-                      <div className="flex items-center gap-x-6 pt-4 sm:pt-6 text-sm text-gray-600">
-                        <div className="flex items-center gap-x-2 px-4 py-2 rounded-full bg-white shadow-sm ring-1 ring-gray-900/5">
-                          <svg className="h-5 w-5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                          </svg>
-                          <span>Trusted by 50+ Growing Businesses</span>
-                        </div>
-                      </div>
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                      <a
+                        href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
+                      >
+                        Book Discovery Call
+                        <ArrowRightIcon className="ml-2.5 h-5 w-5" />
+                      </a>
+                      <Link
+                        href="/services"
+                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-emerald-600 ring-2 ring-emerald-600/10 hover:bg-emerald-50 transition-all duration-200"
+                      >
+                        View Services
+                      </Link>
                     </div>
-                  </div>
 
-                  {/* Right Column - Stats Grid */}
-                  <div className="relative w-full">
-                    <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-                      {[
-                        { stat: '50+', label: 'Active Clients', sublabel: 'Growing $1M-$20M' },
-                        { stat: '$150M+', label: 'Revenue Managed', sublabel: 'for our clients' },
-                        { stat: '45+', label: 'Combined Years Experience', sublabel: 'serving growing businesses' },
-                        { stat: '4.9', label: 'Star Rating', sublabel: 'on Google Reviews' },
-                      ].map((item, index) => (
-                        <div
-                          key={item.label}
-                          className="relative group"
-                        >
-                          <div className="absolute inset-0 bg-white rounded-2xl sm:rounded-3xl shadow-xl shadow-emerald-600/5 ring-1 ring-emerald-100/20 transform transition-transform group-hover:scale-105" />
-                          <div className="relative p-4 sm:p-6 lg:p-8 text-center">
-                            <p className="text-3xl sm:text-4xl font-bold text-emerald-600">{item.stat}</p>
-                            <p className="mt-2 text-base font-medium text-gray-900">{item.label}</p>
-                            <p className="text-sm text-gray-500">{item.sublabel}</p>
-                          </div>
-                        </div>
-                      ))}
+                    {/* Trust Indicators */}
+                    <div className="flex items-center gap-x-6 pt-4 sm:pt-6 text-sm text-gray-600">
+                      <div className="flex items-center gap-x-2 px-4 py-2 rounded-full bg-white shadow-sm ring-1 ring-gray-900/5">
+                        <svg className="h-5 w-5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                        </svg>
+                        <span>Trusted by 50+ Growing Businesses</span>
+                      </div>
                     </div>
                   </div>
                 </div>
