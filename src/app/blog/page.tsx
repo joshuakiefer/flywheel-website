@@ -60,7 +60,7 @@ export default function BlogPage() {
                 Expert guidance and actionable strategies to help your business thrive financially.
               </p>
               <div className="mt-4 inline-flex items-center rounded-full bg-amber-50 px-4 py-2 text-sm font-medium text-amber-700 ring-1 ring-amber-600/20">
-                Coming Soon — Stay tuned for new articles
+                Coming Soon. Stay tuned for new articles
               </div>
             </div>
           </AnimateInView>

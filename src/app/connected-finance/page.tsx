@@ -7,7 +7,7 @@ const integrationCategories = [
   {
     name: 'Accounting',
     tools: ['QuickBooks Online', 'QuickBooks Desktop', 'QuickBooks Enterprise'],
-    description: 'Your financial core. We work with every version of QuickBooks — Online, Desktop, and Enterprise — and build from there.',
+    description: 'Your financial core. We work with every version of QuickBooks, including Online, Desktop, and Enterprise, and build from there.',
     color: 'emerald',
   },
   {
@@ -46,7 +46,7 @@ const processSteps = [
   {
     step: '01',
     title: 'Audit Your Stack',
-    description: 'We map every tool your business runs on — accounting, operations, people, communication — and identify where data is siloed or leaking.',
+    description: 'We map every tool your business runs on, from accounting and operations to people and communication, and identify where data is siloed or leaking.',
   },
   {
     step: '02',
@@ -56,7 +56,7 @@ const processSteps = [
   {
     step: '03',
     title: 'Build & Connect',
-    description: 'We wire the systems together — API integrations, automated data flows, custom middleware where needed. Your data starts flowing in real time.',
+    description: 'We wire the systems together with API integrations, automated data flows, and custom middleware where needed. Your data starts flowing in real time.',
   },
   {
     step: '04',
@@ -120,7 +120,7 @@ export default function ConnectedFinancePage() {
                 <span className="text-emerald-400">One Financial Picture.</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl">
-                We integrate your QuickBooks with your project management, time tracking, payroll, and communication tools — then build custom dashboards that give you complete financial clarity in real time.
+                We integrate your QuickBooks with your project management, time tracking, payroll, and communication tools, then build custom dashboards that give you complete financial clarity in real time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
@@ -155,7 +155,7 @@ export default function ConnectedFinancePage() {
                 <span className="text-gray-400">You Deserve the Full Picture.</span>
               </h2>
               <p className="text-xl text-gray-600">
-                Traditional outsourced bookkeeping starts and ends with QuickBooks. But your business doesn&apos;t run on QuickBooks alone. Revenue, costs, time, people, and projects are scattered across a half-dozen tools — and the financial story they tell individually is incomplete.
+                Traditional outsourced bookkeeping starts and ends with QuickBooks. But your business doesn&apos;t run on QuickBooks alone. Revenue, costs, time, people, and projects are scattered across a half-dozen tools, and the financial story they tell individually is incomplete.
               </p>
             </motion.div>
           </div>
@@ -211,7 +211,7 @@ export default function ConnectedFinancePage() {
                   'Real-time dashboards updated continuously',
                   'Project profitability visible at any moment',
                   'Payroll feeds directly into cost analysis',
-                  'One dashboard — accounting, ops, people, unified',
+                  'One dashboard for accounting, ops, and people, fully unified',
                   'Decisions made on live, complete data',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-gray-700">
@@ -241,7 +241,7 @@ export default function ConnectedFinancePage() {
                 What We Connect
               </h2>
               <p className="text-lg text-gray-600">
-                We work with the tools you already use. No ripping and replacing — just wiring everything together.
+                We work with the tools you already use. No ripping and replacing. Just wiring everything together.
               </p>
             </motion.div>
           </div>
