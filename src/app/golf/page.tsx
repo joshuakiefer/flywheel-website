@@ -46,8 +46,7 @@ export default function GolfPage() {
           transition={{ duration: 0.55, delay: 0.15 }}
           className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 max-w-xl leading-tight"
         >
-          If your books are messier than your short game,{' '}
-          <span className="text-emerald-600">we should talk.</span>
+          Accounting that keeps up with your growth.
         </motion.h1>
 
         {/* Subtext */}
@@ -57,7 +56,7 @@ export default function GolfPage() {
           transition={{ duration: 0.5, delay: 0.22 }}
           className="mt-5 text-lg text-gray-600 max-w-md"
         >
-          Stop hacking through your financials. Flywheel provides expert bookkeeping and CFO insights for growing businesses so you can focus on what matters.
+          Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M&#8211;$20M.
         </motion.p>
 
         {/* Stats */}
