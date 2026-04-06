@@ -1,14 +1,11 @@
+import './globals.css'
 import '../styles/globals.css'
-import { Inter, Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Metadata, Viewport } from 'next'
-import Footer from '@/components/Footer'
-import Navigation from '@/components/Navigation'
-import ScrollToTop from '@/components/ScrollToTop'
 
 const inter = Inter({ subsets: ['latin'] })
-const montserrat = Montserrat({ subsets: ['latin'] })
 
-export const viewport = {
+export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -53,13 +50,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`}>
-        <ScrollToTop />
-        <header className="absolute inset-x-0 top-0 z-50">
-          <Navigation />
-        </header>
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
-} 
+}
