@@ -32,28 +32,32 @@ export default function GolfPage() {
 
   return (
     <main className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
-      <div className="flex-1 mx-auto max-w-md px-5 pt-10 pb-6">
 
+      {/* Hero Header */}
+      <div className="bg-[#1D6B52] px-6 pt-10 pb-8 text-center">
         {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 92" width="36" height="36" aria-label="Flywheel" role="img">
-            <circle cx="42" cy="46" r="22" fill="none" stroke="#1D6B52" strokeWidth="4" />
-            <circle cx="42" cy="46" r="9" fill="#1D6B52" />
-            <path d="M42 24 Q57 28 62 38" fill="none" stroke="#1D6B52" strokeWidth="3" strokeLinecap="round" />
-            <path d="M64 46 Q60 61 50 68" fill="none" stroke="#1D6B52" strokeWidth="3" strokeLinecap="round" />
-            <path d="M42 68 Q27 64 20 54" fill="none" stroke="#1D6B52" strokeWidth="3" strokeLinecap="round" />
+        <div className="flex justify-center mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 92" width="42" height="42" aria-label="Flywheel" role="img">
+            <circle cx="42" cy="46" r="22" fill="none" stroke="#ffffff" strokeWidth="3.5" />
+            <circle cx="42" cy="46" r="9" fill="#ffffff" />
+            <path d="M42 24 Q57 28 62 38" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
+            <path d="M64 46 Q60 61 50 68" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
+            <path d="M42 68 Q27 64 20 54" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
           </svg>
         </div>
 
         {/* Headline */}
-        <h1 className="text-[1.7rem] font-bold text-gray-900 text-center leading-tight tracking-tight mb-2">
+        <h1 className="text-[1.75rem] font-bold text-white text-center leading-tight tracking-tight mb-2">
           Accounting that keeps up with your growth.
         </h1>
 
         {/* Subheadline */}
-        <p className="text-sm text-gray-500 text-center mb-6">
+        <p className="text-sm text-white/70 text-center">
           Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M–$20M.
         </p>
+      </div>
+
+      <div className="flex-1 mx-auto max-w-md px-5 pt-6 pb-6">
 
         {/* Report Preview Section */}
         <div className="mb-6">
