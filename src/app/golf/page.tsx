@@ -14,6 +14,7 @@ const reportPages = [
 
 export default function GolfPage() {
   const [activeSlide, setActiveSlide] = useState(0)
+  const [fullscreen, setFullscreen] = useState(false)
   const touchStartX = useRef(0)
   const tabsRef = useRef<HTMLDivElement>(null)
 
@@ -34,12 +35,9 @@ export default function GolfPage() {
 
   const selectSlide = (i: number) => {
     setActiveSlide(i)
-    // Scroll the tab into view
     if (tabsRef.current) {
       const tab = tabsRef.current.children[i] as HTMLElement
-      if (tab) {
-        tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
-      }
+      if (tab) tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
     }
   }
 
@@ -48,7 +46,6 @@ export default function GolfPage() {
 
       {/* Hero Header */}
       <div className="bg-[#1D6B52] px-6 pt-10 pb-8 text-center">
-        {/* Logo + Wordmark */}
         <div className="flex items-center justify-center gap-2.5 mb-5">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 92" width="36" height="36" aria-label="Flywheel" role="img">
             <circle cx="42" cy="46" r="22" fill="none" stroke="#ffffff" strokeWidth="3.5" />
@@ -61,13 +58,9 @@ export default function GolfPage() {
             flywheel
           </span>
         </div>
-
-        {/* Headline */}
         <h1 className="text-[1.75rem] font-bold text-white text-center leading-tight tracking-tight mb-2">
           Accounting that keeps up with your growth.
         </h1>
-
-        {/* Subheadline */}
         <p className="text-sm text-white/70 text-center">
           Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M–$20M.
         </p>
@@ -75,16 +68,16 @@ export default function GolfPage() {
 
       <div className="flex-1 mx-auto max-w-md w-full px-5 pt-5 pb-6">
 
-        {/* Report Preview Section */}
+        {/* Report Section */}
         <div className="mb-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 text-center mb-3">
-            Sample Monthly Report
+            What you get every month
           </p>
 
-          {/* Tab navigation */}
+          {/* Tabs */}
           <div
             ref={tabsRef}
-            className="flex gap-1.5 overflow-x-auto pb-2 mb-3 scrollbar-hide"
+            className="flex gap-1.5 overflow-x-auto pb-2 mb-3"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
           >
             {reportPages.map((page, i) => (
@@ -102,29 +95,41 @@ export default function GolfPage() {
             ))}
           </div>
 
-          {/* Image viewer */}
-          <div
-            className="relative rounded-xl overflow-hidden bg-gray-50 ring-1 ring-gray-200 shadow-sm"
+          {/* Preview card — tap to go fullscreen */}
+          <button
+            onClick={() => setFullscreen(true)}
+            className="relative w-full rounded-xl overflow-hidden bg-gray-50 ring-1 ring-gray-200 shadow-sm text-left"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            <div className="relative aspect-[8.5/11]">
-              <Image
-                src={reportPages[activeSlide].src}
-                alt={reportPages[activeSlide].label}
-                fill
-                className="object-contain"
-                sizes="(max-width: 448px) 100vw, 448px"
-                priority={activeSlide === 0}
-              />
+            {/* Cropped preview — top portion of the page for readability */}
+            <div className="relative w-full overflow-hidden" style={{ height: '280px' }}>
+              <div className="relative w-full" style={{ height: '600px', marginTop: '-10px' }}>
+                <Image
+                  src={reportPages[activeSlide].src}
+                  alt={reportPages[activeSlide].label}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 448px) 100vw, 448px"
+                  priority={activeSlide === 0}
+                />
+              </div>
             </div>
 
-            {/* Page label overlay */}
-            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent pt-8 pb-3 px-4">
-              <p className="text-white text-sm font-medium">{reportPages[activeSlide].label}</p>
-              <p className="text-white/60 text-xs">Swipe or tap tabs to browse</p>
+            {/* Bottom bar */}
+            <div className="bg-white border-t border-gray-100 px-4 py-3 flex items-center justify-between">
+              <div>
+                <p className="text-sm font-semibold text-gray-900">{reportPages[activeSlide].label}</p>
+                <p className="text-xs text-gray-400">{activeSlide + 1} of {reportPages.length}</p>
+              </div>
+              <div className="flex items-center gap-1.5 text-[#1D6B52]">
+                <span className="text-xs font-semibold">View full page</span>
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                </svg>
+              </div>
             </div>
-          </div>
+          </button>
         </div>
 
         {/* Stats */}
@@ -142,7 +147,7 @@ export default function GolfPage() {
           </div>
         </div>
 
-        {/* Book Discovery Call */}
+        {/* CTAs */}
         <a
           href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
           target="_blank"
@@ -151,8 +156,6 @@ export default function GolfPage() {
         >
           Book Discovery Call &nbsp;&rarr;
         </a>
-
-        {/* Phone Number */}
         <a
           href="tel:6146650557"
           className="flex items-center justify-center w-full rounded-full border-2 border-gray-200 bg-white py-4 text-lg font-semibold text-[#1D6B52]"
@@ -162,24 +165,81 @@ export default function GolfPage() {
           </svg>
           614-665-0557
         </a>
-
-        {/* URL */}
-        <p className="text-sm text-gray-400 text-center mt-4">
-          flywheelbookkeeping.com
-        </p>
-
+        <p className="text-sm text-gray-400 text-center mt-4">flywheelbookkeeping.com</p>
       </div>
 
-      {/* Footer bar */}
+      {/* Footer */}
       <div className="bg-[#1D6B52] py-4 px-6 text-center">
         <p className="text-sm text-white/90 font-medium">
           Flywheel Bookkeeping &nbsp;&middot;&nbsp; Outsourced Accounting for Growing Businesses
         </p>
       </div>
 
-      {/* Hide scrollbar on tabs */}
+      {/* Fullscreen viewer */}
+      {fullscreen && (
+        <div className="fixed inset-0 z-50 bg-black flex flex-col">
+          {/* Top bar */}
+          <div className="flex items-center justify-between px-4 py-3 bg-black/90">
+            <div>
+              <p className="text-white text-sm font-semibold">{reportPages[activeSlide].label}</p>
+              <p className="text-white/50 text-xs">{activeSlide + 1} of {reportPages.length}</p>
+            </div>
+            <button
+              onClick={() => setFullscreen(false)}
+              className="text-white p-2 rounded-full hover:bg-white/10"
+              aria-label="Close"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Image — pinch to zoom */}
+          <div
+            className="flex-1 overflow-auto"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={(e) => {
+              const diff = touchStartX.current - e.changedTouches[0].clientX
+              if (Math.abs(diff) > 50) {
+                if (diff > 0 && activeSlide < reportPages.length - 1) setActiveSlide(prev => prev + 1)
+                else if (diff < 0 && activeSlide > 0) setActiveSlide(prev => prev - 1)
+              }
+            }}
+          >
+            <Image
+              src={reportPages[activeSlide].src}
+              alt={reportPages[activeSlide].label}
+              width={850}
+              height={1100}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+
+          {/* Bottom tabs */}
+          <div className="bg-black/90 px-4 py-3">
+            <div className="flex gap-1.5 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
+              {reportPages.map((page, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveSlide(i)}
+                  className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                    i === activeSlide
+                      ? 'bg-[#1D6B52] text-white'
+                      : 'bg-white/10 text-white/60'
+                  }`}
+                >
+                  {page.short}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        div::-webkit-scrollbar { display: none; }
       `}</style>
     </main>
   )
