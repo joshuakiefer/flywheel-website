@@ -4,16 +4,18 @@ import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 
 const reportPages = [
-  { src: '/report/notes-to-management.jpg', label: 'Executive Summary' },
-  { src: '/report/key-metrics.jpg', label: 'Key Metrics' },
-  { src: '/report/kpi-results.jpg', label: 'KPI Results' },
-  { src: '/report/breakeven-analysis.jpg', label: 'Breakeven Analysis' },
-  { src: '/report/cash-flow-analysis.jpg', label: 'Cash Flow Analysis' },
+  { src: '/report/notes-to-management.jpg', label: 'Executive Summary', short: 'Summary' },
+  { src: '/report/profit-and-loss.jpg', label: 'Profit & Loss', short: 'P&L' },
+  { src: '/report/key-metrics.jpg', label: 'Key Metrics', short: 'Metrics' },
+  { src: '/report/kpi-results.jpg', label: 'KPI Results', short: 'KPIs' },
+  { src: '/report/breakeven-analysis.jpg', label: 'Breakeven Analysis', short: 'Breakeven' },
+  { src: '/report/cash-flow-analysis.jpg', label: 'Cash Flow Analysis', short: 'Cash Flow' },
 ]
 
 export default function GolfPage() {
   const [activeSlide, setActiveSlide] = useState(0)
   const touchStartX = useRef(0)
+  const tabsRef = useRef<HTMLDivElement>(null)
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
@@ -23,9 +25,20 @@ export default function GolfPage() {
     const diff = touchStartX.current - e.changedTouches[0].clientX
     if (Math.abs(diff) > 50) {
       if (diff > 0 && activeSlide < reportPages.length - 1) {
-        setActiveSlide(activeSlide + 1)
+        setActiveSlide(prev => prev + 1)
       } else if (diff < 0 && activeSlide > 0) {
-        setActiveSlide(activeSlide - 1)
+        setActiveSlide(prev => prev - 1)
+      }
+    }
+  }
+
+  const selectSlide = (i: number) => {
+    setActiveSlide(i)
+    // Scroll the tab into view
+    if (tabsRef.current) {
+      const tab = tabsRef.current.children[i] as HTMLElement
+      if (tab) {
+        tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
       }
     }
   }
@@ -35,15 +48,18 @@ export default function GolfPage() {
 
       {/* Hero Header */}
       <div className="bg-[#1D6B52] px-6 pt-10 pb-8 text-center">
-        {/* Logo */}
-        <div className="flex justify-center mb-5">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 92" width="42" height="42" aria-label="Flywheel" role="img">
+        {/* Logo + Wordmark */}
+        <div className="flex items-center justify-center gap-2.5 mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 92" width="36" height="36" aria-label="Flywheel" role="img">
             <circle cx="42" cy="46" r="22" fill="none" stroke="#ffffff" strokeWidth="3.5" />
             <circle cx="42" cy="46" r="9" fill="#ffffff" />
             <path d="M42 24 Q57 28 62 38" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
             <path d="M64 46 Q60 61 50 68" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
             <path d="M42 68 Q27 64 20 54" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
           </svg>
+          <span className="text-2xl font-medium text-white leading-none" style={{ letterSpacing: '-0.02em' }}>
+            flywheel
+          </span>
         </div>
 
         {/* Headline */}
@@ -57,7 +73,7 @@ export default function GolfPage() {
         </p>
       </div>
 
-      <div className="flex-1 mx-auto max-w-md px-5 pt-6 pb-6">
+      <div className="flex-1 mx-auto max-w-md w-full px-5 pt-5 pb-6">
 
         {/* Report Preview Section */}
         <div className="mb-6">
@@ -65,13 +81,33 @@ export default function GolfPage() {
             Sample Monthly Report
           </p>
 
-          {/* Image carousel */}
+          {/* Tab navigation */}
+          <div
+            ref={tabsRef}
+            className="flex gap-1.5 overflow-x-auto pb-2 mb-3 scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
+          >
+            {reportPages.map((page, i) => (
+              <button
+                key={i}
+                onClick={() => selectSlide(i)}
+                className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
+                  i === activeSlide
+                    ? 'bg-[#1D6B52] text-white'
+                    : 'bg-gray-100 text-gray-500'
+                }`}
+              >
+                {page.short}
+              </button>
+            ))}
+          </div>
+
+          {/* Image viewer */}
           <div
             className="relative rounded-xl overflow-hidden bg-gray-50 ring-1 ring-gray-200 shadow-sm"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            {/* Active page image */}
             <div className="relative aspect-[8.5/11]">
               <Image
                 src={reportPages[activeSlide].src}
@@ -86,22 +122,8 @@ export default function GolfPage() {
             {/* Page label overlay */}
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent pt-8 pb-3 px-4">
               <p className="text-white text-sm font-medium">{reportPages[activeSlide].label}</p>
-              <p className="text-white/60 text-xs">{activeSlide + 1} of {reportPages.length}</p>
+              <p className="text-white/60 text-xs">Swipe or tap tabs to browse</p>
             </div>
-          </div>
-
-          {/* Dots */}
-          <div className="flex items-center justify-center gap-2 mt-3">
-            {reportPages.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveSlide(i)}
-                className={`h-2 rounded-full transition-all duration-200 ${
-                  i === activeSlide ? 'w-6 bg-[#1D6B52]' : 'w-2 bg-gray-300'
-                }`}
-                aria-label={`View ${reportPages[i].label}`}
-              />
-            ))}
           </div>
         </div>
 
@@ -154,6 +176,11 @@ export default function GolfPage() {
           Flywheel Bookkeeping &nbsp;&middot;&nbsp; Outsourced Accounting for Growing Businesses
         </p>
       </div>
+
+      {/* Hide scrollbar on tabs */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+      `}</style>
     </main>
   )
 }
