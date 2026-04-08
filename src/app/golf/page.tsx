@@ -42,10 +42,6 @@ export default function GolfPage() {
 
         {/* Report Preview */}
         <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 text-center mb-4">
-            What you get every month
-          </p>
-
           {/* Stacked page preview — visual only */}
           <div className="relative mx-auto w-[220px] h-[180px] mb-5">
             {/* Background pages (fanned stack) */}
