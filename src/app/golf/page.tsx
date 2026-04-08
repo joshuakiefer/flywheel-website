@@ -128,7 +128,7 @@ export default function GolfPage() {
           rel="noopener noreferrer"
           className="block w-full rounded-full bg-[#1D6B52] py-4 text-center text-lg font-bold text-white shadow-lg mb-3"
         >
-          Book Discovery Call &nbsp;&rarr;
+          Get a Second Opinion on Your Books &nbsp;&rarr;
         </a>
         <a
           href="tel:6146650557"
