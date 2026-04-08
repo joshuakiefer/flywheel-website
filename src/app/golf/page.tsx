@@ -126,9 +126,12 @@ export default function GolfPage() {
           href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full rounded-full bg-[#1D6B52] py-4 text-center text-lg font-bold text-white shadow-lg mb-3"
+          className="flex items-center justify-center w-full rounded-full bg-[#1D6B52] py-5 px-6 text-base font-bold text-white shadow-lg shadow-[#1D6B52]/25 mb-3"
         >
-          Get a Second Opinion on Your Books &nbsp;&rarr;
+          <span>Get a Second Opinion on Your Books</span>
+          <svg className="ml-2 h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
         </a>
         <a
           href="tel:6146650557"
