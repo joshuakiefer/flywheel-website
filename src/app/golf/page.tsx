@@ -146,10 +146,22 @@ export default function GolfPage() {
       </div>
 
       {/* Footer */}
-      <div className="bg-[#1D6B52] py-4 px-6 text-center">
-        <p className="text-sm text-white/90 font-medium">
-          Flywheel Bookkeeping &nbsp;&middot;&nbsp; Outsourced Accounting for Growing Businesses
-        </p>
+      <div className="bg-[#1D6B52] py-6 px-6">
+        <div className="max-w-md mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 92" width="20" height="20" aria-hidden="true">
+              <circle cx="42" cy="46" r="22" fill="none" stroke="#ffffff" strokeWidth="4" />
+              <circle cx="42" cy="46" r="9" fill="#ffffff" />
+              <path d="M42 24 Q57 28 62 38" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
+              <path d="M64 46 Q60 61 50 68" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
+              <path d="M42 68 Q27 64 20 54" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
+            </svg>
+            <span className="text-sm font-medium text-white leading-none" style={{ letterSpacing: '-0.01em' }}>flywheel</span>
+          </div>
+          <p className="text-xs text-white/60">
+            &copy; {new Date().getFullYear()} Flywheel Bookkeeping
+          </p>
+        </div>
       </div>
     </main>
   )
