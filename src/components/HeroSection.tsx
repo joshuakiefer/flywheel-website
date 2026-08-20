@@ -20,8 +20,6 @@ const VIDEO_EMBED_URL = ''
 const VIDEO_FILE = ''
 
 export default function HeroSection() {
-  const hasVideo = Boolean(VIDEO_EMBED_URL || VIDEO_FILE)
-
   return (
     <section className="relative isolate overflow-hidden bg-gray-900">
       {/* Background motion */}
@@ -135,20 +133,6 @@ export default function HeroSection() {
                 )}
               </div>
             </div>
-
-            <p className="mt-4 text-center text-sm text-gray-400">
-              {hasVideo
-                ? 'A few minutes on how connected financial reporting changes the decisions you make every month.'
-                : 'Want the walkthrough now? '}
-              {!hasVideo && (
-                <a
-                  href="#book"
-                  className="font-semibold text-emerald-400 hover:text-emerald-300 underline underline-offset-4"
-                >
-                  Book a call and we&apos;ll show you live.
-                </a>
-              )}
-            </p>
           </motion.div>
         </div>
       </div>
