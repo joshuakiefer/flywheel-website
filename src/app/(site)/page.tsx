@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import ConnectedFinanceSection from '@/components/ConnectedFinanceSection'
-import VSLSection from '@/components/VSLSection'
+import HeroSection from '@/components/HeroSection'
 import ComparisonTable from '@/components/ComparisonTable'
 import BookingSection from '@/components/BookingSection'
 import ReviewCarousel from '@/components/ReviewCarousel'
@@ -21,83 +21,33 @@ import { motion } from 'framer-motion'
 export default function Home() {
   return (
     <main className="relative">
-      {/* Hero Section */}
-      <div className="relative isolate">
-        {/* Hero section */}
-        <div className="relative pt-16 sm:pt-20 lg:pt-8">
-          {/* Video Background */}
-          <div className="fixed top-0 left-0 w-full h-full -z-10">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
-            >
-              <source src="/video1.mp4" type="video/mp4" />
-            </video>
-            {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 bg-white/50" />
-          </div>
-          <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="relative min-h-[70vh] flex items-center">
-              <div className="relative w-full mx-auto max-w-7xl pt-24 sm:pt-28 lg:pt-40 pb-4 sm:pb-8 lg:pb-12">
-                <div className="max-w-3xl">
-                  <div className="space-y-5">
-                    <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-semibold uppercase tracking-widest ring-1 ring-emerald-100">
-                      For Businesses Scaling $1M to $20M
-                    </span>
-
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.05] text-gray-900">
-                      Financial{' '}
-                      <span className="text-emerald-600">Clarity</span>
-                      {' '}
-                      <br className="hidden sm:block" />
-                      Fuels Business{' '}
-                      <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-                        Growth
-                      </span>
-                    </h1>
-
-                    <p className="text-lg sm:text-xl text-gray-600 max-w-xl leading-relaxed">
-                      Transform your business&apos;s financial complexity into a strategic advantage with expert bookkeeping, CFO services, and tax planning.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-                      <a
-                        href="#book"
-                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-emerald-600 px-7 sm:px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-xl shadow-emerald-600/20 hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
-                      >
-                        Book Discovery Call
-                        <ArrowRightIcon className="ml-2.5 h-5 w-5" />
-                      </a>
-                      <Link
-                        href="/services"
-                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-7 sm:px-8 py-4 text-base sm:text-lg font-semibold text-emerald-700 bg-white/80 ring-2 ring-emerald-600/15 hover:bg-emerald-50 transition-all duration-200"
-                      >
-                        View Services
-                      </Link>
-                    </div>
-
-                    {/* Trust Indicators */}
-                    <div className="flex items-center gap-x-6 pt-4 sm:pt-6 text-sm text-gray-600">
-                      <div className="flex items-center gap-x-2 px-4 py-2 rounded-full bg-white shadow-sm ring-1 ring-gray-900/5">
-                        <svg className="h-5 w-5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                        </svg>
-                        <span>Trusted by 50+ Growing Businesses</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Subtle background motion behind the lighter sections below.
+          The hero paints its own opaque background over this. */}
+      <div className="fixed top-0 left-0 w-full h-full -z-10">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+        >
+          <source src="/video1.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-white/50" />
       </div>
 
-      {/* VSL Section */}
-      <VSLSection />
+      {/* Hero */}
+      <HeroSection />
+
+      {/* Wave transition out of the dark hero */}
+      <div className="w-full text-gray-900 leading-[0] -mt-px">
+        <svg viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+          <path
+            d="M1440 51.4091H1090.08C833.336 51.4091 580.229 116 360 116C139.771 116 0 51.4091 0 51.4091V0H1440V51.4091Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
 
       {/* Services Section */}
       <div className="relative py-32 overflow-hidden">

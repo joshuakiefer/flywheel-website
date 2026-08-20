@@ -34,7 +34,7 @@ export default function GolfPage() {
           Accounting that keeps up with your growth.
         </h1>
         <p className="text-sm text-white/70">
-          Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M–$20M.
+          Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M-$20M.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function GolfPage() {
 
         {/* Report Preview */}
         <div className="mb-8">
-          {/* Stacked page preview — visual only */}
+          {/* Stacked page preview: visual only */}
           <div className="relative mx-auto w-[220px] h-[180px] mb-5">
             {/* Background pages (fanned stack) */}
             <div className="absolute inset-0 bg-white rounded-lg shadow-md ring-1 ring-gray-200 rotate-[-4deg] translate-x-[-8px]">
@@ -61,7 +61,7 @@ export default function GolfPage() {
                 <div className="h-1.5 w-3/4 bg-gray-200 rounded" />
               </div>
             </div>
-            {/* Top page — actual report thumbnail */}
+            {/* Top page: actual report thumbnail */}
             <div className="absolute inset-0 bg-white rounded-lg shadow-lg ring-1 ring-gray-200 overflow-hidden rotate-[1.5deg] translate-x-[4px] translate-y-[3px]">
               <Image
                 src="/report/notes-to-management.jpg"
@@ -73,7 +73,7 @@ export default function GolfPage() {
             </div>
           </div>
 
-          {/* What's included — clean list */}
+          {/* What's included: clean list */}
           <div className="bg-gray-50 rounded-xl p-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Every report includes</p>
             <div className="grid grid-cols-2 gap-y-2.5 gap-x-4">
@@ -107,7 +107,7 @@ export default function GolfPage() {
           <div className="text-center">
             <div className="text-3xl font-bold text-[#1D6B52]">50+</div>
             <div className="text-sm font-medium text-gray-900 mt-0.5">Active Clients</div>
-            <div className="text-xs text-gray-400">Growing $1M–$20M</div>
+            <div className="text-xs text-gray-400">Growing $1M-$20M</div>
           </div>
           <div className="w-px bg-gray-200" />
           <div className="text-center">
@@ -130,13 +130,13 @@ export default function GolfPage() {
           </svg>
         </a>
         <a
-          href="tel:6146650557"
+          href="tel:6142960874"
           className="flex items-center justify-center w-full rounded-full border-2 border-gray-200 bg-white py-4 text-lg font-semibold text-[#1D6B52]"
         >
           <svg className="mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
           </svg>
-          614-665-0557
+          614-296-0874
         </a>
         <p className="text-sm text-gray-400 text-center mt-4">flywheelbookkeeping.com</p>
       </div>

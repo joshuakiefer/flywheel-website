@@ -25,7 +25,7 @@ const values = [
   },
   {
     name: 'Proactive Support',
-    description: 'We don\'t just crunch numbers – we actively help you spot opportunities and navigate challenges.',
+    description: 'We don\'t just crunch numbers. We actively help you spot opportunities and navigate challenges.',
   },
 ]
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 <figure className="border-l-4 border-brand-primary pl-4 sm:pl-8">
                   <blockquote className="text-lg sm:text-xl font-semibold leading-8 tracking-tight text-gray-900">
                     <p>
-                      "I started this firm because I saw how many talented businesses were held back by financial complexity. Our mission is simple: to help you build a strong financial foundation so you can focus on what you do best – growing your business."
+                      "I started this firm because I saw how many talented businesses were held back by financial complexity. Our mission is simple: to help you build a strong financial foundation so you can focus on what you do best, growing your business."
                     </p>
                   </blockquote>
                   <figcaption className="mt-6 sm:mt-8 flex items-center gap-x-4 sm:gap-x-6">
