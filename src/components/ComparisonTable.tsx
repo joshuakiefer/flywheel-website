@@ -72,7 +72,7 @@ function Dash() {
 
 export default function ComparisonTable() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
+    <section className="relative py-20 sm:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -81,7 +81,7 @@ export default function ComparisonTable() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mx-auto max-w-3xl text-center mb-12 sm:mb-16"
+          className="mx-auto max-w-3xl text-center mb-10 sm:mb-12"
         >
           <span className="inline-block py-1.5 px-3 mb-5 text-xs font-semibold uppercase tracking-widest text-emerald-700 bg-emerald-50 ring-1 ring-emerald-100 rounded-full">
             The Difference
