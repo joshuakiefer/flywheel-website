@@ -13,7 +13,7 @@ const BOOKING_URL = 'https://www.calendar.com/joshkiefercpa/meeting-flywheel/'
 
 export default function BookingSection() {
   return (
-    <section id="book" className="relative py-20 sm:py-28 bg-gray-50 scroll-mt-24">
+    <section id="book" className="relative py-16 sm:py-20 bg-gray-50 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

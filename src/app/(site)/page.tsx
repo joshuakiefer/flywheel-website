@@ -50,13 +50,13 @@ export default function Home() {
       </div>
 
       {/* Services Section */}
-      <div className="relative py-32 overflow-hidden">
+      <div className="relative py-20 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#06966A05,_transparent_50%)]" />
         </div>
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-10 sm:mt-12 text-center">
             <Link
               href="/services"
               className="inline-flex items-center justify-center rounded-full bg-emerald-600/10 px-8 py-4 text-lg font-semibold text-emerald-600 hover:bg-emerald-600/20 transition-all duration-200"
@@ -158,14 +158,14 @@ export default function Home() {
       <ComparisonTable />
 
       {/* Industry Focus */}
-      <div className="relative py-32 overflow-hidden bg-gray-900">
+      <div className="relative py-20 sm:py-24 overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A20,_transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4920,_transparent_60%)]" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -247,7 +247,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
+          <div className="mt-10 sm:mt-12 text-center">
             <Link
               href="/success-stories"
               className="inline-flex items-center justify-center rounded-full bg-emerald-400/10 px-8 py-4 text-lg font-semibold text-emerald-400 hover:bg-emerald-400/20 transition-all duration-200"
@@ -268,13 +268,13 @@ export default function Home() {
       </div>
 
       {/* Reviews Section */}
-      <div className="relative py-32 overflow-hidden">
+      <div className="relative py-20 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#06966A05,_transparent_50%)]" />
         </div>
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -299,7 +299,7 @@ export default function Home() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 stat: '50+',

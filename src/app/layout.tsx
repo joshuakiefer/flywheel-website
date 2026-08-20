@@ -2,6 +2,7 @@ import './globals.css'
 import '../styles/globals.css'
 import { Inter } from 'next/font/google'
 import { Metadata, Viewport } from 'next'
+import { OrganizationSchema } from '@/components/StructuredData'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,9 @@ export const metadata: Metadata = {
   description: 'Specialized bookkeeping, CFO, and tax services for businesses scaling from $1M to $20M. Transform your business\'s financial management with expert guidance.',
   keywords: 'business bookkeeping, CFO services, tax planning, financial strategy, business growth',
   metadataBase: new URL('https://flywheelbookkeeping.com'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -29,6 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Flywheel',
+    url: '/',
   },
   twitter: {
     card: 'summary_large_image',
@@ -50,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`}>
+        <OrganizationSchema />
         {children}
       </body>
     </html>

@@ -57,27 +57,28 @@ const outcomes = [
 
 export default function ConnectedFinanceSection() {
   return (
-    <div className="relative py-24 sm:py-32 overflow-hidden">
+    <div className="relative py-20 sm:py-24 overflow-hidden bg-gray-900">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,_#06966A20,_transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,_#1A2B4955,_transparent_50%)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <span className="inline-flex text-emerald-600 text-base sm:text-lg font-semibold">
+            <span className="inline-flex text-emerald-400 text-base sm:text-lg font-semibold">
               What Makes Flywheel Different
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               We Don&apos;t Just Do Your Books.{' '}
-              <span className="text-emerald-600">We Connect Your Entire Business.</span>
+              <span className="text-emerald-400">We Connect Your Entire Business.</span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
               Most bookkeepers see one system. We wire together every tool your business runs on and give you a single dashboard with the full picture.
             </p>
           </motion.div>
@@ -89,41 +90,41 @@ export default function ConnectedFinanceSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="mb-20 sm:mb-24"
+          className="mb-12 sm:mb-16"
         >
           <div className="relative max-w-4xl mx-auto">
             {/* The Hub */}
-            <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-xl shadow-gray-900/5 ring-1 ring-gray-900/5 p-6 sm:p-10 lg:p-12">
+            <div className="relative bg-white/[0.04] rounded-2xl sm:rounded-3xl ring-1 ring-white/10 p-6 sm:p-8 lg:p-10">
               {/* Pain → Solution narrative */}
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-10 sm:mb-12">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-8 sm:mb-10">
                 {/* The Problem */}
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-red-500">
+                  <div className="flex items-center gap-2 text-red-400">
                     <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
                     </svg>
                     <span className="text-sm font-semibold uppercase tracking-wider">The Problem</span>
                   </div>
-                  <p className="text-gray-900 font-medium text-lg">
+                  <p className="text-white font-medium text-lg">
                     Your business runs on 5+ disconnected tools.
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-400">
                     Your accounting lives in QuickBooks. Project data is in another tool. Time tracking is somewhere else. Payroll is separate. Your team communicates in Slack. None of it talks to each other, so you&apos;re making decisions on incomplete data.
                   </p>
                 </div>
 
                 {/* The Solution */}
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-emerald-600">
+                  <div className="flex items-center gap-2 text-emerald-400">
                     <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="text-sm font-semibold uppercase tracking-wider">Our Approach</span>
                   </div>
-                  <p className="text-gray-900 font-medium text-lg">
+                  <p className="text-white font-medium text-lg">
                     We build you a connected financial command center.
                   </p>
-                  <p className="text-gray-600">
+                  <p className="text-gray-400">
                     We integrate your QuickBooks with your project management, time tracking, payroll, and communication tools, then build custom dashboards that show you the real story. Real-time. In one place.
                   </p>
                 </div>
@@ -131,13 +132,13 @@ export default function ConnectedFinanceSection() {
 
               {/* Integration Flow Visual */}
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-gray-50/50 rounded-2xl" />
+                <div className="absolute inset-0 bg-white/[0.03] ring-1 ring-white/5 rounded-2xl" />
                 <div className="relative p-6 sm:p-8">
                   {/* Integration badges flowing into center */}
                   <div className="flex flex-col items-center gap-6">
                     {/* Source Systems */}
                     <div className="w-full">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 text-center">Your Tools</p>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3 text-center">Your Tools</p>
                       <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                         {integrations.map((item, i) => (
                           <motion.div
@@ -146,9 +147,9 @@ export default function ConnectedFinanceSection() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 + (i * 0.05) }}
-                            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full shadow-sm ring-1 ring-gray-200 text-sm font-medium text-gray-700"
+                            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 rounded-full ring-1 ring-white/10 text-sm font-medium text-gray-200"
                           >
-                            <span className="h-2 w-2 rounded-full bg-gray-300" />
+                            <span className="h-2 w-2 rounded-full bg-emerald-400/60" />
                             <span className="hidden sm:inline">{item.name}</span>
                             <span className="sm:hidden">{item.short}</span>
                           </motion.div>
@@ -158,8 +159,8 @@ export default function ConnectedFinanceSection() {
 
                     {/* Flow Arrow */}
                     <div className="flex flex-col items-center gap-1">
-                      <div className="w-px h-6 bg-gradient-to-b from-gray-200 to-emerald-300" />
-                      <svg className="h-5 w-5 text-emerald-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <div className="w-px h-6 bg-gradient-to-b from-white/20 to-emerald-400" />
+                      <svg className="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
                       </svg>
                     </div>
@@ -197,21 +198,21 @@ export default function ConnectedFinanceSection() {
               className="relative group"
             >
               <div className="space-y-3">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-600/10 text-emerald-600">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400">
                   {outcome.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900">{outcome.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{outcome.description}</p>
+                <h3 className="text-lg font-semibold text-white">{outcome.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{outcome.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-14 sm:mt-16 text-center">
+        <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/connected-finance"
-            className="inline-flex items-center justify-center rounded-full bg-emerald-600/10 px-8 py-4 text-lg font-semibold text-emerald-600 hover:bg-emerald-600/20 transition-all duration-200"
+            className="inline-flex items-center justify-center rounded-full bg-emerald-500/10 ring-1 ring-emerald-400/25 px-8 py-4 text-lg font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-all duration-200"
           >
             See How It Works
             <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
