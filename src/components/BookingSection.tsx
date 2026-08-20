@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
  * Inline scheduler.
  *
  * BOOKING_URL is embedded in an iframe. If your scheduler ever blocks framing,
- * swap in the provider's official embed snippet here — the "open in a new tab"
+ * swap in the provider's official embed snippet here. The "open in a new tab"
  * fallback link below stays either way so visitors never hit a dead end.
  */
 const BOOKING_URL = 'https://www.calendar.com/joshkiefercpa/meeting-flywheel/'
@@ -51,7 +51,7 @@ export default function BookingSection() {
             </div>
           </div>
 
-          {/* Always-visible fallback — works even if the scheduler can't be framed */}
+          {/* Always-visible fallback: works even if the scheduler cannot be framed */}
           <div className="relative px-6 pb-9 sm:pb-12 text-center">
             <a
               href={BOOKING_URL}

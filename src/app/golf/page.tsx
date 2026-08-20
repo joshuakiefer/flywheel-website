@@ -34,7 +34,7 @@ export default function GolfPage() {
           Accounting that keeps up with your growth.
         </h1>
         <p className="text-sm text-white/70">
-          Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M–$20M.
+          Bookkeeping. Fractional Controller. CFO insights. Built for businesses scaling $1M-$20M.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function GolfPage() {
 
         {/* Report Preview */}
         <div className="mb-8">
-          {/* Stacked page preview — visual only */}
+          {/* Stacked page preview: visual only */}
           <div className="relative mx-auto w-[220px] h-[180px] mb-5">
             {/* Background pages (fanned stack) */}
             <div className="absolute inset-0 bg-white rounded-lg shadow-md ring-1 ring-gray-200 rotate-[-4deg] translate-x-[-8px]">
@@ -61,7 +61,7 @@ export default function GolfPage() {
                 <div className="h-1.5 w-3/4 bg-gray-200 rounded" />
               </div>
             </div>
-            {/* Top page — actual report thumbnail */}
+            {/* Top page: actual report thumbnail */}
             <div className="absolute inset-0 bg-white rounded-lg shadow-lg ring-1 ring-gray-200 overflow-hidden rotate-[1.5deg] translate-x-[4px] translate-y-[3px]">
               <Image
                 src="/report/notes-to-management.jpg"
@@ -73,7 +73,7 @@ export default function GolfPage() {
             </div>
           </div>
 
-          {/* What's included — clean list */}
+          {/* What's included: clean list */}
           <div className="bg-gray-50 rounded-xl p-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Every report includes</p>
             <div className="grid grid-cols-2 gap-y-2.5 gap-x-4">
@@ -107,7 +107,7 @@ export default function GolfPage() {
           <div className="text-center">
             <div className="text-3xl font-bold text-[#1D6B52]">50+</div>
             <div className="text-sm font-medium text-gray-900 mt-0.5">Active Clients</div>
-            <div className="text-xs text-gray-400">Growing $1M–$20M</div>
+            <div className="text-xs text-gray-400">Growing $1M-$20M</div>
           </div>
           <div className="w-px bg-gray-200" />
           <div className="text-center">

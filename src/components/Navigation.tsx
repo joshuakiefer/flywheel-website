@@ -65,7 +65,7 @@ export default function Navigation() {
 
         {/* === DESKTOP NAV (lg+) === */}
         <nav className="hidden lg:block mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Top row — Logo lockup (hides on scroll) */}
+          {/* Top row: logo lockup (hides on scroll) */}
           <div
             className={`flex justify-center overflow-hidden transition-all duration-300 ${
               isScrolled ? 'max-h-0 opacity-0 py-0' : 'max-h-32 opacity-100 py-5'
@@ -90,7 +90,7 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Bottom row — Nav links + CTA */}
+          {/* Bottom row: nav links + CTA */}
           <div
             className={`relative flex items-center transition-all duration-300 ${
               isScrolled

@@ -14,7 +14,7 @@ export default function FlywheelLogo({ height = 48, showTagline = true, iconOnly
   const textColor = isLight ? '#ffffff' : '#1C1C1A'
   const taglineColor = isLight ? '#9ca3af' : '#6B6B68'
 
-  // Icon only — just the flywheel circle
+  // Icon only: just the flywheel circle
   if (iconOnly) {
     const iconViewBox = '0 0 84 92'
     return (
@@ -36,7 +36,7 @@ export default function FlywheelLogo({ height = 48, showTagline = true, iconOnly
     )
   }
 
-  // Full logo — icon + wordmark + optional tagline
+  // Full logo: icon + wordmark + optional tagline
   const viewBoxWidth = showTagline ? 520 : 260
   const viewBoxHeight = showTagline ? 100 : 70
   const width = height * (viewBoxWidth / viewBoxHeight)
