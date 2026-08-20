@@ -2,83 +2,21 @@
 
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import ServicesSection from '@/components/ServicesSection'
-import PricingSection from '@/components/PricingSection'
-import CTASection from '@/components/CTASection'
 import ConnectedFinanceSection from '@/components/ConnectedFinanceSection'
-import AnimateInView from '@/components/AnimateInView'
-import FlywheelAnimation from '@/components/FlywheelAnimation'
+import VSLSection from '@/components/VSLSection'
+import ComparisonTable from '@/components/ComparisonTable'
+import BookingSection from '@/components/BookingSection'
 import ReviewCarousel from '@/components/ReviewCarousel'
-import SectionHeader from '@/components/SectionHeader'
-import { ChartBarIcon, ArrowTrendingUpIcon, ClockIcon, CurrencyDollarIcon, BuildingOfficeIcon, RocketLaunchIcon, LightBulbIcon, SparklesIcon, ArrowRightIcon, BookOpenIcon, CalculatorIcon } from '@heroicons/react/24/outline'
+import {
+  ArrowRightIcon,
+  ArrowTrendingUpIcon,
+  BuildingOfficeIcon,
+  ChartBarIcon,
+  LightBulbIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+} from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
-
-const features = [
-  {
-    name: 'Bookkeeping',
-    description: 'Clean books and accurate financial statements that give you clarity on your business performance.',
-    icon: BookOpenIcon,
-  },
-  {
-    name: 'CFO Services',
-    description: 'Strategic guidance and financial planning to help you make data-driven decisions.',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Tax Planning',
-    description: 'Proactive tax planning and preparation tailored for your business.',
-    icon: CalculatorIcon,
-  },
-]
-
-const stats = [
-  { id: 1, stat: '45+', emphasis: 'Combined Years Experience', rest: 'serving growing businesses' },
-  { id: 2, stat: '$150M+', emphasis: 'Revenue Managed', rest: 'for our clients' },
-  { id: 3, stat: '5.0', emphasis: 'Star Rating', rest: 'on Google Reviews' },
-]
-
-const industries = [
-  { id: 1, name: 'Professional Services' },
-  { id: 2, name: 'Technology' },
-  { id: 3, name: 'E-commerce' },
-  { id: 4, name: 'Manufacturing' },
-  { id: 5, name: 'Healthcare' },
-  { id: 6, name: 'Construction' },
-]
-
-const metrics = [
-  { id: 1, stat: '10+', emphasis: 'Years Experience', rest: 'serving growing businesses' },
-  { id: 2, stat: '45+', emphasis: 'Active Clients', rest: 'in the $1M-$20M range' },
-  { id: 3, stat: '5.0', emphasis: 'Star Rating', rest: 'on Google Reviews' },
-]
-
-const industryIcons = [
-  {
-    name: 'Digital Marketing',
-    description: 'Specializing in business cash flow',
-    icon: RocketLaunchIcon,
-    color: 'from-purple-500/10 to-purple-500/5',
-  },
-  {
-    name: 'Creative Studios',
-    description: 'Financial systems for retainers',
-    icon: SparklesIcon,
-    color: 'from-amber-500/10 to-amber-500/5',
-  },
-  {
-    name: 'Tech Companies',
-    description: 'SaaS revenue optimization',
-    icon: LightBulbIcon,
-    color: 'from-blue-500/10 to-blue-500/5',
-  },
-  {
-    name: 'Design Studios',
-    description: 'Project-based forecasting',
-    icon: BuildingOfficeIcon,
-    color: 'from-rose-500/10 to-rose-500/5',
-  },
-]
 
 export default function Home() {
   return (
@@ -105,43 +43,37 @@ export default function Home() {
             <div className="relative min-h-[70vh] flex items-center">
               <div className="relative w-full mx-auto max-w-7xl pt-24 sm:pt-28 lg:pt-40 pb-4 sm:pb-8 lg:pb-12">
                 <div className="max-w-3xl">
-                  <div className="space-y-4">
-                    <span className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50 text-emerald-600 text-base sm:text-lg font-semibold ring-1 ring-emerald-100/50">
+                  <div className="space-y-5">
+                    <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs sm:text-sm font-semibold uppercase tracking-widest ring-1 ring-emerald-100">
                       For Businesses Scaling $1M to $20M
                     </span>
 
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.05] text-gray-900">
                       Financial{' '}
-                      <span className="relative">
-                        <span className="relative z-10 text-emerald-600">Clarity</span>
-                      </span>
+                      <span className="text-emerald-600">Clarity</span>
                       {' '}
                       <br className="hidden sm:block" />
                       Fuels Business{' '}
-                      <span className="relative inline-block">
-                        <span className="relative z-10 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-                          Growth
-                        </span>
+                      <span className="bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+                        Growth
                       </span>
                     </h1>
 
-                    <p className="text-lg sm:text-xl text-gray-600 max-w-xl">
+                    <p className="text-lg sm:text-xl text-gray-600 max-w-xl leading-relaxed">
                       Transform your business&apos;s financial complexity into a strategic advantage with expert bookkeeping, CFO services, and tax planning.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
                       <a
-                        href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
+                        href="#book"
+                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-emerald-600 px-7 sm:px-8 py-4 text-base sm:text-lg font-semibold text-white shadow-xl shadow-emerald-600/20 hover:bg-emerald-500 transition-all duration-200 hover:scale-105"
                       >
                         Book Discovery Call
                         <ArrowRightIcon className="ml-2.5 h-5 w-5" />
                       </a>
                       <Link
                         href="/services"
-                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-emerald-600 ring-2 ring-emerald-600/10 hover:bg-emerald-50 transition-all duration-200"
+                        className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-7 sm:px-8 py-4 text-base sm:text-lg font-semibold text-emerald-700 bg-white/80 ring-2 ring-emerald-600/15 hover:bg-emerald-50 transition-all duration-200"
                       >
                         View Services
                       </Link>
@@ -163,6 +95,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* VSL Section */}
+      <VSLSection />
 
       {/* Services Section */}
       <div className="relative py-32 overflow-hidden">
@@ -268,6 +203,9 @@ export default function Home() {
 
       {/* Connected Finance Section */}
       <ConnectedFinanceSection />
+
+      {/* Comparison Table */}
+      <ComparisonTable />
 
       {/* Industry Focus */}
       <div className="relative py-32 overflow-hidden bg-gray-900">
@@ -454,98 +392,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="relative py-32 overflow-hidden bg-emerald-600">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A40,_transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4940,_transparent_60%)]" />
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center space-y-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="space-y-4"
-              >
-                <span className="inline-flex text-emerald-200 text-lg font-semibold">
-                  Ready to Grow Your Business?
-                </span>
-                <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                  Transform Your Business's{' '}
-                  <span className="relative">
-                    <span className="relative inline-block">
-                      <span className="relative z-10">
-                        Financial Future
-                      </span>
-                      <div className="absolute -bottom-2 left-0 right-0 h-1 bg-emerald-400/30 rounded-full" />
-                    </span>
-                  </span>
-                </h2>
-                <p className="text-xl leading-8 text-emerald-100 max-w-2xl mx-auto">
-                  Join the growing number of businesses that trust us with their financial success. Book a discovery call to learn how we can help your business thrive.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
-              >
-                <a
-                  href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-emerald-600 shadow-sm hover:bg-emerald-50 transition-all duration-200 hover:scale-105"
-                >
-                  Book Discovery Call
-                  <svg
-                    className="ml-2.5 h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                  </svg>
-                </a>
-                <Link
-                  href="/services"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full px-8 py-4 text-lg font-semibold text-white ring-2 ring-white/20 hover:bg-white/10 transition-all duration-200"
-                >
-                  View Services
-                </Link>
-              </motion.div>
-
-              {/* Trust Badges */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="pt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
-              >
-                <div className="flex items-center gap-x-2 text-emerald-100">
-                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                  </svg>
-                  <span>98% Client Retention</span>
-                </div>
-                <div className="flex items-center gap-x-2 text-emerald-100">
-                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M10.464 3.314a.75.75 0 00-1.077-.798L5.26 4.966l3.977-1.514a.75.75 0 10-.474-1.424L3.214 4.416a.75.75 0 00-.445.832l1.458 6.5A.75.75 0 004.978 12h4.271a.75.75 0 000-1.5H5.421l-1.041-4.432 5.677-2.166a.75.75 0 00.407-.888z" />
-                  </svg>
-                  <span>Free Discovery Call</span>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Booking Section */}
+      <BookingSection />
     </main>
   )
 } 

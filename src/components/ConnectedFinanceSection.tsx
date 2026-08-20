@@ -108,7 +108,7 @@ export default function ConnectedFinanceSection() {
                     Your business runs on 5+ disconnected tools.
                   </p>
                   <p className="text-gray-600">
-                    Your accounting lives in QuickBooks. Project data is in another tool. Time tracking is somewhere else. Payroll is separate. Your team communicates in Slack. None of it talks to each other, so you\'re making decisions on incomplete data.
+                    Your accounting lives in QuickBooks. Project data is in another tool. Time tracking is somewhere else. Payroll is separate. Your team communicates in Slack. None of it talks to each other, so you&apos;re making decisions on incomplete data.
                   </p>
                 </div>
 
