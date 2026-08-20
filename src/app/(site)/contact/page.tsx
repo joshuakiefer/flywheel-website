@@ -4,6 +4,7 @@ import React from 'react'
 import AnimateInView from '@/components/AnimateInView'
 import { EnvelopeIcon, PhoneIcon, CalendarIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import { FaqSchema } from '@/components/StructuredData'
 
 export default function ContactPage() {
   const contactMethods = [
@@ -17,7 +18,7 @@ export default function ContactPage() {
     {
       name: 'Send a Message',
       description: 'Drop us a line anytime. We\'ll get back to you within one business day.',
-      href: 'mailto:josh@scalablebookkeeping.co',
+      href: 'mailto:josh@flywheelbookkeeping.com',
       icon: EnvelopeIcon,
       external: false,
     },
@@ -44,6 +45,7 @@ export default function ContactPage() {
 
   return (
     <div className="relative isolate bg-white">
+      <FaqSchema faqs={faqs} />
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-4 sm:px-6 pb-12 sm:pb-20 pt-16 sm:pt-24 lg:static lg:px-8 lg:pt-56 lg:pb-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
