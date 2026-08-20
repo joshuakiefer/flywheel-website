@@ -66,8 +66,8 @@ export default function BookingSection() {
             </a>
             <p className="mt-3 text-sm text-emerald-50/90">
               Prefer to talk first? Call{' '}
-              <a href="tel:6146650557" className="font-semibold text-white hover:text-emerald-100">
-                (614) 665-0557
+              <a href="tel:6142960874" className="font-semibold text-white hover:text-emerald-100">
+                (614) 296-0874
               </a>
             </p>
           </div>
