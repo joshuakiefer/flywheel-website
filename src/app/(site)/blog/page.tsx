@@ -13,7 +13,7 @@ const featuredPosts = [
     author: 'Joshua Kiefer, CPA',
     date: 'Mar 15, 2024',
     readTime: '8 min read',
-    gradient: 'from-emerald-500 to-emerald-700',
+    gradient: 'from-blue-500 to-blue-700',
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const featuredPosts = [
     author: 'Joshua Kiefer, CPA',
     date: 'Mar 5, 2024',
     readTime: '7 min read',
-    gradient: 'from-purple-500 to-purple-700',
+    gradient: 'from-navy-700 to-navy-900',
   },
 ]
 
@@ -53,13 +53,13 @@ export default function BlogPage() {
         <div className="container-custom py-24 sm:py-32">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-6xl">
                 Financial Insights
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Expert guidance and actionable strategies to help your business thrive financially.
               </p>
-              <div className="mt-4 inline-flex items-center rounded-full bg-amber-50 px-4 py-2 text-sm font-medium text-amber-700 ring-1 ring-amber-600/20">
+              <div className="mt-4 inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 ring-1 ring-blue-600/20">
                 Coming Soon. Stay tuned for new articles
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function BlogPage() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900">
+                      <h3 className="mt-3 text-lg font-semibold leading-6 text-navy-900">
                         {post.title}
                       </h3>
                       <p className="mt-3 text-sm leading-6 text-gray-600">
@@ -98,7 +98,7 @@ export default function BlogPage() {
                       </p>
                     </div>
                     <div className="mt-4 flex items-center gap-x-2">
-                      <span className="text-sm font-medium text-gray-900">{post.author}</span>
+                      <span className="text-sm font-medium text-navy-900">{post.author}</span>
                     </div>
                   </div>
                 </article>
@@ -107,10 +107,10 @@ export default function BlogPage() {
           </div>
 
           {/* Categories and Newsletter */}
-          <div className="mx-auto mt-24 grid max-w-7xl gap-8 lg:grid-cols-4">
+          <div className="mx-auto mt-24 grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-4">
             {/* Categories */}
-            <div className="lg:col-span-1">
-              <h2 className="text-lg font-semibold text-gray-900">Categories</h2>
+            <div className="min-w-0 lg:col-span-1">
+              <h2 className="text-lg font-semibold text-navy-900">Categories</h2>
               <ul role="list" className="mt-4 space-y-3">
                 {categories.map((category) => (
                   <li key={category.name}>
@@ -126,9 +126,9 @@ export default function BlogPage() {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="lg:col-span-3">
+            <div className="min-w-0 lg:col-span-3">
               <div className="rounded-2xl bg-gray-50 p-8">
-                <h2 className="text-lg font-semibold text-gray-900">
+                <h2 className="text-lg font-semibold text-navy-900">
                   Get Financial Insights Delivered
                 </h2>
                 <p className="mt-2 text-sm text-gray-600">
@@ -145,7 +145,7 @@ export default function BlogPage() {
                       type="email"
                       autoComplete="email"
                       required
-                      className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                      className="min-w-0 flex-auto rounded-md border-0 px-3.5 py-2 text-navy-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                       placeholder="Enter your email"
                     />
                     <button

@@ -57,10 +57,10 @@ const outcomes = [
 
 export default function ConnectedFinanceSection() {
   return (
-    <div className="relative py-20 sm:py-24 overflow-hidden bg-gray-900">
+    <div className="relative py-20 sm:py-24 overflow-hidden bg-navy-900">
       {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,_#06966A20,_transparent_45%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,_#1A2B4955,_transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,_#3B82F620,_transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,_#0B1F3E55,_transparent_50%)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -71,12 +71,12 @@ export default function ConnectedFinanceSection() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <span className="inline-flex text-emerald-400 text-base sm:text-lg font-semibold">
+            <span className="inline-flex text-blue-400 text-base sm:text-lg font-semibold">
               What Makes Flywheel Different
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               We Don&apos;t Just Do Your Books.{' '}
-              <span className="text-emerald-400">We Connect Your Entire Business.</span>
+              <span className="text-blue-400">We Connect Your Entire Business.</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
               Most bookkeepers see one system. We wire together every tool your business runs on and give you a single dashboard with the full picture.
@@ -115,7 +115,7 @@ export default function ConnectedFinanceSection() {
 
                 {/* The Solution */}
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-emerald-400">
+                  <div className="flex items-center gap-2 text-blue-400">
                     <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -149,7 +149,7 @@ export default function ConnectedFinanceSection() {
                             transition={{ delay: 0.2 + (i * 0.05) }}
                             className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 rounded-full ring-1 ring-white/10 text-sm font-medium text-gray-200"
                           >
-                            <span className="h-2 w-2 rounded-full bg-emerald-400/60" />
+                            <span className="h-2 w-2 rounded-full bg-blue-400/60" />
                             <span className="hidden sm:inline">{item.name}</span>
                             <span className="sm:hidden">{item.short}</span>
                           </motion.div>
@@ -159,8 +159,8 @@ export default function ConnectedFinanceSection() {
 
                     {/* Flow Arrow */}
                     <div className="flex flex-col items-center gap-1">
-                      <div className="w-px h-6 bg-gradient-to-b from-white/20 to-emerald-400" />
-                      <svg className="h-5 w-5 text-emerald-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <div className="w-px h-6 bg-gradient-to-b from-white/20 to-blue-400" />
+                      <svg className="h-5 w-5 text-blue-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
                       </svg>
                     </div>
@@ -173,10 +173,10 @@ export default function ConnectedFinanceSection() {
                       transition={{ delay: 0.5 }}
                       className="w-full max-w-md"
                     >
-                      <div className="bg-emerald-600 rounded-2xl p-5 sm:p-6 text-center shadow-lg shadow-emerald-600/20">
-                        <p className="text-emerald-200 text-xs font-semibold uppercase tracking-wider mb-1">Flywheel</p>
+                      <div className="bg-blue-600 rounded-2xl p-5 sm:p-6 text-center shadow-lg shadow-blue-600/20">
+                        <p className="text-blue-200 text-xs font-semibold uppercase tracking-wider mb-1">Flywheel</p>
                         <p className="text-white text-lg sm:text-xl font-bold">Your Financial Command Center</p>
-                        <p className="text-emerald-100 text-sm mt-1">Custom dashboards. Real-time data. Full clarity.</p>
+                        <p className="text-blue-100 text-sm mt-1">Custom dashboards. Real-time data. Full clarity.</p>
                       </div>
                     </motion.div>
                   </div>
@@ -198,7 +198,7 @@ export default function ConnectedFinanceSection() {
               className="relative group"
             >
               <div className="space-y-3">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-400">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-blue-500/15 text-blue-400">
                   {outcome.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white">{outcome.title}</h3>
@@ -212,7 +212,7 @@ export default function ConnectedFinanceSection() {
         <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/connected-finance"
-            className="inline-flex items-center justify-center rounded-full bg-emerald-500/10 ring-1 ring-emerald-400/25 px-8 py-4 text-lg font-semibold text-emerald-300 hover:bg-emerald-500/20 transition-all duration-200"
+            className="inline-flex items-center justify-center rounded-full bg-blue-500/10 ring-1 ring-blue-400/25 px-8 py-4 text-lg font-semibold text-blue-300 hover:bg-blue-500/20 transition-all duration-200"
           >
             See How It Works
             <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

@@ -49,17 +49,17 @@ export default function ContactPage() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-4 sm:px-6 pb-12 sm:pb-20 pt-16 sm:pt-24 lg:static lg:px-8 lg:pt-56 lg:pb-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-navy-900/10 lg:w-1/2">
               {/* ... existing SVG background ... */}
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Let's Talk About Your Business</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-navy-900">Let's Talk About Your Business</h2>
             <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
               Whether you have questions about our services or just want to explore how we could help your business grow, we're here to chat.
             </p>
             <dl className="mt-8 sm:mt-10 space-y-4 text-sm sm:text-base leading-6 sm:leading-7 text-gray-600">
               {contactMethods.map((method) => (
                 <div key={method.name} className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
+                  <dt className="inline font-semibold text-navy-900">
                     <method.icon className="absolute left-1 top-1 h-5 w-5 text-brand-primary" aria-hidden="true" />
                     <a
                       href={method.href}
@@ -80,7 +80,7 @@ export default function ContactPage() {
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:gap-y-6">
               <div className="sm:col-span-2">
-                <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="name" className="block text-sm font-semibold leading-6 text-navy-900">
                   Your Name
                 </label>
                 <div className="mt-2">
@@ -89,13 +89,13 @@ export default function ContactPage() {
                     name="name"
                     id="name"
                     autoComplete="name"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-navy-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                     placeholder="Let's start with your name"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-navy-900">
                   Email
                 </label>
                 <div className="mt-2">
@@ -104,13 +104,13 @@ export default function ContactPage() {
                     name="email"
                     id="email"
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-navy-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                     placeholder="Where we can reach you"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="business" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="business" className="block text-sm font-semibold leading-6 text-navy-900">
                   Business Name
                 </label>
                 <div className="mt-2">
@@ -118,13 +118,13 @@ export default function ContactPage() {
                     type="text"
                     name="business"
                     id="business"
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-navy-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                     placeholder="Tell us about your business"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-navy-900">
                   How Can We Help?
                 </label>
                 <div className="mt-2">
@@ -132,7 +132,7 @@ export default function ContactPage() {
                     name="message"
                     id="message"
                     rows={4}
-                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-navy-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                     placeholder="Share your goals or challenges - we're here to help"
                   />
                 </div>
@@ -149,13 +149,13 @@ export default function ContactPage() {
 
       {/* FAQ section */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
-          <h2 className="text-xl sm:text-2xl font-bold leading-10 tracking-tight text-gray-900">Common Questions</h2>
-          <dl className="mt-8 sm:mt-10 space-y-4 sm:space-y-6 divide-y divide-gray-900/10">
+        <div className="mx-auto max-w-4xl divide-y divide-navy-900/10">
+          <h2 className="text-xl sm:text-2xl font-bold leading-10 tracking-tight text-navy-900">Common Questions</h2>
+          <dl className="mt-8 sm:mt-10 space-y-4 sm:space-y-6 divide-y divide-navy-900/10">
             {faqs.map((faq) => (
               <div key={faq.question} className="pt-4 sm:pt-6">
                 <dt>
-                  <span className="text-sm sm:text-base font-semibold leading-7 text-gray-900">{faq.question}</span>
+                  <span className="text-sm sm:text-base font-semibold leading-7 text-navy-900">{faq.question}</span>
                 </dt>
                 <dd className="mt-2 text-sm sm:text-base leading-7 text-gray-600">{faq.answer}</dd>
               </div>

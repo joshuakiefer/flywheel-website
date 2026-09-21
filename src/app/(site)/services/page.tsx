@@ -101,7 +101,7 @@ export default function ServicesPage() {
       <div className="relative pt-32 sm:pt-40 lg:pt-44 pb-24 sm:pb-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-6xl">
               Services That Power Your Growth
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 max-w-3xl mx-auto">
@@ -120,8 +120,8 @@ export default function ServicesPage() {
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
                   <div className="space-y-6">
                     <div className="flex items-center gap-x-3">
-                      <service.icon className="h-12 w-12 text-emerald-600" />
-                      <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                      <service.icon className="h-12 w-12 text-blue-600" />
+                      <h2 className="text-3xl font-bold tracking-tight text-navy-900">
                         {service.name}
                       </h2>
                     </div>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                         href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105 hover:shadow-emerald-600/20"
+                        className="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-xl shadow-blue-600/10 hover:bg-blue-500 transition-all duration-200 hover:scale-105 hover:shadow-blue-600/20"
                       >
                         {service.cta}
                         <ArrowRightIcon className="ml-2.5 h-5 w-5" />
@@ -143,11 +143,11 @@ export default function ServicesPage() {
                     {service.features.map((feature) => (
                       <div
                         key={feature.name}
-                        className="relative group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5 hover:bg-gradient-to-br hover:from-emerald-50 hover:to-emerald-100/50 transition-all duration-200"
+                        className="relative group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy-900/5 hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100/50 transition-all duration-200"
                       >
                         <div className="flex items-center gap-x-3">
-                          <feature.icon className="h-6 w-6 text-emerald-600" />
-                          <h3 className="font-semibold text-gray-900">{feature.name}</h3>
+                          <feature.icon className="h-6 w-6 text-blue-600" />
+                          <h3 className="font-semibold text-navy-900">{feature.name}</h3>
                         </div>
                         <p className="mt-3 text-gray-600">{feature.description}</p>
                       </div>
@@ -163,12 +163,12 @@ export default function ServicesPage() {
         <div className="mt-32 text-center">
           <div className="relative">
             <div className="absolute inset-0">
-              <div className="h-1/3 bg-gradient-to-b from-emerald-50/50" />
+              <div className="h-1/3 bg-gradient-to-b from-blue-50/50" />
             </div>
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="mx-auto max-w-2xl lg:max-w-none">
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h2 className="text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
                     Ready to Transform Your Business's Finances?
                   </h2>
                   <p className="mt-4 text-lg text-gray-600">
@@ -183,7 +183,7 @@ export default function ServicesPage() {
               href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105 hover:shadow-emerald-600/20"
+              className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-600/10 hover:bg-blue-500 transition-all duration-200 hover:scale-105 hover:shadow-blue-600/20"
             >
               Book Discovery Call
               <ArrowRightIcon className="ml-2.5 h-5 w-5" />

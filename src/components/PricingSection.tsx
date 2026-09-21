@@ -77,8 +77,8 @@ export default function PricingSection() {
               transition={{ delay: tierIdx * 0.2 }}
               className={`relative rounded-3xl p-8 ${
                 tier.mostPopular
-                  ? 'bg-gray-900 text-white shadow-2xl ring-1 ring-gray-900'
-                  : 'bg-gradient-to-b ${tier.accent} to-white/60 backdrop-blur-sm ring-1 ring-gray-900/10'
+                  ? 'bg-navy-900 text-white shadow-2xl ring-1 ring-navy-900'
+                  : 'bg-gradient-to-b ${tier.accent} to-white/60 backdrop-blur-sm ring-1 ring-navy-900/10'
               }`}
             >
               {tier.mostPopular && (
@@ -90,7 +90,7 @@ export default function PricingSection() {
                 <div className="flex items-center justify-between">
                   <h3
                     className={`text-lg font-semibold leading-8 ${
-                      tier.mostPopular ? 'text-white' : 'text-gray-900'
+                      tier.mostPopular ? 'text-white' : 'text-navy-900'
                     }`}
                   >
                     {tier.name}
@@ -114,7 +114,7 @@ export default function PricingSection() {
                   <p className="flex items-baseline gap-x-1">
                     <span
                       className={`text-4xl font-bold tracking-tight ${
-                        tier.mostPopular ? 'text-white' : 'text-gray-900'
+                        tier.mostPopular ? 'text-white' : 'text-navy-900'
                       }`}
                     >
                       ${tier.price}
@@ -151,8 +151,8 @@ export default function PricingSection() {
                   rel="noopener noreferrer"
                   className={`mt-8 block rounded-lg px-4 py-2.5 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 group ${
                     tier.mostPopular
-                      ? 'bg-white text-gray-900 hover:bg-gray-50 focus-visible:outline-white'
-                      : 'bg-gray-900 text-white hover:bg-gray-800 focus-visible:outline-brand-primary'
+                      ? 'bg-white text-navy-900 hover:bg-gray-50 focus-visible:outline-white'
+                      : 'bg-navy-900 text-white hover:bg-navy-800 focus-visible:outline-brand-primary'
                   }`}
                 >
                   {tier.cta}

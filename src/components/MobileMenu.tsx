@@ -37,7 +37,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <Dialog
             as={motion.div}
             static
-            className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-navy-900/10"
             open={isOpen}
             onClose={onClose}
           >
@@ -74,7 +74,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     >
                       <Link
                         href={item.href}
-                        className="flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-gray-900 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200"
+                        className="flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium text-navy-900 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
                         onClick={onClose}
                       >
                         {item.name}
@@ -98,16 +98,16 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   transition={{ delay: 0.3 }}
                   className="mt-8 space-y-4"
                 >
-                  <div className="rounded-2xl bg-emerald-50 p-4">
-                    <h3 className="text-sm font-medium text-emerald-900">Ready to Transform Your Business&apos;s Finances?</h3>
-                    <p className="mt-1 text-sm text-emerald-700">Book a discovery call to learn how we can help your business thrive.</p>
+                  <div className="rounded-2xl bg-blue-50 p-4">
+                    <h3 className="text-sm font-medium text-blue-900">Ready to Transform Your Business&apos;s Finances?</h3>
+                    <p className="mt-1 text-sm text-blue-700">Book a discovery call to learn how we can help your business thrive.</p>
                   </div>
                   
                   <a
                     href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center rounded-full bg-emerald-600 px-4 py-3 text-base font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200"
+                    className="flex w-full items-center justify-center rounded-full bg-blue-600 px-4 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200"
                     onClick={onClose}
                   >
                     Book Discovery Call

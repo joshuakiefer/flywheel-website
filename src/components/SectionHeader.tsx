@@ -29,7 +29,7 @@ export default function SectionHeader({
         <div className="inline-flex items-center justify-center p-1 mb-4 rounded-full bg-brand-primary/5 text-brand-primary">
           <span className="text-sm font-medium px-3">{label}</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
           {title}
         </h2>
         {description && (

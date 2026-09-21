@@ -50,7 +50,7 @@ export default function ServicesSection() {
       <div className="container-custom">
         <AnimateInView>
           <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
               Choose Your Level of Support
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -65,9 +65,9 @@ export default function ServicesSection() {
               {services.map((service) => (
                 <div
                   key={service.name}
-                  className="flex flex-col bg-white p-8 shadow-sm ring-1 ring-gray-900/5 transition-all duration-300 hover:shadow-md"
+                  className="flex flex-col bg-white p-8 shadow-sm ring-1 ring-navy-900/5 transition-all duration-300 hover:shadow-md"
                 >
-                  <h3 className="text-xl font-semibold leading-7 text-gray-900">
+                  <h3 className="text-xl font-semibold leading-7 text-navy-900">
                     {service.name}
                   </h3>
                   <p className="mt-4 text-base leading-7 text-gray-600">
@@ -94,7 +94,7 @@ export default function ServicesSection() {
                   href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-semibold text-gray-900 group flex items-center justify-center gap-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-32 after:origin-center after:scale-x-0 after:bg-brand-primary after:transition-transform hover:after:scale-x-100"
+                  className="text-base font-semibold text-navy-900 group flex items-center justify-center gap-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-32 after:origin-center after:scale-x-0 after:bg-brand-primary after:transition-transform hover:after:scale-x-100"
                 >
                   Explore Partnership Options
                   <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">→</span>

@@ -41,14 +41,8 @@ export default function Navigation() {
         {/* === MOBILE NAV (below lg) === */}
         <nav className="lg:hidden mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2.5">
-              <FlywheelLogo height={32} iconOnly />
-              <span
-                className="text-lg font-medium text-gray-900 leading-none"
-                style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", letterSpacing: '-0.02em' }}
-              >
-                flywheel
-              </span>
+            <Link href="/" className="flex items-center">
+              <FlywheelLogo height={30} showTagline={false} />
             </Link>
             <button
               type="button"
@@ -71,22 +65,8 @@ export default function Navigation() {
               isScrolled ? 'max-h-0 opacity-0 py-0' : 'max-h-32 opacity-100 py-5'
             }`}
           >
-            <Link href="/" className="flex items-center gap-3">
-              <FlywheelLogo height={44} iconOnly />
-              <div className="flex flex-col justify-center">
-                <span
-                  className="text-3xl font-medium text-gray-900 leading-none"
-                  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", letterSpacing: '-0.02em' }}
-                >
-                  flywheel
-                </span>
-                <span
-                  className="text-xs uppercase text-gray-500 leading-none mt-1.5"
-                  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", letterSpacing: '0.12em' }}
-                >
-                  Outsourced Accounting for Growing Businesses
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <FlywheelLogo height={46} showTagline />
             </Link>
           </div>
 
@@ -100,14 +80,8 @@ export default function Navigation() {
           >
             {/* Collapsed logo (shows on scroll) */}
             {isScrolled && (
-              <Link href="/" className="flex items-center gap-2 shrink-0">
-                <FlywheelLogo height={30} iconOnly />
-                <span
-                  className="text-xl font-medium text-gray-900 leading-none"
-                  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", letterSpacing: '-0.02em' }}
-                >
-                  flywheel
-                </span>
+              <Link href="/" className="flex items-center shrink-0">
+                <FlywheelLogo height={30} showTagline={false} />
               </Link>
             )}
 
@@ -117,10 +91,10 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors duration-200 whitespace-nowrap relative group"
+                  className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors duration-200 whitespace-nowrap relative group"
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-600 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full" />
                 </Link>
               ))}
             </div>
@@ -130,7 +104,7 @@ export default function Navigation() {
               href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center justify-center rounded-full bg-emerald-600 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-all duration-200 whitespace-nowrap ${
+              className={`inline-flex items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200 whitespace-nowrap ${
                 isScrolled ? 'px-5 py-2' : 'absolute right-0 px-5 py-2'
               }`}
             >

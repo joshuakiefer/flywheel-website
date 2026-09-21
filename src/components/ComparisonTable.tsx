@@ -46,8 +46,8 @@ const groups: Group[] = [
 
 function Check() {
   return (
-    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-100">
-      <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-emerald-600" aria-hidden="true">
+    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-100">
+      <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-blue-600" aria-hidden="true">
         <path
           fillRule="evenodd"
           d="M16.704 5.29a1 1 0 010 1.415l-7.5 7.5a1 1 0 01-1.415 0l-3.5-3.5a1 1 0 111.415-1.415l2.792 2.793 6.793-6.793a1 1 0 011.415 0z"
@@ -73,7 +73,7 @@ function Dash() {
 export default function ComparisonTable() {
   return (
     <section className="relative py-20 sm:py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -83,11 +83,11 @@ export default function ComparisonTable() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center mb-10 sm:mb-12"
         >
-          <span className="inline-block py-1.5 px-3 mb-5 text-xs font-semibold uppercase tracking-widest text-emerald-700 bg-emerald-50 ring-1 ring-emerald-100 rounded-full">
+          <span className="inline-block py-1.5 px-3 mb-5 text-xs font-semibold uppercase tracking-widest text-blue-700 bg-blue-50 ring-1 ring-blue-100 rounded-full">
             The Difference
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
-            What Sets Flywheel <span className="text-emerald-600">Apart</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-navy-900 leading-tight">
+            What Sets Flywheel <span className="text-blue-600">Apart</span>
           </h2>
           <p className="mt-5 text-lg text-gray-600">
             Most bookkeepers close your books and hand you a report. We connect your
@@ -103,19 +103,19 @@ export default function ComparisonTable() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mx-auto max-w-4xl"
         >
-          <div className="rounded-2xl overflow-hidden shadow-xl shadow-emerald-600/5 ring-1 ring-gray-900/5 bg-white">
+          <div className="rounded-2xl overflow-hidden shadow-xl shadow-blue-600/5 ring-1 ring-navy-900/5 bg-white">
             <table className="w-full table-fixed border-collapse text-left">
               <thead>
                 <tr className="bg-gray-50">
                   <th
                     scope="col"
-                    className="px-4 sm:px-6 py-4 text-sm font-semibold text-gray-900"
+                    className="px-4 sm:px-6 py-4 text-sm font-semibold text-navy-900"
                   >
                     Service
                   </th>
                   <th
                     scope="col"
-                    className="px-2 py-4 text-center text-xs sm:text-sm font-semibold text-emerald-700 w-[84px] sm:w-40"
+                    className="px-2 py-4 text-center text-xs sm:text-sm font-semibold text-blue-700 w-[84px] sm:w-40"
                   >
                     Flywheel
                   </th>
@@ -135,7 +135,7 @@ export default function ComparisonTable() {
                       <th
                         scope="colgroup"
                         colSpan={3}
-                        className="px-4 sm:px-6 pt-6 pb-2 text-xs font-semibold uppercase tracking-widest text-emerald-700 bg-white"
+                        className="px-4 sm:px-6 pt-6 pb-2 text-xs font-semibold uppercase tracking-widest text-blue-700 bg-white"
                       >
                         {group.category}
                       </th>
@@ -148,7 +148,7 @@ export default function ComparisonTable() {
                         >
                           {row.service}
                         </th>
-                        <td className="px-2 py-3.5 text-center bg-emerald-50/40">
+                        <td className="px-2 py-3.5 text-center bg-blue-50/40">
                           {row.flywheel ? <Check /> : <Dash />}
                         </td>
                         <td className="px-2 py-3.5 text-center">

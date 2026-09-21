@@ -1,11 +1,11 @@
 {
   "name": "Flywheel",
   "short_name": "Flywheel",
-  "description": "Financial Strategy for Modern Agencies",
+  "description": "Bookkeeping, CFO, and tax services for growing businesses",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#00A651",
+  "theme_color": "#0B1F3E",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -14,8 +14,8 @@
     },
     {
       "src": "/icon.svg",
-      "sizes": "32x32",
+      "sizes": "any",
       "type": "image/svg+xml"
     }
   ]
-} 
+}
