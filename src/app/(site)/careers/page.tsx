@@ -89,7 +89,7 @@ export default function CareersPage() {
         <div className="container-custom py-16 sm:py-24">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 lg:text-6xl">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-navy-900 lg:text-6xl">
                 Join Our Team
               </h1>
               <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-600">
@@ -103,7 +103,7 @@ export default function CareersPage() {
               <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2">
                 {/* Benefits Section */}
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-navy-900">
                     Why Work With Us?
                   </h2>
                   <p className="mt-4 text-base sm:text-lg text-gray-600">
@@ -120,7 +120,7 @@ export default function CareersPage() {
                 </div>
 
                 {/* Application Form */}
-                <div className="bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-8">
+                <div className="bg-white rounded-2xl shadow-sm ring-1 ring-navy-900/5 p-8">
                   <h2 className="text-xl sm:text-2xl font-semibold mb-6">Apply Now</h2>
                   {submitStatus.type && (
                     <div
@@ -143,7 +143,7 @@ export default function CareersPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-navy-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
                       />
                     </div>
 
@@ -158,7 +158,7 @@ export default function CareersPage() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-navy-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
                       />
                     </div>
 
@@ -172,7 +172,7 @@ export default function CareersPage() {
                         id="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-navy-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
                       />
                     </div>
 
@@ -186,7 +186,7 @@ export default function CareersPage() {
                         required
                         value={formData.role}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-navy-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
                       >
                         <option value="accounting">Accounting</option>
                         <option value="bookkeeping">Bookkeeping</option>
@@ -207,7 +207,7 @@ export default function CareersPage() {
                         required
                         value={formData.experience}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-navy-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
                       />
                     </div>
 
@@ -222,7 +222,7 @@ export default function CareersPage() {
                         required
                         value={formData.message}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
+                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-navy-900 shadow-sm focus:border-brand-primary focus:outline-none focus:ring-1 focus:ring-brand-primary"
                       />
                     </div>
 

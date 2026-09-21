@@ -63,14 +63,14 @@ const tiers = [
 
 export default function PricingPage() {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-50/40 to-white">
+      <div className="absolute inset-0 overflow-hidden bg-gradient-to-b from-blue-50/40 to-white">
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-emerald-100/30 rounded-full blur-3xl animate-pulse-slow" />
+          <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-3xl animate-pulse-slow" />
           <div className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-blue-100/20 rounded-full blur-3xl animate-pulse" />
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A10,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#3B82F610,_transparent_50%)]" />
       </div>
 
       <div className="relative pt-32 pb-24 lg:pt-48">
@@ -84,12 +84,12 @@ export default function PricingPage() {
               className="space-y-4"
             >
               <div className="text-center">
-                <h2 className="text-base font-semibold leading-7 text-emerald-600">
+                <h2 className="text-base font-semibold leading-7 text-blue-600">
                   Transparent Pricing
                 </h2>
-                <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
                   Choose the Right Plan for Your
-                  <span className="text-emerald-600"> Business's Growth</span>
+                  <span className="text-blue-600"> Business's Growth</span>
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
                   Flexible plans designed to support your business at every stage. All
@@ -107,19 +107,19 @@ export default function PricingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative flex flex-col rounded-3xl bg-white shadow-xl shadow-gray-900/5"
+                className="relative flex flex-col rounded-3xl bg-white shadow-xl shadow-navy-900/5"
               >
                 <div className="relative p-8 lg:p-12">
                   {tier.mostPopular && (
-                    <div className="absolute -top-4 right-8 inline-flex items-center rounded-full bg-emerald-600 px-4 py-1 text-sm font-medium text-white">
+                    <div className="absolute -top-4 right-8 inline-flex items-center rounded-full bg-blue-600 px-4 py-1 text-sm font-medium text-white">
                       Most Popular
                     </div>
                   )}
 
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900">{tier.name}</h3>
+                    <h3 className="text-2xl font-bold text-navy-900">{tier.name}</h3>
                     <p className="mt-4 flex items-baseline">
-                      <span className="text-4xl font-bold tracking-tight text-emerald-600">
+                      <span className="text-4xl font-bold tracking-tight text-blue-600">
                         {tier.priceMonthly}
                       </span>
                       <span className="ml-1 text-sm text-gray-500">/month</span>
@@ -130,7 +130,7 @@ export default function PricingPage() {
                       {tier.features.map((feature) => (
                         <li key={feature} className="flex items-center">
                           <div className="flex-shrink-0">
-                            <CheckIcon className="h-6 w-6 text-emerald-500" aria-hidden="true" />
+                            <CheckIcon className="h-6 w-6 text-blue-500" aria-hidden="true" />
                           </div>
                           <span className="ml-3 text-base text-gray-600">{feature}</span>
                         </li>
@@ -144,8 +144,8 @@ export default function PricingPage() {
                     rel="noopener noreferrer"
                     className={`mt-8 block w-full rounded-full px-6 py-4 text-center text-base font-semibold transition-all duration-200 hover:scale-105 ${
                       tier.mostPopular
-                        ? 'bg-emerald-600 text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500'
-                        : 'bg-emerald-600/10 text-emerald-600 hover:bg-emerald-600/20'
+                        ? 'bg-blue-600 text-white shadow-xl shadow-blue-600/10 hover:bg-blue-500'
+                        : 'bg-blue-600/10 text-blue-600 hover:bg-blue-600/20'
                     }`}
                   >
                     {tier.cta}
@@ -160,11 +160,11 @@ export default function PricingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-24 mx-auto max-w-3xl rounded-3xl bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 lg:p-12 text-white"
+            className="mt-24 mx-auto max-w-3xl rounded-3xl bg-gradient-to-br from-navy-900 to-navy-800 p-8 lg:p-12 text-white"
           >
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold">Tax Services</h2>
-              <p className="text-xl text-emerald-100">
+              <p className="text-xl text-blue-100">
                 Comprehensive tax planning and preparation services tailored to your business needs
               </p>
               <div className="mt-6 inline-flex text-3xl font-bold">
@@ -175,15 +175,15 @@ export default function PricingPage() {
                   <h3 className="text-xl font-semibold">Services Include:</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <CheckIcon className="h-6 w-6 text-blue-300 mr-3" />
                       <span>Tax Planning & Strategy</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <CheckIcon className="h-6 w-6 text-blue-300 mr-3" />
                       <span>Tax Return Preparation</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <CheckIcon className="h-6 w-6 text-blue-300 mr-3" />
                       <span>Entity Structure Optimization</span>
                     </li>
                   </ul>
@@ -192,15 +192,15 @@ export default function PricingPage() {
                   <h3 className="text-xl font-semibold">Additional Benefits:</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <CheckIcon className="h-6 w-6 text-blue-300 mr-3" />
                       <span>Year-Round Tax Support</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <CheckIcon className="h-6 w-6 text-blue-300 mr-3" />
                       <span>Multi-State Tax Compliance</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckIcon className="h-6 w-6 text-emerald-300 mr-3" />
+                      <CheckIcon className="h-6 w-6 text-blue-300 mr-3" />
                       <span>IRS Representation</span>
                     </li>
                   </ul>
@@ -211,7 +211,7 @@ export default function PricingPage() {
                   href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-semibold text-emerald-600 shadow-xl shadow-emerald-900/10 hover:bg-emerald-50 transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-blue-900/30 hover:bg-blue-500 transition-all duration-200 hover:scale-105"
                 >
                   Discuss Tax Services
                   <svg
@@ -236,10 +236,10 @@ export default function PricingPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center space-y-4"
             >
-              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+              <span className="inline-flex text-blue-600 text-lg font-semibold">
                 Common Questions
               </span>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-3xl font-bold tracking-tight text-navy-900">
                 Frequently Asked Questions
               </h2>
               <p className="text-lg text-gray-600">
@@ -272,7 +272,7 @@ export default function PricingPage() {
                 },
               ].map((faq, index) => (
                 <div key={index} className="space-y-2">
-                  <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-navy-900">{faq.question}</h3>
                   <p className="text-base text-gray-600">{faq.answer}</p>
                 </div>
               ))}

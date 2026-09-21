@@ -77,7 +77,7 @@ export default function PricingCalculatorPage() {
         <div className="container-custom py-24 sm:py-32">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-6xl">
                 Business Pricing Calculator
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -90,13 +90,13 @@ export default function PricingCalculatorPage() {
             <div className="grid gap-8 lg:grid-cols-2">
               {/* Calculator Form */}
               <AnimateInView delay={0.1}>
-                <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5">
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+                <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-navy-900/5">
+                  <h2 className="text-2xl font-bold tracking-tight text-navy-900">
                     Enter Your Goals
                   </h2>
                   <form onSubmit={calculatePricing} className="mt-8 space-y-6">
                     <div>
-                      <label htmlFor="targetAnnualRevenue" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="targetAnnualRevenue" className="block text-sm font-medium leading-6 text-navy-900">
                         Target Annual Revenue
                       </label>
                       <div className="relative mt-2 rounded-md shadow-sm">
@@ -107,7 +107,7 @@ export default function PricingCalculatorPage() {
                           type="number"
                           name="targetAnnualRevenue"
                           id="targetAnnualRevenue"
-                          className="block w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-navy-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                           value={inputs.targetAnnualRevenue}
                           onChange={handleInputChange}
                         />
@@ -115,7 +115,7 @@ export default function PricingCalculatorPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="workingHoursPerWeek" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="workingHoursPerWeek" className="block text-sm font-medium leading-6 text-navy-900">
                         Working Hours per Week
                       </label>
                       <div className="relative mt-2 rounded-md shadow-sm">
@@ -123,7 +123,7 @@ export default function PricingCalculatorPage() {
                           type="number"
                           name="workingHoursPerWeek"
                           id="workingHoursPerWeek"
-                          className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 py-1.5 px-3 text-navy-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                           value={inputs.workingHoursPerWeek}
                           onChange={handleInputChange}
                         />
@@ -131,7 +131,7 @@ export default function PricingCalculatorPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="weeksPerYear" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="weeksPerYear" className="block text-sm font-medium leading-6 text-navy-900">
                         Working Weeks per Year
                       </label>
                       <div className="relative mt-2 rounded-md shadow-sm">
@@ -139,7 +139,7 @@ export default function PricingCalculatorPage() {
                           type="number"
                           name="weeksPerYear"
                           id="weeksPerYear"
-                          className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 py-1.5 px-3 text-navy-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                           value={inputs.weeksPerYear}
                           onChange={handleInputChange}
                         />
@@ -147,7 +147,7 @@ export default function PricingCalculatorPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="utilization" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="utilization" className="block text-sm font-medium leading-6 text-navy-900">
                         Utilization Rate (%)
                       </label>
                       <div className="relative mt-2 rounded-md shadow-sm">
@@ -155,7 +155,7 @@ export default function PricingCalculatorPage() {
                           type="number"
                           name="utilization"
                           id="utilization"
-                          className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 py-1.5 px-3 text-navy-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                           value={inputs.utilization}
                           onChange={handleInputChange}
                         />
@@ -166,7 +166,7 @@ export default function PricingCalculatorPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="teamSize" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="teamSize" className="block text-sm font-medium leading-6 text-navy-900">
                         Team Size (Billable Members)
                       </label>
                       <div className="relative mt-2 rounded-md shadow-sm">
@@ -174,7 +174,7 @@ export default function PricingCalculatorPage() {
                           type="number"
                           name="teamSize"
                           id="teamSize"
-                          className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 py-1.5 px-3 text-navy-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                           value={inputs.teamSize}
                           onChange={handleInputChange}
                         />
@@ -182,7 +182,7 @@ export default function PricingCalculatorPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="profitMargin" className="block text-sm font-medium leading-6 text-gray-900">
+                      <label htmlFor="profitMargin" className="block text-sm font-medium leading-6 text-navy-900">
                         Target Profit Margin (%)
                       </label>
                       <div className="relative mt-2 rounded-md shadow-sm">
@@ -190,7 +190,7 @@ export default function PricingCalculatorPage() {
                           type="number"
                           name="profitMargin"
                           id="profitMargin"
-                          className="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
+                          className="block w-full rounded-md border-0 py-1.5 px-3 text-navy-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6"
                           value={inputs.profitMargin}
                           onChange={handleInputChange}
                         />
@@ -209,15 +209,15 @@ export default function PricingCalculatorPage() {
 
               {/* Results */}
               <AnimateInView delay={0.2}>
-                <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5">
-                  <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+                <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-navy-900/5">
+                  <h2 className="text-2xl font-bold tracking-tight text-navy-900">
                     Recommended Rates
                   </h2>
                   <div className="mt-8 space-y-8">
                     {results ? (
                       <>
                         <div>
-                          <h3 className="flex items-center gap-x-2 text-lg font-semibold text-gray-900">
+                          <h3 className="flex items-center gap-x-2 text-lg font-semibold text-navy-900">
                             <CurrencyDollarIcon className="h-5 w-5 text-brand-primary" />
                             Hourly Rate
                           </h3>
@@ -230,7 +230,7 @@ export default function PricingCalculatorPage() {
                         </div>
 
                         <div>
-                          <h3 className="flex items-center gap-x-2 text-lg font-semibold text-gray-900">
+                          <h3 className="flex items-center gap-x-2 text-lg font-semibold text-navy-900">
                             <ClockIcon className="h-5 w-5 text-brand-primary" />
                             Monthly Retainer
                           </h3>
@@ -243,7 +243,7 @@ export default function PricingCalculatorPage() {
                         </div>
 
                         <div>
-                          <h3 className="flex items-center gap-x-2 text-lg font-semibold text-gray-900">
+                          <h3 className="flex items-center gap-x-2 text-lg font-semibold text-navy-900">
                             <UserGroupIcon className="h-5 w-5 text-brand-primary" />
                             Client Strategy
                           </h3>
@@ -256,7 +256,7 @@ export default function PricingCalculatorPage() {
                         </div>
 
                         <div className="rounded-lg bg-gray-50 p-4">
-                          <h4 className="font-semibold text-gray-900">Project Pricing</h4>
+                          <h4 className="font-semibold text-navy-900">Project Pricing</h4>
                           <p className="mt-2 text-sm text-gray-600">
                             Minimum project size should be {formatCurrency(results.projectMinimum)} (20 hours).
                             Consider value-based pricing for larger projects to maximize profitability.

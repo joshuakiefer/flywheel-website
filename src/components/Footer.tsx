@@ -28,16 +28,19 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 bg-gray-900">
+    <footer className="relative z-10 bg-navy-900">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-block">
-              <FlywheelLogo height={32} showTagline={false} variant="light" />
+              <FlywheelLogo height={38} showTagline variant="light" />
             </Link>
-            <p className="mt-4 text-sm leading-6 text-gray-400 max-w-xs">
-              Empowering growing businesses with financial clarity and strategic guidance to scale with confidence.
+            <p className="mt-4 text-sm leading-6 text-blue-300 font-medium max-w-xs">
+              Same numbers. A brighter tomorrow.
+            </p>
+            <p className="mt-2 text-sm leading-6 text-gray-400 max-w-xs">
+              Bookkeeping, CFO, and tax for businesses scaling from $1M to $20M.
             </p>
           </div>
 
@@ -79,7 +82,7 @@ export default function Footer() {
               href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors"
+              className="mt-4 inline-flex items-center rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 transition-colors"
             >
               Book a Call
               <svg className="ml-1.5 h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -90,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-800 pt-8">
-          <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Flywheel Bookkeeping. All rights reserved.</p>
+          <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} Flywheel. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -88,22 +88,22 @@ const useCases = [
 ]
 
 const colorMap: Record<string, { bg: string; text: string; ring: string }> = {
-  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-700', ring: 'ring-emerald-200' },
+  emerald: { bg: 'bg-blue-50', text: 'text-blue-700', ring: 'ring-blue-200' },
   blue: { bg: 'bg-blue-50', text: 'text-blue-700', ring: 'ring-blue-200' },
-  purple: { bg: 'bg-purple-50', text: 'text-purple-700', ring: 'ring-purple-200' },
-  amber: { bg: 'bg-amber-50', text: 'text-amber-700', ring: 'ring-amber-200' },
-  rose: { bg: 'bg-rose-50', text: 'text-rose-700', ring: 'ring-rose-200' },
-  sky: { bg: 'bg-sky-50', text: 'text-sky-700', ring: 'ring-sky-200' },
+  purple: { bg: 'bg-indigo-50', text: 'text-indigo-700', ring: 'ring-indigo-200' },
+  amber: { bg: 'bg-sky-50', text: 'text-sky-700', ring: 'ring-sky-200' },
+  rose: { bg: 'bg-navy-50', text: 'text-navy-700', ring: 'ring-navy-200' },
+  sky: { bg: 'bg-cyan-50', text: 'text-cyan-700', ring: 'ring-cyan-200' },
 }
 
 export default function ConnectedFinancePage() {
   return (
     <main className="relative">
       {/* Hero */}
-      <div className="relative bg-gray-900 pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-28 overflow-hidden">
+      <div className="relative bg-navy-900 pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A20,_transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,_#06966A10,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#3B82F620,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,_#3B82F610,_transparent_50%)]" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -112,12 +112,12 @@ export default function ConnectedFinancePage() {
               animate={{ opacity: 1, y: 0 }}
               className="space-y-6"
             >
-              <span className="inline-flex text-emerald-400 text-lg font-semibold">
+              <span className="inline-flex text-blue-400 text-lg font-semibold">
                 Connected Finance
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
                 Your Entire Business.{' '}
-                <span className="text-emerald-400">One Financial Picture.</span>
+                <span className="text-blue-400">One Financial Picture.</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl">
                 We integrate your QuickBooks with your project management, time tracking, payroll, and communication tools, then build custom dashboards that give you complete financial clarity in real time.
@@ -127,7 +127,7 @@ export default function ConnectedFinancePage() {
                   href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-emerald-500 transition-all duration-200"
+                  className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-blue-500 transition-all duration-200"
                 >
                   Book a Discovery Call
                   <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -150,7 +150,7 @@ export default function ConnectedFinancePage() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
                 Your Bookkeeper Sees One System.{' '}
                 <span className="text-gray-400">You Deserve the Full Picture.</span>
               </h2>
@@ -197,9 +197,9 @@ export default function ConnectedFinancePage() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-emerald-50 rounded-2xl p-8 ring-1 ring-emerald-100"
+              className="bg-blue-50 rounded-2xl p-8 ring-1 ring-blue-100"
             >
-              <div className="flex items-center gap-2 text-emerald-600 mb-6">
+              <div className="flex items-center gap-2 text-blue-600 mb-6">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -215,7 +215,7 @@ export default function ConnectedFinancePage() {
                   'Decisions made on live, complete data',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-gray-700">
-                    <svg className="h-5 w-5 text-emerald-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                    <svg className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                     </svg>
                     {item}
@@ -237,7 +237,7 @@ export default function ConnectedFinancePage() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
                 What We Connect
               </h2>
               <p className="text-lg text-gray-600">
@@ -286,7 +286,7 @@ export default function ConnectedFinancePage() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-navy-900">
                 How We Build Your Command Center
               </h2>
               <p className="text-lg text-gray-600">
@@ -307,15 +307,15 @@ export default function ConnectedFinancePage() {
                   className="flex gap-6"
                 >
                   <div className="shrink-0 flex flex-col items-center">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white text-sm font-bold">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white text-sm font-bold">
                       {step.step}
                     </div>
                     {index < processSteps.length - 1 && (
-                      <div className="w-px h-full bg-emerald-200 mt-2" />
+                      <div className="w-px h-full bg-blue-200 mt-2" />
                     )}
                   </div>
                   <div className="pb-8">
-                    <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
+                    <h3 className="text-lg font-semibold text-navy-900">{step.title}</h3>
                     <p className="mt-2 text-gray-600">{step.description}</p>
                   </div>
                 </motion.div>
@@ -326,9 +326,9 @@ export default function ConnectedFinancePage() {
       </div>
 
       {/* Use Cases */}
-      <div className="relative py-20 sm:py-28 bg-gray-900">
+      <div className="relative py-20 sm:py-28 bg-navy-900">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A15,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#3B82F615,_transparent_50%)]" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -360,7 +360,7 @@ export default function ConnectedFinancePage() {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
-                    <p className="text-emerald-400 text-sm font-medium">{useCase.size}</p>
+                    <p className="text-blue-400 text-sm font-medium">{useCase.size}</p>
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Challenge</p>
@@ -374,7 +374,7 @@ export default function ConnectedFinancePage() {
                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Results</p>
                     <ul className="space-y-2">
                       {useCase.outcomes.map((outcome) => (
-                        <li key={outcome} className="flex items-center gap-2 text-sm text-emerald-300">
+                        <li key={outcome} className="flex items-center gap-2 text-sm text-blue-300">
                           <svg className="h-4 w-4 shrink-0" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                           </svg>
@@ -391,9 +391,9 @@ export default function ConnectedFinancePage() {
       </div>
 
       {/* Final CTA */}
-      <div className="relative py-20 sm:py-28 bg-emerald-600">
+      <div className="relative py-20 sm:py-28 bg-navy-900">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A40,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#3B82F640,_transparent_50%)]" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -405,14 +405,14 @@ export default function ConnectedFinancePage() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
               Ready to See Your Whole Business in One Place?
             </h2>
-            <p className="text-xl text-emerald-100">
+            <p className="text-xl text-blue-100">
               Book a discovery call. We&apos;ll map your current stack, identify the gaps, and show you what a connected financial command center looks like for your business.
             </p>
             <a
               href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-emerald-600 shadow-sm hover:bg-emerald-50 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-blue-600 shadow-sm hover:bg-blue-50 transition-all duration-200"
             >
               Book Discovery Call
               <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

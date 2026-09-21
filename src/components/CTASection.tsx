@@ -7,7 +7,7 @@ export default function CTASection() {
     <section className="relative isolate">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-emerald-700" />
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900 to-navy-800" />
         <div className="absolute inset-y-0 right-1/2 -left-72 -z-10 mr-16 w-[200%] origin-top-right skew-x-[-30deg] bg-white/10 ring-1 ring-white/10 sm:-left-100 lg:-left-100" />
         <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-right skew-x-[-30deg] bg-white/10 ring-1 ring-white/10 sm:-left-100 lg:-left-100" />
       </div>
@@ -43,7 +43,7 @@ export default function CTASection() {
                 href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-emerald-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
+                className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200"
               >
                 Schedule Your Discovery Call
               </a>

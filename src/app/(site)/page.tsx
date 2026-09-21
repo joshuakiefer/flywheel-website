@@ -40,7 +40,7 @@ export default function Home() {
       <HeroSection />
 
       {/* Wave transition out of the dark hero */}
-      <div className="w-full text-gray-900 leading-[0] -mt-px">
+      <div className="w-full text-navy-900 leading-[0] -mt-px">
         <svg viewBox="0 0 1440 116" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
           <path
             d="M1440 51.4091H1090.08C833.336 51.4091 580.229 116 360 116C139.771 116 0 51.4091 0 51.4091V0H1440V51.4091Z"
@@ -51,8 +51,8 @@ export default function Home() {
 
       {/* Services Section */}
       <div className="relative py-20 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#06966A05,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#3B82F605,_transparent_50%)]" />
         </div>
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -63,12 +63,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+              <span className="inline-flex text-blue-600 text-lg font-semibold">
                 Comprehensive Financial Services
               </span>
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
                 Everything Your Business Needs to{' '}
-                <span className="text-emerald-600">Grow</span>
+                <span className="text-blue-600">Grow</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 From day-to-day operations to strategic planning, we provide the financial expertise businesses need to grow from $1M to $20M+
@@ -108,18 +108,18 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-gray-900/5 transform transition-transform group-hover:scale-[1.025]" />
+                <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-navy-900/5 transform transition-transform group-hover:scale-[1.025]" />
                 <div className="relative p-8">
-                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${({emerald: 'bg-emerald-600/10', blue: 'bg-blue-600/10', purple: 'bg-purple-600/10'} as Record<string, string>)[service.color]}`}>
-                    <service.icon className={`h-6 w-6 ${({emerald: 'text-emerald-600', blue: 'text-blue-600', purple: 'text-purple-600'} as Record<string, string>)[service.color]}`} aria-hidden="true" />
+                  <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${({emerald: 'bg-blue-600/10', blue: 'bg-navy-700/10', purple: 'bg-sky-600/10'} as Record<string, string>)[service.color]}`}>
+                    <service.icon className={`h-6 w-6 ${({emerald: 'text-blue-600', blue: 'text-navy-700', purple: 'text-sky-600'} as Record<string, string>)[service.color]}`} aria-hidden="true" />
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-gray-900">{service.title}</h3>
+                  <h3 className="mt-6 text-xl font-semibold text-navy-900">{service.title}</h3>
                   <p className="mt-2 text-gray-600">{service.description}</p>
                   
                   <ul className="mt-6 space-y-3">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center text-gray-600">
-                        <svg className="h-5 w-5 text-emerald-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                        <svg className="h-5 w-5 text-blue-500 mr-3" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                         </svg>
                         {feature}
@@ -134,7 +134,7 @@ export default function Home() {
           <div className="mt-10 sm:mt-12 text-center">
             <Link
               href="/services"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-600/10 px-8 py-4 text-lg font-semibold text-emerald-600 hover:bg-emerald-600/20 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-full bg-blue-600/10 px-8 py-4 text-lg font-semibold text-blue-600 hover:bg-blue-600/20 transition-all duration-200"
             >
               View All Services
               <svg
@@ -158,10 +158,10 @@ export default function Home() {
       <ComparisonTable />
 
       {/* Industry Focus */}
-      <div className="relative py-20 sm:py-24 overflow-hidden bg-gray-900">
+      <div className="relative py-20 sm:py-24 overflow-hidden bg-navy-900">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#06966A20,_transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#1A2B4920,_transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#3B82F620,_transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,_#0B1F3E20,_transparent_60%)]" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -172,12 +172,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <span className="inline-flex text-emerald-400 text-lg font-semibold">
+              <span className="inline-flex text-blue-400 text-lg font-semibold">
                 Built for Growth-Focused Businesses
               </span>
               <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
                 Specialized Financial Expertise for{' '}
-                <span className="text-emerald-400">Modern Businesses</span>
+                <span className="text-blue-400">Modern Businesses</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 We understand the unique financial challenges of growing businesses. Our solutions are tailored to help you scale efficiently and profitably.
@@ -192,14 +192,14 @@ export default function Home() {
                 description: 'Optimize cash flow and profitability with retainer and project-based revenue streams.',
                 features: ['Revenue Recognition', 'Project Costing', 'Margin Analysis'],
                 icon: RocketLaunchIcon,
-                color: 'from-purple-500/10 to-purple-500/5',
+                color: 'from-blue-500/10 to-blue-500/5',
               },
               {
                 name: 'Technology',
                 description: 'Track project profitability and manage resource allocation effectively.',
                 features: ['Resource Tracking', 'Project Budgeting', 'Time Analysis'],
                 icon: SparklesIcon,
-                color: 'from-amber-500/10 to-amber-500/5',
+                color: 'from-sky-500/10 to-sky-500/5',
               },
               {
                 name: 'E-commerce',
@@ -213,7 +213,7 @@ export default function Home() {
                 description: 'Balance creative excellence with financial performance and growth.',
                 features: ['Project ROI', 'Resource Planning', 'Cost Control'],
                 icon: BuildingOfficeIcon,
-                color: 'from-rose-500/10 to-rose-500/5',
+                color: 'from-indigo-500/10 to-indigo-500/5',
               },
             ].map((industry, index) => (
               <motion.div
@@ -235,7 +235,7 @@ export default function Home() {
                   <ul className="mt-6 space-y-3">
                     {industry.features.map((feature) => (
                       <li key={feature} className="flex items-center text-gray-300">
-                        <svg className="h-5 w-5 text-emerald-400 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                        <svg className="h-5 w-5 text-blue-400 mr-3" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                         </svg>
                         {feature}
@@ -250,7 +250,7 @@ export default function Home() {
           <div className="mt-10 sm:mt-12 text-center">
             <Link
               href="/success-stories"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-400/10 px-8 py-4 text-lg font-semibold text-emerald-400 hover:bg-emerald-400/20 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-full bg-blue-400/10 px-8 py-4 text-lg font-semibold text-blue-400 hover:bg-blue-400/20 transition-all duration-200"
             >
               View Success Stories
               <svg
@@ -269,8 +269,8 @@ export default function Home() {
 
       {/* Reviews Section */}
       <div className="relative py-20 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-emerald-50/30 to-white">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#06966A05,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-blue-50/30 to-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,_#3B82F605,_transparent_50%)]" />
         </div>
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -281,12 +281,12 @@ export default function Home() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <span className="inline-flex text-emerald-600 text-lg font-semibold">
+              <span className="inline-flex text-blue-600 text-lg font-semibold">
                 Client Success Stories
               </span>
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
                 Trusted by Growing{' '}
-                <span className="text-emerald-600">Businesses</span>
+                <span className="text-blue-600">Businesses</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 See how we've helped businesses like yours transform their financial operations and accelerate growth.
@@ -330,10 +330,10 @@ export default function Home() {
                 transition={{ delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-emerald-600/5 transform transition-transform group-hover:scale-[1.025]" />
+                <div className="absolute inset-0 bg-white rounded-3xl shadow-xl shadow-blue-600/5 transform transition-transform group-hover:scale-[1.025]" />
                 <div className="relative p-8 text-center">
-                  <p className="text-4xl font-bold text-emerald-600">{item.stat}</p>
-                  <p className="mt-2 font-medium text-gray-900">{item.label}</p>
+                  <p className="text-4xl font-bold text-blue-600">{item.stat}</p>
+                  <p className="mt-2 font-medium text-navy-900">{item.label}</p>
                   <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                 </div>
               </motion.div>

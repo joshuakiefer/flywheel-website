@@ -29,7 +29,7 @@ export default function ResourcesPage() {
         <div className="container-custom py-24 sm:py-32">
           <AnimateInView>
             <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-6xl">
                 Business Growth Resources
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -41,7 +41,7 @@ export default function ResourcesPage() {
           {/* Interactive Tools */}
           <div className="mx-auto mt-16 max-w-7xl">
             <AnimateInView>
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-2xl font-bold tracking-tight text-navy-900">
                 Interactive Tools
               </h2>
               <p className="mt-2 text-lg text-gray-600">
@@ -59,7 +59,7 @@ export default function ResourcesPage() {
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-primary/10">
                       <tool.icon className="h-6 w-6 text-brand-primary" />
                     </div>
-                    <h3 className="mt-4 text-lg font-semibold text-gray-900">{tool.name}</h3>
+                    <h3 className="mt-4 text-lg font-semibold text-navy-900">{tool.name}</h3>
                     <p className="mt-2 flex-1 text-base text-gray-600">{tool.description}</p>
                     <div className="mt-6 flex items-center gap-x-3">
                       <span className="text-sm font-medium text-brand-primary">Try it now</span>
@@ -74,7 +74,7 @@ export default function ResourcesPage() {
           {/* Newsletter CTA */}
           <div className="mx-auto mt-24 max-w-7xl">
             <AnimateInView>
-              <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24">
+              <div className="relative isolate overflow-hidden bg-navy-900 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24">
                 <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   Get New Resources First
                 </h2>
@@ -97,7 +97,7 @@ export default function ResourcesPage() {
                     />
                     <button
                       type="submit"
-                      className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                      className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-navy-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                     >
                       Subscribe
                     </button>
@@ -111,8 +111,8 @@ export default function ResourcesPage() {
                   <circle cx={512} cy={512} r={512} fill="url(#gradient)" fillOpacity="0.7" />
                   <defs>
                     <radialGradient id="gradient">
-                      <stop stopColor="#7775D6" />
-                      <stop offset={1} stopColor="#E935C1" />
+                      <stop stopColor="#3B82F6" />
+                      <stop offset={1} stopColor="#1E3A63" />
                     </radialGradient>
                   </defs>
                 </svg>

@@ -66,7 +66,7 @@ export default function SuccessStories() {
       <div className="relative pt-24 sm:pt-28 lg:pt-44">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-navy-900 sm:text-6xl">
               Success Stories
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -82,11 +82,11 @@ export default function SuccessStories() {
           {successStories.map((story, index) => (
             <AnimateInView key={story.title}>
               <div className="relative group">
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-emerald-50 to-emerald-100/50 transform transition-transform group-hover:scale-[1.02]" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-50 to-blue-100/50 transform transition-transform group-hover:scale-[1.02]" />
                 <div className="relative p-8 sm:p-10">
                   <div className="grid gap-8 lg:grid-cols-2">
                     <div className="space-y-6">
-                      <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                      <h2 className="text-3xl font-bold tracking-tight text-navy-900">
                         {story.title}
                       </h2>
                       <p className="text-lg text-gray-600">
@@ -95,7 +95,7 @@ export default function SuccessStories() {
                       <ul className="space-y-4">
                         {story.results.map((result) => (
                           <li key={result} className="flex items-center gap-x-3">
-                            <svg className="h-5 w-5 text-emerald-500" viewBox="0 0 20 20" fill="currentColor">
+                            <svg className="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M16.403 12.652a3 3 0 000-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                             </svg>
                             <span className="text-gray-600">{result}</span>
@@ -105,31 +105,31 @@ export default function SuccessStories() {
                     </div>
 
                     <div className="space-y-6">
-                      <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-900/5">
+                      <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-navy-900/5">
                         <figure className="space-y-4">
                           <blockquote>
-                            <p className="text-lg italic text-gray-900">
+                            <p className="text-lg italic text-navy-900">
                               "{story.quote}"
                             </p>
                           </blockquote>
                           <figcaption>
-                            <div className="font-semibold text-gray-900">{story.author}</div>
+                            <div className="font-semibold text-navy-900">{story.author}</div>
                             <div className="text-gray-600">{story.role}</div>
                           </figcaption>
                         </figure>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-                        <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-900/5">
-                          <div className="text-3xl font-bold text-emerald-600">{story.metrics.growth}</div>
+                        <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-navy-900/5">
+                          <div className="text-3xl font-bold text-blue-600">{story.metrics.growth}</div>
                           <div className="mt-1 text-sm text-gray-600">{story.metrics.focus}</div>
                         </div>
-                        <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-900/5">
-                          <div className="text-3xl font-bold text-emerald-600">{story.metrics.timeframe}</div>
+                        <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-navy-900/5">
+                          <div className="text-3xl font-bold text-blue-600">{story.metrics.timeframe}</div>
                           <div className="mt-1 text-sm text-gray-600">Timeline</div>
                         </div>
-                        <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-gray-900/5">
-                          <div className="text-3xl font-bold text-emerald-600">ROI</div>
+                        <div className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-navy-900/5">
+                          <div className="text-3xl font-bold text-blue-600">ROI</div>
                           <div className="mt-1 text-sm text-gray-600">Positive</div>
                         </div>
                       </div>
@@ -143,7 +143,7 @@ export default function SuccessStories() {
 
         {/* CTA Section */}
         <div className="mt-24 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+          <h2 className="text-3xl font-bold tracking-tight text-navy-900">
             Ready to Write Your Success Story?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
@@ -154,7 +154,7 @@ export default function SuccessStories() {
               href="https://www.calendar.com/joshkiefercpa/meeting-flywheel/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-emerald-600/10 hover:bg-emerald-500 transition-all duration-200 hover:scale-105 hover:shadow-emerald-600/20"
+              className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-blue-600/10 hover:bg-blue-500 transition-all duration-200 hover:scale-105 hover:shadow-blue-600/20"
             >
               Book Discovery Call
               <ArrowRightIcon className="ml-2.5 h-5 w-5" />

@@ -1,10 +1,18 @@
 import { ImageResponse } from 'next/og'
 
-export const alt = 'Flywheel - Outsourced Accounting for Growing Businesses'
+export const alt = 'Flywheel - Bookkeeping, CFO, Tax'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  // Load the wordmark serif so the preview matches the site's logo lockup.
+  // If the fetch fails the image still renders, just in the fallback serif.
+  const playfair = await fetch(
+    'https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.ttf',
+  )
+    .then((res) => (res.ok ? res.arrayBuffer() : null))
+    .catch(() => null)
+
   return new ImageResponse(
     (
       <div
@@ -15,58 +23,78 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'linear-gradient(135deg, #111827 0%, #0f2a22 55%, #111827 100%)',
+          background: 'linear-gradient(135deg, #0B1F3E 0%, #12294E 50%, #0B1F3E 100%)',
           padding: 80,
         }}
       >
-        {/* Flywheel mark */}
-        <svg width="120" height="120" viewBox="0 0 84 92">
-          <circle cx="42" cy="46" r="22" fill="none" stroke="#34d399" strokeWidth="3.5" />
-          <circle cx="42" cy="46" r="9" fill="#34d399" />
-          <path d="M42 24 Q57 28 62 38" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round" />
-          <path d="M64 46 Q60 61 50 68" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round" />
-          <path d="M42 68 Q27 64 20 54" fill="none" stroke="#34d399" strokeWidth="3" strokeLinecap="round" />
-        </svg>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 34 }}>
+          {/* Flywheel mark */}
+          <svg width="150" height="150" viewBox="0 0 100 100">
+            <circle
+              cx="50"
+              cy="50"
+              r="34"
+              fill="none"
+              stroke="#3B82F6"
+              strokeWidth="16"
+              strokeDasharray="92 14.8"
+              transform="rotate(-58 50 50)"
+            />
+          </svg>
 
-        <div
-          style={{
-            display: 'flex',
-            fontSize: 96,
-            fontWeight: 600,
-            color: '#ffffff',
-            letterSpacing: '-0.03em',
-            marginTop: 28,
-          }}
-        >
-          flywheel
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div
+              style={{
+                display: 'flex',
+                fontSize: 116,
+                color: '#ffffff',
+                letterSpacing: '-0.015em',
+                lineHeight: 1,
+                ...(playfair ? { fontFamily: 'Playfair' } : {}),
+              }}
+            >
+              Flywheel
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                fontSize: 27,
+                color: 'rgba(255,255,255,0.72)',
+                letterSpacing: '0.16em',
+                marginTop: 16,
+              }}
+            >
+              BOOKKEEPING · CFO · TAX
+            </div>
+          </div>
         </div>
 
         <div
           style={{
             display: 'flex',
             fontSize: 30,
-            color: '#9ca3af',
-            letterSpacing: '0.18em',
-            textTransform: 'uppercase',
-            marginTop: 18,
-            textAlign: 'center',
+            color: '#3B82F6',
+            marginTop: 58,
           }}
         >
-          Outsourced Accounting for Growing Businesses
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            fontSize: 30,
-            color: '#34d399',
-            marginTop: 40,
-          }}
-        >
-          For businesses scaling $1M to $20M
+          Same numbers. A brighter tomorrow.
         </div>
       </div>
     ),
-    size,
+    {
+      ...size,
+      ...(playfair
+        ? {
+            fonts: [
+              {
+                name: 'Playfair',
+                data: playfair,
+                style: 'normal' as const,
+                weight: 500 as const,
+              },
+            ],
+          }
+        : {}),
+    },
   )
 }

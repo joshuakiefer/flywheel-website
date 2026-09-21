@@ -38,7 +38,7 @@ export default function ReviewCarousel() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="relative bg-white rounded-2xl shadow-sm ring-1 ring-gray-900/5 overflow-hidden">
+      <div className="relative bg-white rounded-2xl shadow-sm ring-1 ring-navy-900/5 overflow-hidden">
         <div className="p-6 sm:p-8">
           {/* Rating */}
           <div className="flex items-center gap-1 mb-6">
@@ -67,7 +67,7 @@ export default function ReviewCarousel() {
                 </blockquote>
                 <div className="mt-4">
                   <cite className="not-italic">
-                    <span className="font-semibold text-gray-900">{reviews[currentIndex].author}</span>
+                    <span className="font-semibold text-navy-900">{reviews[currentIndex].author}</span>
                     <span className="block text-sm text-gray-500 mt-1">
                       {reviews[currentIndex].company}
                       <span className="mx-2">•</span>
