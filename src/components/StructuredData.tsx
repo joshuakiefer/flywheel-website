@@ -155,3 +155,38 @@ export function FaqSchema({ faqs }: { faqs: Array<{ question: string; answer: st
     />
   )
 }
+
+/**
+ * AboutPage + Person schema. Gives assistants an explicit, machine-readable
+ * anchor for "what is this company and who runs it", tied by @id to the
+ * ProfessionalService node above so they resolve to one entity.
+ */
+export function AboutPageSchema() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `${BASE_URL}/about#webpage`,
+    url: `${BASE_URL}/about`,
+    name: 'About Flywheel',
+    description:
+      'Flywheel is an outsourced accounting firm that runs bookkeeping, controller work, CFO strategy, and tax for businesses doing $1M to $20M in revenue.',
+    isPartOf: { '@id': `${BASE_URL}/#website` },
+    about: { '@id': `${BASE_URL}/#organization` },
+    mainEntity: {
+      '@type': 'Person',
+      '@id': `${BASE_URL}/#founder`,
+      name: 'Joshua Kiefer',
+      honorificSuffix: 'CPA',
+      jobTitle: 'Founder',
+      worksFor: { '@id': `${BASE_URL}/#organization` },
+      email: 'josh@flywheelbookkeeping.com',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  )
+}
